@@ -1,6 +1,6 @@
 class HatsMartAdapter < OutfitsMartAdapter
   DEFAULT_NAME = "[unknown]"
-  DEFAULT_DESCRIPTION = "A headgear that trainers can wear."
+  DEFAULT_DESCRIPTION = "Un chapeau que les dresseurs peuvent porter."
 
   def initialize(stock = nil, isShop = nil)
     super
@@ -11,7 +11,7 @@ class HatsMartAdapter < OutfitsMartAdapter
       $Trainer.hat = nil
       @worn_clothes = nil
 
-      if pbConfirmMessage(_INTL("Do you want to take off your hat?"))
+      if pbConfirmMessage(_INTL("Tu veux enlever ton chapeau?"))
         $Trainer.hat = nil
         @worn_clothes = nil
 
@@ -117,7 +117,7 @@ class HatsMartAdapter < OutfitsMartAdapter
   def getSpecialItemCaption(specialType)
     case specialType
     when :REMOVE_HAT
-      return "Remove hat"
+      return "Enlever le chapeau"
     end
     return nil
   end
@@ -140,8 +140,8 @@ class HatsMartAdapter < OutfitsMartAdapter
 
   def getSpecialItemDescription(specialType)
     echoln $Trainer.hair
-    hair_situation = !$Trainer.hair || getSimplifiedHairIdFromFullID($Trainer.hair) == HAIR_BALD ? "bald head" : "fabulous hair"
-    return "Go without a hat and show off your #{hair_situation}!"
+    hair_situation = !$Trainer.hair || getSimplifiedHairIdFromFullID($Trainer.hair) == HAIR_BALD ? "votre crâne chauve" : "vos magnifique cheveux"
+    return "Sortez sans chapeau et montrez #{hair_situation}!"
   end
 
   def doSpecialItemAction(specialType)

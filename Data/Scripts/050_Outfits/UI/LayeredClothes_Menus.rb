@@ -12,7 +12,7 @@ def selectHairstyle(all_unlocked = false)
   selector = OutfitSelector.new
   display_outfit_preview()
   hat = $Trainer.hat
-  commands = ["Next style", "Previous style", "Toggle hat", "Back"]
+  commands = ["Style suivant", "Style précédent", "Changer de chapeau", "Retour"]
   previous_input = 0
   # To enable turning the common event that lets you turn around while in the dialog box
   while (true)
@@ -28,7 +28,7 @@ def selectHairstyle(all_unlocked = false)
       selector.changeToNextHairstyle(-1, all_unlocked)
       display_outfit_preview()
     when 2 #Toggle hat
-      pbSEPlay("GUI storage put down", 80, 100)
+      pbSEPlay("Stockage du GUI mis en place", 80, 100)
       if hat == $Trainer.hat
         $Trainer.hat = nil
       else
@@ -50,7 +50,7 @@ def selectHairColor
   $game_map.update
   display_outfit_preview()
   hat = $Trainer.hat
-  commands = ["Shift up", "Shift down", "Toggle hat", "Reset", "Confirm", "Never Mind"]
+  commands = ["Monter", "Descendre", "Changer de chapeau", "Réinitialiser", "Confirmer", "Annuler"]
   previous_input = 0
 
   while (true)
@@ -59,17 +59,17 @@ def selectHairColor
     case choice
     when 0 #NEXT
       #playOutfitChangeAnimation()
-      pbSEPlay("GUI storage pick up", 80, 100)
+      pbSEPlay("Prendre un objet du stockage", 80, 100)
       shiftHairColor(10)
       display_outfit_preview()
       ret = true
     when 1 #PREVIOUS
-      pbSEPlay("GUI storage pick up", 80, 100)
+      pbSEPlay("Prendre un objet du stockage", 80, 100)
       shiftHairColor(-10)
       display_outfit_preview()
       ret = true
     when 2 #Toggle hat
-      pbSEPlay("GUI storage put down", 80, 100)
+      pbSEPlay("Placer dans le stockage", 80, 100)
       if hat == $Trainer.hat
         $Trainer.hat = nil
       else
@@ -77,7 +77,7 @@ def selectHairColor
       end
       display_outfit_preview()
     when 3 #Reset
-      pbSEPlay("GUI storage put down", 80, 100)
+      pbSEPlay("Placer dans le stockage", 80, 100)
       $Trainer.hair_color = 0
       display_outfit_preview()
       ret = false
@@ -100,24 +100,24 @@ end
 def selectHatColor
   original_color = $Trainer.hat_color
   display_outfit_preview()
-  commands = ["Shift up", "Shift down", "Reset", "Confirm", "Never Mind"]
+  commands = ["Monter", "Descendre", "Réinitialiser", "Confirmer", "Annuler"]
   previous_input = 0
   while (true)
     choice = pbShowCommands(nil, commands, commands.length, previous_input)
     previous_input = choice
     case choice
     when 0 #NEXT
-      pbSEPlay("GUI storage pick up", 80, 100)
+      pbSEPlay("Prendre un objet du stockage", 80, 100)
       shiftHatColor(10)
       display_outfit_preview()
       ret = true
     when 1 #PREVIOUS
-      pbSEPlay("GUI storage pick up", 80, 100)
+      pbSEPlay("Prendre un objet du stockage", 80, 100)
       shiftHatColor(-10)
       display_outfit_preview()
       ret = true
     when 2 #Reset
-      pbSEPlay("GUI storage put down", 80, 100)
+      pbSEPlay("Placer dans le stockage", 80, 100)
       $Trainer.hat_color = 0
       display_outfit_preview()
       refreshPlayerOutfit()
@@ -138,7 +138,7 @@ end
 def selectClothesColor
   original_color = $Trainer.clothes_color
   display_outfit_preview()
-  commands = ["Shift up", "Shift down", "Reset", "Confirm", "Never Mind"]
+  commands = ["Monter", "Descendre", "Réinitialiser", "Confirmer", "Annuler"]
   previous_input = 0
   ret = false
   while (true)
@@ -146,17 +146,17 @@ def selectClothesColor
     previous_input = choice
     case choice
     when 0 #NEXT
-      pbSEPlay("GUI storage pick up", 80, 100)
+      pbSEPlay("Prendre un objet du stockage", 80, 100)
       shiftClothesColor(10)
       display_outfit_preview()
       ret = true
     when 1 #PREVIOUS
-      pbSEPlay("GUI storage pick up", 80, 100)
+      pbSEPlay("Prendre un objet du stockage", 80, 100)
       shiftClothesColor(-10)
       display_outfit_preview()
       ret = true
     when 2 #Reset
-      pbSEPlay("GUI storage pick up", 80, 100)
+      pbSEPlay("Prendre un objet du stockage", 80, 100)
       $Trainer.clothes_color = 0
       display_outfit_preview()
       refreshPlayerOutfit()
@@ -177,7 +177,7 @@ end
 def selectHat(all_unlocked = false)
   selector = OutfitSelector.new
   display_outfit_preview()
-  commands = ["Next hat", "Previous hat", "Remove hat", "Back"]
+  commands = ["Chapeau suivant", "Chapeau précédent", "Enlever le chapeau", "Retour"]
   previous_input = 0
   while (true)
     choice = pbShowCommands(nil, commands, commands.length, previous_input)
@@ -203,17 +203,17 @@ def selectHat(all_unlocked = false)
 end
 
 def spinCharacter
-  pbSEPlay("GUI party switch", 80, 100)
+  pbSEPlay("Echanger dans l'équipe", 80, 100)
 
 end
 
 def selectClothes(all_unlocked = false)
   selector = OutfitSelector.new
   display_outfit_preview()
-  commands = ["Next", "Previous"]
+  commands = ["Suivant", "Précédent"]
   #commands << "Remove clothes (DEBUG)" if $DEBUG
-  commands << "Remove" if $DEBUG
-  commands << "Back"
+  commands << "Enlever" if $DEBUG
+  commands << "Retour"
   previous_input = 0
   while (true)
     choice = pbShowCommands(nil, commands, commands.length, previous_input)

@@ -7,16 +7,16 @@ end
 
 def pbNickname(pkmn)
   species_name = pkmn.speciesName
-  if pbConfirmMessage(_INTL("Would you like to give a nickname to {1}?", species_name))
-    pkmn.name = pbEnterPokemonName(_INTL("{1}'s nickname?", species_name),
+  if pbConfirmMessage(_INTL("Voulez-vous donner un surnom à {1}?", species_name))
+    pkmn.name = pbEnterPokemonName(_INTL("Quel surnom à {1}?", species_name),
                                    0, Pokemon::MAX_NAME_SIZE, "", pkmn)
   end
 end
 
 def pbStorePokemon(pkmn)
   if pbBoxesFull?
-    pbMessage(_INTL("There's no more room for Pokémon!\1"))
-    pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
+    pbMessage(_INTL("Il n'y a plus de place pour les Pokémon!\1"))
+    pbMessage(_INTL("Les boîtes Pokémon sont pleines et ne peuvent plus en accepter!"))
     return
   end
   pkmn.record_first_moves
@@ -29,18 +29,18 @@ def pbStorePokemon(pkmn)
     creator = pbGetStorageCreator if $Trainer.seen_storage_creator
     if storedbox != oldcurbox
       if creator
-        pbMessage(_INTL("Box \"{1}\" on {2}'s PC was full.\1", curboxname, creator))
+        pbMessage(_INTL("Boite \"{1}\" sur le PC de {2} qui est plein.\1", curboxname, creator))
       else
-        pbMessage(_INTL("Box \"{1}\" on someone's PC was full.\1", curboxname))
+        pbMessage(_INTL("Boite \"{1}\" sur le PC de quelqu'un était plein.\1", curboxname))
       end
-      pbMessage(_INTL("{1} was transferred to box \"{2}.\"", pkmn.name, boxname))
+      pbMessage(_INTL("{1} a été transféré dans la boîte \"{2}.\"", pkmn.name, boxname))
     else
       if creator
-        pbMessage(_INTL("{1} was transferred to {2}'s PC.\1", pkmn.name, creator))
+        pbMessage(_INTL("{1} a été transféré sur le PC de {2}.\1", pkmn.name, creator))
       else
-        pbMessage(_INTL("{1} was transferred to someone's PC.\1", pkmn.name))
+        pbMessage(_INTL("{1} a été transféré sur le PC de quelqu'un.\1", pkmn.name))
       end
-      pbMessage(_INTL("It was stored in box \"{1}.\"", boxname))
+      pbMessage(_INTL("Il était stocké dans une boîte \"{1}.\"", boxname))
     end
   else
     $Trainer.party[$Trainer.party.length] = pkmn
@@ -49,8 +49,8 @@ end
 
 def pbNicknameAndStore(pkmn)
   if pbBoxesFull?
-    pbMessage(_INTL("There's no more room for Pokémon!\1"))
-    pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
+    pbMessage(_INTL("Il n'y a plus de place pour les Pokémon!\1"))
+    pbMessage(_INTL("Les boîtes Pokémon sont pleines et ne peuvent plus en accepter!"))
     return
   end
   $Trainer.pokedex.set_seen(pkmn.species)
@@ -67,14 +67,14 @@ end
 def pbAddPokemon(pkmn, level = 1, see_form = true, dontRandomize=false, variableToSave=nil)
   return false if !pkmn
   if pbBoxesFull?
-    pbMessage(_INTL("There's no more room for Pokémon!\1"))
-    pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
+    pbMessage(_INTL("Il n'y a plus de place pour les Pokémon!\1"))
+    pbMessage(_INTL("Les boîtes Pokémon sont pleines et ne peuvent plus en accepter!"))
     return false
   end
   pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
   tryRandomizeGiftPokemon(pkmn,dontRandomize)
   species_name = pkmn.speciesName
-  pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[20]\1", $Trainer.name, species_name))
+  pbMessage(_INTL("{1} a obtenue {2}!\\me[Pkmn get]\\wtnp[20]\1", $Trainer.name, species_name))
   pbNicknameAndStore(pkmn)
   $Trainer.pokedex.register(pkmn) if see_form
   pbSet(variableToSave,pkmn) if variableToSave
@@ -97,6 +97,22 @@ def pbAddPokemonSilent(pkmn, level = 1, see_form = true)
   return true
 end
 
+def pbAddPokemonSilentShiny(pkmn, level = 1, see_form = true)
+  return false if !pkmn || pbBoxesFull?
+  pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
+  pkmn.shiny = true
+  pkmn.natural_shiny=true
+  $Trainer.pokedex.register(pkmn) if see_form
+  $Trainer.pokedex.set_owned(pkmn.species)
+  pkmn.record_first_moves
+  if $Trainer.party_full?
+    $PokemonStorage.pbStoreCaught(pkmn)
+  else
+    $Trainer.party[$Trainer.party.length] = pkmn
+  end
+  return true
+end
+
 #===============================================================================
 # Giving Pokémon/eggs to the player (can only add to party)
 #===============================================================================
@@ -105,7 +121,7 @@ def pbAddToParty(pkmn, level = 1, see_form = true, dontRandomize=false)
   pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
   tryRandomizeGiftPokemon(pkmn,dontRandomize)
   species_name = pkmn.speciesName
-  pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
+  pbMessage(_INTL("{1} a obtenue {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
   pbNicknameAndStore(pkmn)
   $Trainer.pokedex.register(pkmn) if see_form
   return true
@@ -131,9 +147,9 @@ def pbAddForeignPokemon(pkmn, level = 1, owner_name = nil, nickname = nil, owner
   # Recalculate stats
   pkmn.calc_stats
   if owner_name
-    pbMessage(_INTL("\\me[Pkmn get]{1} received a Pokémon from {2}.\1", $Trainer.name, owner_name))
+    pbMessage(_INTL("\\me[Pkmn get]{1} a recu un Pokémon de {2}.\1", $Trainer.name, owner_name))
   else
-    pbMessage(_INTL("\\me[Pkmn get]{1} received a Pokémon.\1", $Trainer.name))
+    pbMessage(_INTL("\\me[Pkmn get]{1} a recu un Pokémon.\1", $Trainer.name))
   end
   pbStorePokemon(pkmn)
   $Trainer.pokedex.register(pkmn) if see_form
@@ -145,7 +161,7 @@ def pbGenerateEgg(pkmn, text = "")
   return false if !pkmn #|| $Trainer.party_full?
   pkmn = Pokemon.new(pkmn, Settings::EGG_LEVEL) if !pkmn.is_a?(Pokemon)
   # Set egg's details
-  pkmn.name           = _INTL("Egg")
+  pkmn.name           = _INTL("Oeuf")
   pkmn.steps_to_hatch = pkmn.species_data.hatch_steps
   pkmn.obtain_text    = text
   pkmn.calc_stats
@@ -154,7 +170,7 @@ def pbGenerateEgg(pkmn, text = "")
     $Trainer.party[$Trainer.party.length] = pkmn
   else
     $PokemonStorage.pbStoreCaught(pkmn)
-    Kernel.pbMessage(_INTL("The egg was transfered to the PC."))
+    Kernel.pbMessage(_INTL("L'oeuf a été transféré sur le PC."))
   end
   return true
 end

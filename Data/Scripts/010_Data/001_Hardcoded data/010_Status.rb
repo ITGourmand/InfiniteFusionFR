@@ -46,7 +46,7 @@ GameData::Status.register({
 GameData::Status.register({
   :id        => :SLEEP,
   :id_number => 1,
-  :name      => _INTL("Sleep"),
+  :name      => _INTL("Sommeil"),
   :animation => "Sleep"
 })
 
@@ -60,20 +60,20 @@ GameData::Status.register({
 GameData::Status.register({
   :id        => :BURN,
   :id_number => 3,
-  :name      => _INTL("Burn"),
+  :name      => _INTL("Brulure"),
   :animation => "Burn"
 })
 
 GameData::Status.register({
   :id        => :PARALYSIS,
   :id_number => 4,
-  :name      => _INTL("Paralysis"),
+  :name      => _INTL("Paralysie"),
   :animation => "Paralysis"
 })
 
 GameData::Status.register({
   :id        => :FROZEN,
   :id_number => 5,
-  :name      => _INTL("Frozen"),
+  :name      => _INTL("Geler"),
   :animation => "Frozen"
 })

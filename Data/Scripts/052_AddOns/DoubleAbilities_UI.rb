@@ -95,10 +95,9 @@ end
 
 class FusionSelectOptionsScene < PokemonOption_Scene
   def pbGetOptions(inloadscreen = false)
-
     options = []
     if shouldSelectNickname
-      options << EnumOption.new(_INTL("Nickname"), [_INTL(@pokemon1.name), _INTL(@pokemon2.name)],
+      options << EnumOption.new(_INTL("Surnom"), [_INTL(@pokemon1.name), _INTL(@pokemon2.name)],
                                 proc { 0 },
                                 proc { |value|
                                   if value ==0
@@ -106,11 +105,11 @@ class FusionSelectOptionsScene < PokemonOption_Scene
                                   else
                                     @nickname = @pokemon2.name
                                   end
-                                }, "Select the Pokémon's nickname")
+                                }, "Choisissez le nom du Pokémon")
     end
 
     if @abilityList != nil
-      options << EnumOption.new(_INTL("Ability"), [_INTL(getAbilityName(@abilityList[0])), _INTL(getAbilityName(@abilityList[1]))],
+      options << EnumOption.new(_INTL("Talent"), [_INTL(getAbilityName(@abilityList[0])), _INTL(getAbilityName(@abilityList[1]))],
                                 proc { 0 },
                                 proc { |value|
                                   @selectedAbility=@abilityList[value]

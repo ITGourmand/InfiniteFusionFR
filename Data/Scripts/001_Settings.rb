@@ -301,14 +301,14 @@ module Settings
   # The names of each pocket of the Bag. Ignore the first entry ("").
   def self.bag_pocket_names
     return ["",
-            _INTL("Items"),
-            _INTL("Medicine"),
+            _INTL("Objets"),
+            _INTL("Soins"),
             _INTL("Poké Balls"),
-            _INTL("TMs & HMs"),
-            _INTL("Berries"),
+            _INTL("CT & CS"),
+            _INTL("Baies"),
             _INTL("Mail"),
-            _INTL("Battle Items"),
-            _INTL("Key Items")
+            _INTL("Objets de Combats"),
+            _INTL("Objets Clé")
     ]
   end
 
@@ -486,7 +486,7 @@ module Settings
     [562, 50, :NINJASK,45,50],          #Boon Island
     [603, 50, :KECLEON,45,50],          #Chrono Island
     [654, 50, :WHIMSICOTT,32,45],        #Brine Road
-    [559, 50, :SCRAGGY,32,45]        #Kindle Road
+    [654, 50, :SCRAGGY,32,45]        #Kindle Road
   ]
 
   #=============================================================================
@@ -535,8 +535,8 @@ module Settings
   # file in the Data folder. Edit only if you have 2 or more languages to choose
   # from.
   LANGUAGES = [
-    #  ["English", "english.dat"],
-    #  ["Deutsch", "deutsch.dat"]
+      ["French", "french.dat"],
+      ["English", "english.dat"]
   ]
 
 

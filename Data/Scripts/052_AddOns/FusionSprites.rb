@@ -37,11 +37,11 @@ module GameData
         body_number = dex_number
         head_number = dex_number
 
-      else
+      else 
         body_number = getBodyID(dex_number)
         head_number = getHeadID(dex_number, body_number)
       end
-      if isBodyShiny && isHeadShiny && SHINY_COLOR_OFFSETS[body_number] && SHINY_COLOR_OFFSETS[head_number]
+      if isBodyShiny && isHeadShiny && SHINY_COLOR_OFFSETS[body_number] && SHINY_COLOR_OFFSETS[head_number] && (SHINY_BW_OFFSETS[body_number] + SHINY_BW_OFFSETS[head_number] == 0)
         offset = SHINY_COLOR_OFFSETS[body_number] + SHINY_COLOR_OFFSETS[head_number]
       elsif isHeadShiny && SHINY_COLOR_OFFSETS[head_number]
         offset = SHINY_COLOR_OFFSETS[head_number]
@@ -49,6 +49,29 @@ module GameData
         offset = SHINY_COLOR_OFFSETS[body_number]
       else
         offset = calculateShinyHueOffsetDefaultMethod(body_number, head_number, dex_number, isBodyShiny, isHeadShiny)
+      end
+      return offset
+    end
+    def self.calculateBWShinyOffset(dex_number, isBodyShiny = false, isHeadShiny = false)
+      if dex_number <= NB_POKEMON
+        if SHINY_BW_OFFSETS[dex_number]
+          return SHINY_BW_OFFSETS[dex_number]
+        end
+        body_number = dex_number
+        head_number = dex_number
+
+      else
+        body_number = getBodyID(dex_number)
+        head_number = getHeadID(dex_number, body_number)
+      end
+      if isBodyShiny && isHeadShiny && SHINY_BW_OFFSETS[body_number] && SHINY_BW_OFFSETS[head_number]
+        offset = (SHINY_BW_OFFSETS[body_number] + SHINY_BW_OFFSETS[head_number]) /2
+      elsif isHeadShiny && SHINY_BW_OFFSETS[head_number]
+        offset = SHINY_BW_OFFSETS[head_number]
+      elsif isBodyShiny && SHINY_BW_OFFSETS[body_number]
+        offset = SHINY_BW_OFFSETS[body_number]
+      else
+        offset = 0
       end
       return offset
     end
@@ -99,6 +122,7 @@ module GameData
       end
       if isShiny
         sprite.shiftColors(self.calculateShinyHueOffset(dex_number, bodyShiny, headShiny))
+        sprite.shiftBWColors(self.calculateBWShinyOffset(dex_number, bodyShiny, headShiny))
       end
       return sprite
     end

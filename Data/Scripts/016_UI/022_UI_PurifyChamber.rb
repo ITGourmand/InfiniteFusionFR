@@ -462,25 +462,25 @@ class PurifyChamberScreen
         # Place Pokemon in the set
         curpkmn=PurifyChamberHelper.pbGetPokemon(@chamber,cmd[1])
         if curpkmn || heldpkmn
-          commands=[_INTL("MOVE"),_INTL("SUMMARY"),
-             _INTL("WITHDRAW")]
+          commands=[_INTL("DEPLACER"),_INTL("RESUMER"),
+             _INTL("RELACHER")]
           if curpkmn && heldpkmn
-            commands[0]=_INTL("EXCHANGE")
+            commands[0]=_INTL("ECHANGER")
           elsif heldpkmn
-            commands[0]=_INTL("PLACE")
+            commands[0]=_INTL("PLACER")
           end
           cmdReplace=-1
           cmdRotate=-1
           if !heldpkmn && curpkmn && cmd[1]==0 &&
              @chamber[@chamber.currentSet].length>0
-            commands[cmdRotate=commands.length]=_INTL("ROTATE")
+            commands[cmdRotate=commands.length]=_INTL("TOURNER")
           end
           if !heldpkmn && curpkmn
-            commands[cmdReplace=commands.length]=_INTL("REPLACE")
+            commands[cmdReplace=commands.length]=_INTL("REPLACER")
           end
-          commands.push(_INTL("CANCEL"))
+          commands.push(_INTL("ANNULER"))
           choice=@scene.pbShowCommands(
-             _INTL("What shall I do with this {1}?",
+             _INTL("Que dois-je faire avec {1}?",
              heldpkmn ? heldpkmn.name : curpkmn.name),commands)
           if choice==0
             if heldpkmn
@@ -503,7 +503,7 @@ class PurifyChamberScreen
             @scene.pbSummary(cmd[1],heldpkmn)
           elsif choice==2
             if pbBoxesFull?
-              @scene.pbDisplay("All boxes are full.")
+              @scene.pbDisplay("Toutes les boîtes sont pleines.")
             elsif heldpkmn
               @scene.pbWithdraw(cmd[1],heldpkmn)
               $PokemonStorage.pbStoreCaught(heldpkmn)
@@ -1346,11 +1346,11 @@ class PurifyChamberPC
   end
 
   def name
-    return _INTL("Purify Chamber")
+    return _INTL("Chambre de purification")
   end
 
   def access
-    pbMessage(_INTL("\\se[PC access]Accessed the Purify Chamber."))
+    pbMessage(_INTL("\\se[PC access]A accédé à la chambre de purification."))
     pbPurifyChamber()
   end
 end

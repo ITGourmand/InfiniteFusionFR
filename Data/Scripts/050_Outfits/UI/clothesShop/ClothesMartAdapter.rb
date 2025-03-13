@@ -1,9 +1,9 @@
 class ClothesMartAdapter < OutfitsMartAdapter
   DEFAULT_NAME = "[unknown]"
-  DEFAULT_DESCRIPTION = "A piece of clothing that trainers can wear."
+  DEFAULT_DESCRIPTION = "Un vêtement que les dresseurs peuvent porter."
   def toggleEvent(item)
     if !isShop? && $Trainer.clothes_color != 0
-      if pbConfirmMessage(_INTL("Would you like to remove the dye?"))
+      if pbConfirmMessage(_INTL("Voulez-vous annuler votre choix?"))
         $Trainer.clothes_color = 0
       end
     end

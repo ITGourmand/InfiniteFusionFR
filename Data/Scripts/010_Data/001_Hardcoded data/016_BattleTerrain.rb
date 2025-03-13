@@ -30,29 +30,29 @@ end
 
 GameData::BattleTerrain.register({
   :id   => :None,
-  :name => _INTL("None")
+  :name => _INTL("Aucun")
 })
 
 GameData::BattleTerrain.register({
   :id        => :Electric,
-  :name      => _INTL("Electric"),
+  :name      => _INTL("Électrique"),
   :animation => "ElectricTerrain"
 })
 
 GameData::BattleTerrain.register({
   :id        => :Grassy,
-  :name      => _INTL("Grassy"),
+  :name      => _INTL("Herbeux"),
   :animation => "GrassyTerrain"
 })
 
 GameData::BattleTerrain.register({
   :id        => :Misty,
-  :name      => _INTL("Misty"),
+  :name      => _INTL("Brumeux"),
   :animation => "MistyTerrain"
 })
 
 GameData::BattleTerrain.register({
   :id        => :Psychic,
-  :name      => _INTL("Psychic"),
+  :name      => _INTL("Psychique"),
   :animation => "PsychicTerrain"
 })

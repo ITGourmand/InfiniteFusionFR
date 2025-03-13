@@ -93,9 +93,9 @@ class PokeBattle_Battle
   #=============================================================================
   def initialize(scene,p1,p2,player,opponent)
     if p1.length==0
-      raise ArgumentError.new(_INTL("Party 1 has no Pokémon."))
+      raise ArgumentError.new(_INTL("La Team 1 n'a aucun Pokémon."))
     elsif p2.length==0
-      raise ArgumentError.new(_INTL("Party 2 has no Pokémon."))
+      raise ArgumentError.new(_INTL("La Team 2 n'a pas de Pokémon."))
     end
     @scene             = scene
     @peer              = PokeBattle_BattlePeer.create
@@ -625,10 +625,10 @@ class PokeBattle_Battle
   def pbThisEx(idxBattler,idxParty)
     party = pbParty(idxBattler)
     if opposes?(idxBattler)
-      return _INTL("The opposing {1}",party[idxParty].name) if trainerBattle?
-      return _INTL("The wild {1}",party[idxParty].name)
+      return _INTL("Le pokemon opposant {1}",party[idxParty].name) if trainerBattle?
+      return _INTL("Le pokemon sauvage {1}",party[idxParty].name)
     end
-    return _INTL("The ally {1}",party[idxParty].name) if !pbOwnedByPlayer?(idxBattler)
+    return _INTL("Le pokemon allié {1}",party[idxParty].name) if !pbOwnedByPlayer?(idxBattler)
     return party[idxParty].name
   end
 
@@ -671,14 +671,14 @@ class PokeBattle_Battle
     pbCommonAnimation(weather_data.animation) if showAnim && weather_data
     pbHideAbilitySplash(user) if user
     case @field.weather
-    when :Sun         then pbDisplay(_INTL("The sunlight turned harsh!"))
-    when :Rain        then pbDisplay(_INTL("It started to rain!"))
-    when :Sandstorm   then pbDisplay(_INTL("A sandstorm brewed!"))
-    when :Hail        then pbDisplay(_INTL("It started to hail!"))
-    when :HarshSun    then pbDisplay(_INTL("The sunlight turned extremely harsh!"))
-    when :HeavyRain   then pbDisplay(_INTL("A heavy rain began to fall!"))
-    when :StrongWinds then pbDisplay(_INTL("Mysterious strong winds are protecting Flying-type Pokémon!"))
-    when :ShadowSky   then pbDisplay(_INTL("A shadow sky appeared!"))
+    when :Sun         then pbDisplay(_INTL("La lumière du soleil est devenue fort!"))
+    when :Rain        then pbDisplay(_INTL("Il a commencé à pleuvoir!"))
+    when :Sandstorm   then pbDisplay(_INTL("Une tempête de sable se préparait!"))
+    when :Hail        then pbDisplay(_INTL("Il a commencé à grêler!"))
+    when :HarshSun    then pbDisplay(_INTL("La lumière du soleil est devenue extrêmement fort!"))
+    when :HeavyRain   then pbDisplay(_INTL("Une forte pluie a commencé à tomber!"))
+    when :StrongWinds then pbDisplay(_INTL("Des vents forts et mystérieux protègent les Pokémon de type Vol!"))
+    when :ShadowSky   then pbDisplay(_INTL("Un ciel d'ombre est apparu!"))
     end
     # Check for end of primordial weather, and weather-triggered form changes
     eachBattler { |b| b.pbCheckFormOnWeatherChange }
@@ -692,12 +692,12 @@ class PokeBattle_Battle
     when :HarshSun
       if !pbCheckGlobalAbility(:DESOLATELAND)
         @field.weather = :None
-        pbDisplay("The harsh sunlight faded!")
+        pbDisplay("La forte lumière du soleil s'est estompée!")
       end
     when :HeavyRain
       if !pbCheckGlobalAbility(:PRIMORDIALSEA)
         @field.weather = :None
-        pbDisplay("The heavy rain has lifted!")
+        pbDisplay("La forte pluie s'est arrêtée!")
       end
     # when :StrongWinds
     #   if !pbCheckGlobalAbility(:DELTASTREAM)
@@ -733,13 +733,13 @@ class PokeBattle_Battle
     pbHideAbilitySplash(user) if user
     case @field.terrain
     when :Electric
-      pbDisplay(_INTL("An electric current runs across the battlefield!"))
+      pbDisplay(_INTL("Un courant électrique traverse le champ de bataille!"))
     when :Grassy
-      pbDisplay(_INTL("Grass grew to cover the battlefield!"))
+      pbDisplay(_INTL("L'herbe a poussé pour couvrir le champ de bataille!"))
     when :Misty
-      pbDisplay(_INTL("Mist swirled about the battlefield!"))
+      pbDisplay(_INTL("La brume tourne autour du champ de bataille!"))
     when :Psychic
-      pbDisplay(_INTL("The battlefield got weird!"))
+      pbDisplay(_INTL("Le champ de bataille est devenu étrange!"))
     end
     # Check for terrain seeds that boost stats in a terrain
     eachBattler { |b| b.pbItemTerrainStatBoostCheck }

@@ -49,6 +49,7 @@ def pbCallTitle
 end
 
 def mainFunction
+  $DEBUG = true
   if $DEBUG
     pbCriticalCode { mainFunctionDebug }
   else
@@ -117,7 +118,7 @@ end
 # def playInViewPort(viewport)
 #   @finished=false
 #   @currentFrame = 1
-#   @initialTime = Time.now
+#   @initialTime = Time.nowF
 #   @timeElapsed = Time.now
 #
 #   pbBGMPlay(@bgm)

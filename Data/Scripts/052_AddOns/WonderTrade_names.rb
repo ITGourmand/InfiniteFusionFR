@@ -16,6 +16,7 @@ RandTrainerNames_male = [
   "Ronald",
   "Randy",
   "William",
+  "Anthony",
   "Ash",
   "Jesse",
   "Roger",
@@ -154,6 +155,7 @@ RandTrainerNames_others = [
 RandPokeNick = [
   "Poncho",
   "King",
+  "Gourmand",
   "Batar",
   "Pneuma",
   "goo",

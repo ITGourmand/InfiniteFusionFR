@@ -3,8 +3,8 @@ def pbAddPokemonID(pokemon, level = nil, seeform = true, dontRandomize = false)
   dontRandomize = true if $game_switches[SWITCH_CHOOSING_STARTER] #when choosing starters
 
   if pbBoxesFull?
-    Kernel.pbMessage(_INTL("There's no more room for Pokémon!\1"))
-    Kernel.pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
+    Kernel.pbMessage(_INTL("Il n'y a plus de place pour les Pokémon!\1"))
+    Kernel.pbMessage(_INTL("Les boîtes Pokémon sont pleines et ne peuvent plus en accepter!"))
     return false
   end
 
@@ -17,7 +17,7 @@ def pbAddPokemonID(pokemon, level = nil, seeform = true, dontRandomize = false)
   end
 
   speciesname = PBSpecies.getName(pokemon.species)
-  Kernel.pbMessage(_INTL("{1} obtained {2}!\\se[itemlevel]\1", $Trainer.name, speciesname))
+  Kernel.pbMessage(_INTL("{1} a obtenue {2}!\\se[itemlevel]\1", $Trainer.name, speciesname))
   pbNicknameAndStore(pokemon)
   pbSeenForm(pokemon) if seeform
   return true
@@ -27,8 +27,8 @@ def pbAddPokemonID(pokemon_id, level = 1, see_form = true, skip_randomize = fals
   return false if !pokemon_id
   skip_randomize = true if $game_switches[SWITCH_CHOOSING_STARTER] #when choosing starters
   if pbBoxesFull?
-    pbMessage(_INTL("There's no more room for Pokémon!\1"))
-    pbMessage(_INTL("The Pokémon Boxes are full and can't accept any more!"))
+    pbMessage(_INTL("Il n'y a plus de place pour les Pokémon!\1"))
+    pbMessage(_INTL("Les boîtes Pokémon sont pleines et ne peuvent plus en accepter!"))
     return false
   end
   if pokemon_id.is_a?(Integer) && level.is_a?(Integer)
@@ -41,7 +41,7 @@ def pbAddPokemonID(pokemon_id, level = 1, see_form = true, skip_randomize = fals
     tryRandomizeGiftPokemon(pokemon, skip_randomize)
   end
 
-  pbMessage(_INTL("{1} obtained {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
+  pbMessage(_INTL("{1} a obtenue {2}!\\me[Pkmn get]\\wtnp[80]\1", $Trainer.name, species_name))
   pbNicknameAndStore(pokemon)
   $Trainer.pokedex.register(pokemon) if see_form
   return true
@@ -155,8 +155,12 @@ end
 
 def addShinyStarsToGraphicsArray(imageArray, xPos, yPos, shinyBody, shinyHead, debugShiny, srcx = nil, srcy = nil, width = nil, height = nil,
                                  showSecondStarUnder = false, showSecondStarAbove = false)
-  color = debugShiny ? Color.new(0, 0, 0, 255) : nil
-  imageArray.push(["Graphics/Pictures/shiny", xPos, yPos, srcx, srcy, width, height, color])
+  color = nil
+  if debugShiny
+    imageArray.push(["Graphics/Pictures/shiny_debug", xPos, yPos, srcx, srcy, width, height, color])
+  else
+    imageArray.push(["Graphics/Pictures/shiny", xPos, yPos, srcx, srcy, width, height, color])
+  end
   if shinyBody && shinyHead
     if showSecondStarUnder
       yPos += 15
@@ -165,7 +169,11 @@ def addShinyStarsToGraphicsArray(imageArray, xPos, yPos, shinyBody, shinyHead, d
     else
       xPos -= 15
     end
-    imageArray.push(["Graphics/Pictures/shiny", xPos, yPos, srcx, srcy, width, height, color])
+    if debugShiny
+      imageArray.push(["Graphics/Pictures/shiny_debug", xPos, yPos, srcx, srcy, width, height, color])
+    else
+      imageArray.push(["Graphics/Pictures/shiny", xPos, yPos, srcx, srcy, width, height, color])
+    end
   end
   # if onlyOutline
   #   imageArray.push(["Graphics/Pictures/shiny_black",xPos,yPos,srcx,srcy,width,height,color])
@@ -473,9 +481,9 @@ end
 
 def get_difficulty_text
   if $game_switches[SWITCH_GAME_DIFFICULTY_EASY]
-    return "Easy"
+    return "Facile"
   elsif $game_switches[SWITCH_GAME_DIFFICULTY_HARD]
-    return "Hard"
+    return "Difficile"
   else
     return "Normal"
   end

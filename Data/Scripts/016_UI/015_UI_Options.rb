@@ -252,6 +252,13 @@ class Window_PokemonOption < Window_DrawableCommand
     return @options.length + 1
   end
 
+  def drawCursor(index,rect)
+    if self.index==index
+      pbCopyBitmap(self.contents,@selarrow.bitmap,rect.x,rect.y)
+    end
+    return Rect.new(rect.x+16,rect.y,rect.width-16,rect.height)
+  end
+
   def dont_draw_item(index)
     return false
   end
@@ -259,7 +266,7 @@ class Window_PokemonOption < Window_DrawableCommand
   def drawItem(index, _count, rect)
     return if dont_draw_item(index)
     rect = drawCursor(index, rect)
-    optionname = (index == @options.length) ? _INTL("Confirm") : @options[index].name
+    optionname = (index == @options.length) ? _INTL("Confirmer") : @options[index].name
     optionwidth = rect.width * 9 / 20
     pbDrawShadowText(self.contents, rect.x, rect.y, optionwidth, rect.height, optionname,
                      @nameBaseColor, @nameShadowColor)
@@ -344,7 +351,7 @@ end
 #===============================================================================
 class PokemonOption_Scene
   def getDefaultDescription
-    return _INTL("Speech frame {1}.", 1 + $PokemonSystem.textskin)
+    return _INTL("Vitesse de dialogue {1}.", 1 + $PokemonSystem.textskin)
   end
 
   def pbUpdate
@@ -364,7 +371,7 @@ class PokemonOption_Scene
     @sprites["title"] = Window_UnformattedTextPokemon.newWithSize(
       _INTL("Options"), 0, 0, Graphics.width, 64, @viewport)
     @sprites["textbox"] = pbCreateMessageWindow
-    @sprites["textbox"].text = _INTL("Speech frame {1}.", 1 + $PokemonSystem.textskin)
+    @sprites["textbox"].text = _INTL("Vitesse de dialogue {1}.", 1 + $PokemonSystem.textskin)
     @sprites["textbox"].letterbyletter = false
     pbSetSystemFont(@sprites["textbox"].contents)
   end
@@ -455,7 +462,7 @@ class PokemonOption_Scene
           end
           if $PokemonSystem.textskin != oldTextSkin
             @sprites["textbox"].setSkin(MessageConfig.pbGetSpeechFrame())
-            @sprites["textbox"].text = _INTL("Speech frame {1}.", 1 + $PokemonSystem.textskin)
+            @sprites["textbox"].text = _INTL("Vitesse de dialogue {1}.", 1 + $PokemonSystem.textskin)
             oldTextSkin = $PokemonSystem.textskin
           end
           if $PokemonSystem.frame != oldSystemSkin

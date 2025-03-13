@@ -3,23 +3,23 @@ def oricorioEventPickFlower(flower_color)
   quest_progression = pbGet(VAR_ORICORIO_FLOWERS)
   if flower_color == :PINK
     if !$game_switches[SWITCH_ORICORIO_QUEST_PINK]
-      pbMessage(_INTL("Woah! A Pokémon jumped out of the flower!"))
+      pbMessage(_INTL("Ouah ! Un Pokémon a sauté hors de la fleur!"))
       pbWildBattle(:FOMANTIS, 10)
     end
     $game_switches[SWITCH_ORICORIO_QUEST_PINK] = true
-    pbMessage(_INTL("It's a flower with pink nectar."))
+    pbMessage(_INTL("C'est une fleur avec du nectar rose."))
     pbSEPlay("MiningAllFound")
-    pbMessage(_INTL("{1} picked some of the pink flowers.", $Trainer.name))
+    pbMessage(_INTL("{1} a cueilli quelques fleurs roses.", $Trainer.name))
   elsif flower_color == :RED && quest_progression == 1
     $game_switches[SWITCH_ORICORIO_QUEST_RED] = true
-    pbMessage(_INTL("It's a flower with red nectar."))
+    pbMessage(_INTL("C'est une fleur avec du nectar rouge."))
     pbSEPlay("MiningAllFound")
-    pbMessage(_INTL("{1} picked some of the red flowers.", $Trainer.name))
+    pbMessage(_INTL("{1} a cueilli quelques fleurs rouges.", $Trainer.name))
   elsif flower_color == :BLUE && quest_progression == 2
     $game_switches[SWITCH_ORICORIO_QUEST_BLUE] = true
-    pbMessage(_INTL("It's a flower with blue nectar."))
+    pbMessage(_INTL("C'est une fleur au nectar bleu."))
     pbSEPlay("MiningAllFound")
-    pbMessage(_INTL("{1} picked some of the blue flowers.", $Trainer.name))
+    pbMessage(_INTL("{1} a cueilli quelques fleurs bleues.", $Trainer.name))
   end
 
 end
@@ -30,7 +30,7 @@ def changeOricorioFlower(form = 1)
       obtainHat(HAT_FLOWER)
       $PokemonGlobal.stepcount += 1
     else
-      pbMessage(_INTL("Woah! A Pokémon jumped out of the flower!"))
+      pbMessage(_INTL("Ouah ! Un Pokémon a sauté hors de la fleur!"))
       pbWildBattle(:FOMANTIS, 10)
       $PokemonGlobal.stepcount += 1
     end
@@ -65,10 +65,10 @@ def changeOricorioFlower(form = 1)
     if (pbGet(1) != -1)
       poke = $Trainer.party[pbGet(1)]
       if changeOricorioForm(poke, form)
-        pbMessage(_INTL("{1} switched to the {2} style", poke.name, form_name))
+        pbMessage(_INTL("{1} passé à au style {2}", poke.name, form_name))
         pbSet(1, poke.name)
       else
-        pbMessage(_INTL("{1} remained the same...", poke.name, form_name))
+        pbMessage(_INTL("{1} est resté le même...", poke.name, form_name))
       end
     end
   end
@@ -377,7 +377,7 @@ def Kernel.setRocketPassword(variableNum)
 end
 
 def obtainBadgeMessage(badgeName)
-  Kernel.pbMessage(_INTL("\\me[Badge get]{1} obtained the {2}!", $Trainer.name, badgeName))
+  Kernel.pbMessage(_INTL("\\me[Badge get]{1} a obtenu le {2}!", $Trainer.name, badgeName))
 end
 
 KANTO_OUTDOOR_MAPS = [
@@ -709,8 +709,8 @@ def regirock_steel_move_boulder()
 end
 
 def displayRandomizerErrorMessage()
-  Kernel.pbMessage(_INTL("The randomizer has encountered an error. You should try to re-randomize your game as soon as possible."))
-  Kernel.pbMessage(_INTL("You can do this on the top floor of Pokémon Centers."))
+  Kernel.pbMessage(_INTL("Le générateur de randomisation a rencontré une erreur. Vous devriez essayer de re-randomiser votre jeu dès que possible."))
+  Kernel.pbMessage(_INTL("Vous pouvez le faire au dernier étage des Centres Pokémon."))
 end
 
 #ex:Game_Event.new
@@ -924,8 +924,8 @@ def promptCaughtPokemonAction(pokemon)
   return pbStorePokemon(pokemon) if !$Trainer.party_full?
   return promptKeepOrRelease(pokemon) if isOnPinkanIsland() && !$game_switches[SWITCH_PINKAN_FINISHED]
   while !pickedOption
-    command = pbMessage(_INTL("\\ts[]Your team is full!"),
-                        [_INTL("Add to your party"), _INTL("Store to PC"),], 2)
+    command = pbMessage(_INTL("\\ts[]Votre équipe est complète!"),
+                        [_INTL("Ajoutez à votre groupe"), _INTL("Stocker sur PC"),], 2)
     echoln ("command " + command.to_s)
     case command
     when 0 #SWAP
@@ -946,8 +946,8 @@ end
 def promptKeepOrRelease(pokemon)
   pickedOption = false
   while !pickedOption
-    command = pbMessage(_INTL("\\ts[]Your team is full!"),
-                        [_INTL("Release a party member"), _INTL("Release this #{pokemon.name}"),], 2)
+    command = pbMessage(_INTL("\\ts[]Votre équipe est complète!"),
+                        [_INTL("Libérer un membre du groupe"), _INTL("Libérez ce #{pokemon.name}"),], 2)
     echoln ("command " + command.to_s)
     case command
     when 0 #SWAP
@@ -1047,7 +1047,7 @@ def exportFusedPokemonForShowdown(pokemon)
     nameLine = _INTL("{1} ({2})", pokemon.name, species_name)
   end
 
-  abilityLine = _INTL("Ability: {1}", pokemon.ability.name)
+  abilityLine = _INTL("Talent: {1}", pokemon.ability.name)
   levelLine = _INTL("Level: {1}", pokemon.level)
 
   fusionLine = ""
@@ -1398,7 +1398,7 @@ def get_mart_exclusive_items(city)
   return items_list
 end
 
-def calculate_pokemon_weight(pokemon,nerf=0)
+def calculate_pokemon_weight(pokemon)
 
   base_weight = pokemon.weight
   ivs = []
@@ -1426,20 +1426,18 @@ def calculate_pokemon_weight(pokemon,nerf=0)
 
   # Cap the weight between min and max values
   weight = [[weight, min_weight].max, max_weight].min
-  weight -= nerf if weight- nerf > min_weight
+
   return weight.round(2) # Round to 2 decimal places
 end
 
-#nerf: remove x kg from each generated pokemon
-def generate_weight_contest_entries(species, level, resultsVariable,nerf=0)
+def generate_weight_contest_entries(species, level, resultsVariable)
   #echoln "Generating Pokemon"
   pokemon1 = pbGenerateWildPokemon(species, level) #Pokemon.new(species,level)
   pokemon2 = pbGenerateWildPokemon(species, level) #Pokemon.new(species,level)
   new_weights = []
-  new_weights << calculate_pokemon_weight(pokemon1,nerf)
-  new_weights << calculate_pokemon_weight(pokemon2,nerf)
+  new_weights << calculate_pokemon_weight(pokemon1)
+  new_weights << calculate_pokemon_weight(pokemon2)
   echoln new_weights
-  echoln "(nerfed by -#{nerf})"
   pbSet(resultsVariable, new_weights.max)
 
 end

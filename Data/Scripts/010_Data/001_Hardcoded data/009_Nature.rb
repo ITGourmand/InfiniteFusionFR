@@ -32,13 +32,13 @@ end
 GameData::Nature.register({
   :id           => :HARDY,
   :id_number    => 0,
-  :name         => _INTL("Hardy")
+  :name         => _INTL("Hardi")
 })
 
 GameData::Nature.register({
   :id           => :LONELY,
   :id_number    => 1,
-  :name         => _INTL("Lonely"),
+  :name         => _INTL("Solo"),
   :stat_changes => [[:ATTACK, 10], [:DEFENSE, -10]]
 })
 
@@ -52,21 +52,21 @@ GameData::Nature.register({
 GameData::Nature.register({
   :id           => :ADAMANT,
   :id_number    => 3,
-  :name         => _INTL("Adamant"),
+  :name         => _INTL("Rigide"),
   :stat_changes => [[:ATTACK, 10], [:SPECIAL_ATTACK, -10]]
 })
 
 GameData::Nature.register({
   :id           => :NAUGHTY,
   :id_number    => 4,
-  :name         => _INTL("Naughty"),
+  :name         => _INTL("Mauvais"),
   :stat_changes => [[:ATTACK, 10], [:SPECIAL_DEFENSE, -10]]
 })
 
 GameData::Nature.register({
   :id           => :BOLD,
   :id_number    => 5,
-  :name         => _INTL("Bold"),
+  :name         => _INTL("Assuré"),
   :stat_changes => [[:DEFENSE, 10], [:ATTACK, -10]]
 })
 
@@ -79,122 +79,122 @@ GameData::Nature.register({
 GameData::Nature.register({
   :id           => :RELAXED,
   :id_number    => 7,
-  :name         => _INTL("Relaxed"),
+  :name         => _INTL("Relax"),
   :stat_changes => [[:DEFENSE, 10], [:SPEED, -10]]
 })
 
 GameData::Nature.register({
   :id           => :IMPISH,
   :id_number    => 8,
-  :name         => _INTL("Impish"),
+  :name         => _INTL("Malin"),
   :stat_changes => [[:DEFENSE, 10], [:SPECIAL_ATTACK, -10]]
 })
 
 GameData::Nature.register({
   :id           => :LAX,
   :id_number    => 9,
-  :name         => _INTL("Lax"),
+  :name         => _INTL("Lache"),
   :stat_changes => [[:DEFENSE, 10], [:SPECIAL_DEFENSE, -10]]
 })
 
 GameData::Nature.register({
   :id           => :TIMID,
   :id_number    => 10,
-  :name         => _INTL("Timid"),
+  :name         => _INTL("Timide"),
   :stat_changes => [[:SPEED, 10], [:ATTACK, -10]]
 })
 
 GameData::Nature.register({
   :id           => :HASTY,
   :id_number    => 11,
-  :name         => _INTL("Hasty"),
+  :name         => _INTL("Pressé"),
   :stat_changes => [[:SPEED, 10], [:DEFENSE, -10]]
 })
 
 GameData::Nature.register({
   :id           => :SERIOUS,
   :id_number    => 12,
-  :name         => _INTL("Serious")
+  :name         => _INTL("Serieux")
 })
 
 GameData::Nature.register({
   :id           => :JOLLY,
   :id_number    => 13,
-  :name         => _INTL("Jolly"),
+  :name         => _INTL("Jovial"),
   :stat_changes => [[:SPEED, 10], [:SPECIAL_ATTACK, -10]]
 })
 
 GameData::Nature.register({
   :id           => :NAIVE,
   :id_number    => 14,
-  :name         => _INTL("Naive"),
+  :name         => _INTL("Naif"),
   :stat_changes => [[:SPEED, 10], [:SPECIAL_DEFENSE, -10]]
 })
 
 GameData::Nature.register({
   :id           => :MODEST,
   :id_number    => 15,
-  :name         => _INTL("Modest"),
+  :name         => _INTL("Modeste"),
   :stat_changes => [[:SPECIAL_ATTACK, 10], [:ATTACK, -10]]
 })
 
 GameData::Nature.register({
   :id           => :MILD,
   :id_number    => 16,
-  :name         => _INTL("Mild"),
+  :name         => _INTL("Doux"),
   :stat_changes => [[:SPECIAL_ATTACK, 10], [:DEFENSE, -10]]
 })
 
 GameData::Nature.register({
   :id           => :QUIET,
   :id_number    => 17,
-  :name         => _INTL("Quiet"),
+  :name         => _INTL("Discret"),
   :stat_changes => [[:SPECIAL_ATTACK, 10], [:SPEED, -10]]
 })
 
 GameData::Nature.register({
   :id           => :BASHFUL,
   :id_number    => 18,
-  :name         => _INTL("Bashful")
+  :name         => _INTL("Pudique")
 })
 
 GameData::Nature.register({
   :id           => :RASH,
   :id_number    => 19,
-  :name         => _INTL("Rash"),
+  :name         => _INTL("Foufou"),
   :stat_changes => [[:SPECIAL_ATTACK, 10], [:SPECIAL_DEFENSE, -10]]
 })
 
 GameData::Nature.register({
   :id           => :CALM,
   :id_number    => 20,
-  :name         => _INTL("Calm"),
+  :name         => _INTL("Calme"),
   :stat_changes => [[:SPECIAL_DEFENSE, 10], [:ATTACK, -10]]
 })
 
 GameData::Nature.register({
   :id           => :GENTLE,
   :id_number    => 21,
-  :name         => _INTL("Gentle"),
+  :name         => _INTL("Gentil"),
   :stat_changes => [[:SPECIAL_DEFENSE, 10], [:DEFENSE, -10]]
 })
 
 GameData::Nature.register({
   :id           => :SASSY,
   :id_number    => 22,
-  :name         => _INTL("Sassy"),
+  :name         => _INTL("Malpoli"),
   :stat_changes => [[:SPECIAL_DEFENSE, 10], [:SPEED, -10]]
 })
 
 GameData::Nature.register({
   :id           => :CAREFUL,
   :id_number    => 23,
-  :name         => _INTL("Careful"),
+  :name         => _INTL("Prudent"),
   :stat_changes => [[:SPECIAL_DEFENSE, 10], [:SPECIAL_ATTACK, -10]]
 })
 
 GameData::Nature.register({
   :id           => :QUIRKY,
   :id_number    => 24,
-  :name         => _INTL("Quirky")
+  :name         => _INTL("Bizarre")
 })

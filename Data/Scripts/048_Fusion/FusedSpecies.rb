@@ -244,6 +244,7 @@ module GameData
         if prefix[-1] == suffix[0]
           prefix = prefix[0..-2]
         end
+        
         return prefix + suffix
 
       rescue

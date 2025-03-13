@@ -473,16 +473,16 @@ class PokemonLoadScreen
         end
       end
 
-      commands[cmd_new_game = commands.length] = _INTL('New Game')
+      commands[cmd_new_game = commands.length] = _INTL('Nouvelle partie')
       if new_game_plus
-        commands[cmd_new_game_plus = commands.length] = _INTL('New Game +')
+        commands[cmd_new_game_plus = commands.length] = _INTL('Nouvelle partie +')
       end
       commands[cmd_options = commands.length] = _INTL('Options')
       commands[cmd_language = commands.length] = _INTL('Language') if Settings::LANGUAGES.length >= 2
       commands[cmd_discord = commands.length] = _INTL('Discord')
       commands[cmd_wiki = commands.length] = _INTL('Wiki')
       commands[cmd_debug = commands.length] = _INTL('Debug') if $DEBUG
-      commands[cmd_quit = commands.length] = _INTL('Quit Game')
+      commands[cmd_quit = commands.length] = _INTL('Quitter le jeu')
       cmd_left = -3
       cmd_right = -2
 
@@ -591,10 +591,10 @@ end
 class PokemonSaveScreen
   def doSave(slot)
     if Game.save(slot)
-      pbMessage(_INTL("\\se[]{1} saved the game.\\me[GUI save game]\\wtnp[30]", $Trainer.name))
+      pbMessage(_INTL("\\se[]{1} a sauvegardé la partie.\\me[GUI save game]\\wtnp[30]", $Trainer.name))
       return true
     else
-      pbMessage(_INTL("\\se[]Save failed.\\wtnp[30]"))
+      pbMessage(_INTL("\\se[]Savegarde interrompue.\\wtnp[30]"))
       return false
     end
   end
@@ -608,11 +608,11 @@ class PokemonSaveScreen
       ret = slotSelect
     else
       choices = [
-        _INTL("Save to #{$Trainer.save_slot}"),
-        _INTL("Save to another slot"),
-        _INTL("Don't save")
+        _INTL("Sauvegarder dans #{$Trainer.save_slot}"),
+        _INTL("Sauvegarder dans un autre slot"),
+        _INTL("Ne pas sauvegarder")
       ]
-      opt = pbMessage(_INTL('Would you like to save the game?'), choices, 3)
+      opt = pbMessage(_INTL('Voulez-vous sauvegarder le jeu?'), choices, 3)
       if opt == 0
         pbSEPlay('GUI save choice')
         ret = doSave($Trainer.save_slot)
@@ -638,7 +638,7 @@ class PokemonSaveScreen
       slot = SaveData::MANUAL_SLOTS[index]
       # Confirm if slot not empty
       if !File.file?(SaveData.get_full_path(slot)) ||
-        pbConfirmMessageSerious(_INTL("Are you sure you want to overwrite the save in #{slot}?")) # If the slot names were changed this grammar might need adjustment.
+        pbConfirmMessageSerious(_INTL("Êtes-vous sûr de vouloir écraser la sauvegarde dans #{slot}?")) # If the slot names were changed this grammar might need adjustment.
         pbSEPlay('GUI save choice')
         ret = doSave(slot)
       end
@@ -650,7 +650,7 @@ class PokemonSaveScreen
   # Handles the UI for the save slot select screen. Returns the index of the chosen slot, or -1.
   # Based on pbShowCommands
   def slotSelectCommands(choices, choice_info, defaultCmd = 0)
-    msgwindow = Window_AdvancedTextPokemon.new(_INTL("Which slot to save in?"))
+    msgwindow = Window_AdvancedTextPokemon.new(_INTL("Quel slot sauvegarder?"))
     msgwindow.z = 99999
     msgwindow.visible = true
     msgwindow.letterbyletter = true

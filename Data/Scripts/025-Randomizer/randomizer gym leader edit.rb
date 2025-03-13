@@ -376,23 +376,23 @@ def Kernel.pbShuffleTrainersCustom(bst_range = 50)
   randomTrainersHash = Hash.new
   bst_range = pbGet(VAR_RANDOMIZER_TRAINER_BST)
 
-  Kernel.pbMessage(_INTL("Parsing custom sprites folder"))
+  Kernel.pbMessage(_INTL("Analyse du dossier des sprites personnalisés"))
   customsList = getCustomSpeciesList(true, true)
-  Kernel.pbMessage(_INTL("{1} sprites found", customsList.length.to_s))
+  Kernel.pbMessage(_INTL("{1} sprites trouvés", customsList.length.to_s))
 
   if customsList.length == 0
-    Kernel.pbMessage(_INTL("To use custom sprites, please place correctly named sprites in the /CustomBattlers folder. See readMe.txt for more information"))
-    Kernel.pbMessage(_INTL("Trainer Pokémon will include auto-generated sprites."))
+    Kernel.pbMessage(_INTL("Pour utiliser des sprites personnalisés, veuillez placer les sprites correctement nommés dans le dossier /CustomBattlers. Consultez readMe.txt pour plus d'informations"))
+    Kernel.pbMessage(_INTL("Les dresseurs de Pokémon incluront des sprites générés automatiquement."))
     return Kernel.pbShuffleTrainers(bst_range)
   elsif customsList.length < 200
-    if Kernel.pbConfirmMessage(_INTL("Too few custom sprites were found. This will result in a very low Pokémon variety for trainers. Would you like to disable the Custom Sprites only option?"))
-      Kernel.pbMessage(_INTL("Trainer Pokémon will include auto-generated sprites."))
+    if Kernel.pbConfirmMessage(_INTL("Trop peu de sprites personnalisés ont été trouvés. Cela entraînera une très faible variété de Pokémon pour les dresseurs. Souhaitez-vous désactiver l'option Sprites personnalisés uniquement ?"))
+      Kernel.pbMessage(_INTL("Les dresseurs de Pokémon incluront des sprites générés automatiquement."))
       return Kernel.pbShuffleTrainers(bst_range) ##use regular shuffle if not enough sprites
     end
-    if Kernel.pbConfirmMessage(_INTL("This will result in a very low Pokémon variety for trainers. Continue anyway?"))
+    if Kernel.pbConfirmMessage(_INTL("Cela entraînera une très faible variété de Pokémon pour les dresseurs. Continuez quand même?"))
       bst_range = 999
     else
-      Kernel.pbMessage(_INTL("Trainer Pokémon will include auto-generated sprites."))
+      Kernel.pbMessage(_INTL("Les dresseurs de Pokémon incluront des sprites générés automatiquement."))
       return Kernel.pbShuffleTrainers(bst_range) ##use regular shuffle if not enough sprites
     end
   end

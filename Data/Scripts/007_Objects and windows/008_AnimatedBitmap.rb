@@ -1,6 +1,137 @@
 #===============================================================================
 #
 #===============================================================================
+class Bitmap
+def hue_nocolor(level)
+    return if level == 0 # Aucun changement
+    level = [[level, -255].max, 255].min # Limite entre -255 et 255
+
+    for y in 0...height
+      for x in 0...width
+        color = get_pixel(x, y)
+        next if color.green <= 200 && (color.green <= color.blue || color.green <= color.red)
+        next if (color.red <= 40 && color.green <= 40 && color.blue <= 40) || (color.red >= 220 && color.green >= 220 && color.blue >= 220) || (color.red == color.green && color.green == color.blue)
+        gray = (color.red + color.green + color.blue) / 3 # Conversion en niveaux de gris
+        factor = level.abs / 255.0 # Normalisation entre 0 et 1
+        tolerance = 150
+        if level > 0
+          # Accentue le contraste (blanc plus blanc, noir plus noir)
+          if gray > tolerance
+            gray = [gray + factor * (255 - gray), 255].min
+          else
+            gray = [gray - factor * gray, 0].max
+          end
+        else
+          # Inverse le contraste (blanc devient noir, noir devient blanc)
+          if gray > tolerance
+            gray = 255 - [gray + factor * (255 - gray), 255].min
+          else
+            gray = 255 - [gray - factor * gray, 0].max
+          end
+        end
+        
+        set_pixel(x, y, Color.new(gray, gray, gray, color.alpha))
+      end
+    end
+  end
+end
+def checkgreen()
+  green_count = 0
+  total_pixels = width * height
+
+  for y in 0...height
+    for x in 0...width
+      color = get_pixel(x, y)
+      if color.alpha == 0
+        total_pixels -= 1
+        next
+      end
+      next if (color.green <= color.blue || color.green <= color.red)
+      green_count += 1
+    end
+  end
+  return green_count > (total_pixels / 3)
+end
+
+def checkred()
+  red_count = 0
+  total_pixels = width * height
+
+  for y in 0...height
+    for x in 0...width
+      color = get_pixel(x, y)
+      if color.alpha == 0
+        total_pixels -= 1
+        next
+      end
+      next if (color.red <= color.blue || color.red <= color.green)
+      red_count += 1
+    end
+  end
+  return red_count > (total_pixels / 3)
+end
+
+def checkblue()
+  blue_count = 0
+  total_pixels = width * height
+
+  for y in 0...height
+    for x in 0...width
+      color = get_pixel(x, y)
+      if color.alpha == 0
+        total_pixels -= 1
+        next
+      end
+      next if (color.blue <= color.green || color.blue <= color.red)
+      blue_count += 1
+    end
+  end
+  return blue_count > (total_pixels / 3)
+end
+
+def hue_yellow(intensity = 255)
+  intensity = [[intensity, 0].max, 255].min
+  width.times do |x|
+    height.times do |y|
+      color = get_pixel(x, y)
+      next if color.green + 30 <= color.blue || color.green + 30 <= color.red
+      new_red = [color.green + intensity, 255].min
+      new_green = [color.green + intensity, 255].min
+      new_blue = [color.blue - intensity, 0].max
+      set_pixel(x, y, Color.new(new_red, new_green, new_blue, color.alpha))
+    end
+  end
+end
+
+def hue_pink(intensity = 255)
+  intensity = [[intensity, 0].max, 255].min
+  width.times do |x|
+    height.times do |y|
+      color = get_pixel(x, y)
+      next if color.red + 30 <= color.blue || color.red + 30 <= color.green
+      new_red = [color.red + intensity, 255].min
+      new_green = [color.green - intensity, 0].max
+      new_blue = [color.red + intensity, 255].min
+      set_pixel(x, y, Color.new(new_red, new_green, new_blue, color.alpha))
+    end
+  end
+end
+
+def hue_cyan(intensity = 255)
+  intensity = [[intensity, 0].max, 255].min
+  width.times do |x|
+    height.times do |y|
+      color = get_pixel(x, y)
+      next if color.blue + 30 <= color.green || color.blue + 30 <= color.red
+      new_red = [color.red - intensity, 0].max
+      new_green = [color.blue + intensity, 255].min
+      new_blue = [color.blue + intensity, 255].min
+      set_pixel(x, y, Color.new(new_red, new_green, new_blue, color.alpha))
+    end
+  end
+end
+  
+
 
 class AnimatedBitmap
   attr_reader :path
@@ -52,9 +183,21 @@ class AnimatedBitmap
     end
   end
 
-
   def shiftColors(offset = 0)
-    @bitmap.bitmap.hue_change(offset)
+    if offset == 300 
+      if @bitmap.bitmap.checkgreen()
+        @bitmap.bitmap.hue_yellow(20)
+      elsif @bitmap.bitmap.checkred()
+        @bitmap.bitmap.hue_pink(20)
+      elsif @bitmap.bitmap.checkblue()
+        @bitmap.bitmap.hue_cyan(20)
+      end
+    else
+      @bitmap.bitmap.hue_change(offset)
+    end
+  end
+  def shiftBWColors(offset = 0)
+    @bitmap.bitmap.hue_nocolor(offset)
   end
 
   def [](index)

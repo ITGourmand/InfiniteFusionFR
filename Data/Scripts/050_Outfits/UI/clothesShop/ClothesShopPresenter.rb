@@ -17,16 +17,16 @@ class ClothesShopPresenter < PokemonMartScreen
     is_player_hat = item.id == @adapter.worn_clothes
     options = []
     if is_player_hat
-      options << "Take off"
+      options << "Remplacer"
     else
-      options << "Wear"
+      options << "Porter"
     end
 
     remove_dye_option_available = $Trainer.hat_color != 0
-    options << "Remove dye" if remove_dye_option_available
-    options << "Cancel"
+    options << "Retirer la couleur" if remove_dye_option_available
+    options << "Annuler"
     #if $Trainer.hat_color != 0
-    choice = pbMessage("What would you like to do?",options,-1)
+    choice = pbMessage("Que voulez vous faire?",options,-1)
     if choice == 0
       if is_player_hat #remove
         @adapter.doSpecialItemAction(:REMOVE)
@@ -39,7 +39,7 @@ class ClothesShopPresenter < PokemonMartScreen
         return false
       end
     elsif choice == 1 && remove_dye_option_available
-      if pbConfirm(_INTL("Are you sure you want to remove the dye from the {1}?", item.name))
+      if pbConfirm(_INTL("Êtes-vous sûr de vouloir enlever la teinture du {1}?", item.name))
         $Trainer.hat_color = 0
       end
       return true
@@ -52,16 +52,16 @@ class ClothesShopPresenter < PokemonMartScreen
   def playerClothesActionsMenu(item)
     is_worn = item.id == @adapter.worn_clothes
     options = []
-    options << "Wear"
-    options << "Remove dye" if $Trainer.clothes_color != 0
-    options << "Cancel"
-    choice = pbMessage("What would you like to do?",options,-1)
+    options << "Remplacer"
+    options << "Retirer la couleur" if $Trainer.clothes_color != 0
+    options << "Annuler"
+    choice = pbMessage("Qu'aimeriez-vous faire ?",options,-1)
     if choice == 0
         putOnClothes(item)
         $Trainer.clothes_color = @adapter.get_dye_color(item)
         return false
     elsif choice == 1
-      if pbConfirm(_INTL("Are you sure you want to remove the dye from the {1}?", item.name))
+      if pbConfirm(_INTL("Êtes-vous sûr de vouloir enlever la teinture du {1}?", item.name))
         $Trainer.clothes_color = 0
       end
     end
@@ -86,7 +86,7 @@ class ClothesShopPresenter < PokemonMartScreen
           next if stay_in_menu
           return
         else
-          if pbConfirm(_INTL("Would you like to put on the {1}?", item.name))
+          if pbConfirm(_INTL("Voulez-vous mettre le {1}?", item.name))
             putOnClothes(item)
             return
           end
@@ -97,28 +97,28 @@ class ClothesShopPresenter < PokemonMartScreen
       itemname = @adapter.getDisplayName(item)
       price = @adapter.getPrice(item)
       if !price.is_a?(Integer)
-        pbDisplayPaused(_INTL("You already own this item!"))
-        if pbConfirm(_INTL("Would you like to put on the {1}?", item.name))
+        pbDisplayPaused(_INTL("Vous possédez déjà cet item!"))
+        if pbConfirm(_INTL("Voulez-vous mettre le {1}?", item.name))
           @adapter.putOnOutfit(item)
         end
         next
       end
       if @adapter.getMoney < price
-        pbDisplayPaused(_INTL("You don't have enough money."))
+        pbDisplayPaused(_INTL("Vous n'avez pas assez d'argent."))
         next
       end
 
-      if !pbConfirm(_INTL("Certainly. You want {1}. That will be ${2}. OK?",
+      if !pbConfirm(_INTL("Certainement. Vous voulez {1}. Ce sera {2}$. OK?",
                           itemname, price.to_s_formatted))
         next
       end
       if @adapter.getMoney < price
-        pbDisplayPaused(_INTL("You don't have enough money."))
+        pbDisplayPaused(_INTL("Vous n'avez pas assez d'argent."))
         next
       end
       @adapter.setMoney(@adapter.getMoney - price)
       @stock.compact!
-      pbDisplayPaused(_INTL("Here you are! Thank you!")) { pbSEPlay("Mart buy item") }
+      pbDisplayPaused(_INTL("Et voilà ! Merci beaucoup!")) { pbSEPlay("Mart acheter un item") }
       @adapter.addItem(item)
       #break
     end

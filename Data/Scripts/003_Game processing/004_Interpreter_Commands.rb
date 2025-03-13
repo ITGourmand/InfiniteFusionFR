@@ -14,6 +14,7 @@ class Interpreter
       command_end
       return true
     end
+
     # Make current command's parameters available for reference via @parameters
     @parameters = @list[@index].parameters
     # Branch by command code
@@ -932,7 +933,7 @@ class Interpreter
   #-----------------------------------------------------------------------------
   def command_303
     if $Trainer
-      $Trainer.name = pbEnterPlayerName(_INTL("Your name?"), 1, @parameters[1], $Trainer.name)
+      $Trainer.name = pbEnterPlayerName(_INTL("Ton nom ?"), 1, @parameters[1], $Trainer.name)
       return true
     end
     if $game_actors && $data_actors && $data_actors[@parameters[0]] != nil
@@ -941,7 +942,7 @@ class Interpreter
         sscene = PokemonEntryScene.new
         sscreen = PokemonEntry.new(sscene)
         $game_actors[@parameters[0]].name = sscreen.pbStartScreen(
-           _INTL("Enter {1}'s name.", $game_actors[@parameters[0]].name),
+           _INTL("Entrez le nom de {1}.", $game_actors[@parameters[0]].name),
            1, @parameters[1], $game_actors[@parameters[0]].name)
       }
     end

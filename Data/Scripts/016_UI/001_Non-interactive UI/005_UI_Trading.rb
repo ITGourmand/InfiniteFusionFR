@@ -201,14 +201,14 @@ class PokemonTrade_Scene
     pbPlayDecisionSE
     pbScene1
     pbMessageDisplay(@sprites["msgwindow"],
-       _INTL("For {1}'s {2},\r\n{3} sends {4}.\1",@trader1,@pokemon.name,@trader2,@pokemon2.name)) { pbUpdate }
+       _INTL("Pour {1} {2},\r\n{3} envoye {4}.\1",@trader1,@pokemon.name,@trader2,@pokemon2.name)) { pbUpdate }
     pbMessageDisplay(@sprites["msgwindow"],
-       _INTL("{1} bids farewell to {2}.",@trader2,@pokemon2.name)) { pbUpdate }
+       _INTL("{1} fait ses adieux à {2}.",@trader2,@pokemon2.name)) { pbUpdate }
     pbScene2
     pbMessageDisplay(@sprites["msgwindow"],
        _ISPRINTF("{1:s}\r\nNN: {2:s}   OT: {3:s}\1", speciesname2,@pokemon2.name,@pokemon2.owner.name)) { pbUpdate }
     pbMessageDisplay(@sprites["msgwindow"],
-       _INTL("Take good care of {1}.",@pokemon2.name)) { pbUpdate }
+       _INTL("Prends bien soin de {1}.",@pokemon2.name)) { pbUpdate }
   end
 end
 
@@ -233,7 +233,7 @@ def pbStartTrade(pokemonIndex,newpoke,nickname,trainerName,trainerGender=0,saveg
     resetmoves = false
   else
     species_data = GameData::Species.try_get(newpoke)
-    raise _INTL("Species does not exist ({1}).", newpoke) if !species_data
+    raise _INTL("L'espèce n'existe pas ({1}).", newpoke) if !species_data
     yourPokemon = Pokemon.new(species_data.id, myPokemon.level, opponent)
   end
   yourPokemon.name          = nickname

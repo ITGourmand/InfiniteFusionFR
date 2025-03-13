@@ -321,7 +321,7 @@ class HallOfFame_Scene
     hour = totalsec / 60 / 60
     min = totalsec / 60 % 60
     pubid = sprintf("%05d", $Trainer.public_ID)
-    lefttext = _INTL("Name<r>{1}<br>", $Trainer.name)
+    lefttext = _INTL("Nom<r>{1}<br>", $Trainer.name)
     lefttext += _INTL("IDNo.<r>{1}<br>", pubid)
     lefttext += _ISPRINTF("Time<r>{1:02d}:{2:02d}<br>", hour, min)
     lefttext += _INTL("Pokédex<r>{1}/{2}<br>",
@@ -332,7 +332,7 @@ class HallOfFame_Scene
     @sprites["messagebox"].width = 192 if @sprites["messagebox"].width < 192
     @sprites["msgwindow"] = pbCreateMessageWindow(@viewport)
     pbMessageDisplay(@sprites["msgwindow"],
-                     _INTL("League champion!\nCongratulations!\\^"))
+                     _INTL("Félicitations!\nChampion de la ligue\\^"))
   end
 
   def writePokemonData(pokemon, hallNumber = -1)
@@ -362,7 +362,7 @@ class HallOfFame_Scene
        Graphics.width - 192, Graphics.height - 54, 2, BASECOLOR, SHADOWCOLOR]
     ]
     if (hallNumber > -1)
-      textPositions.push([_INTL("Hall of Fame No."), Graphics.width / 2 - 104, -6, 0, BASECOLOR, SHADOWCOLOR])
+      textPositions.push([_INTL("Panthéon No."), Graphics.width / 2 - 104, -6, 0, BASECOLOR, SHADOWCOLOR])
       textPositions.push([hallNumber.to_s, Graphics.width / 2 + 104, -6, 1, BASECOLOR, SHADOWCOLOR])
     end
     pbDrawTextPositions(overlay, textPositions)
@@ -371,7 +371,7 @@ class HallOfFame_Scene
   def writeWelcome
     overlay = @sprites["overlay"].bitmap
     overlay.clear
-    pbDrawTextPositions(overlay, [[_INTL("Welcome to the Hall of Fame!"),
+    pbDrawTextPositions(overlay, [[_INTL("Bienvenue au Panthéon!"),
                                    Graphics.width / 2, Graphics.height - 80, 2, BASECOLOR, SHADOWCOLOR]])
 
     writeDate(overlay, 120, Graphics.height - 50)
@@ -381,7 +381,7 @@ class HallOfFame_Scene
   def writeWelcomePC
     overlay = @sprites["overlay"].bitmap
     overlay.clear
-    pbDrawTextPositions(overlay, [[_INTL("Entered the Hall of Fame!"),
+    pbDrawTextPositions(overlay, [[_INTL("Entré au Panthéon!"),
                                    Graphics.width / 2, Graphics.height - 80, 2, BASECOLOR, SHADOWCOLOR]])
 
     date = $PokemonGlobal.hallOfFame[@hallIndex][:DATE]
@@ -597,11 +597,11 @@ class HallOfFamePC
   end
 
   def name
-    return _INTL("Hall of Fame")
+    return _INTL("Panthéon")
   end
 
   def access
-    pbMessage(_INTL("\\se[PC access]Accessed the Hall of Fame."))
+    pbMessage(_INTL("\\se[PC access]A accédé au Panthéon."))
     pbHallOfFamePC
   end
 end

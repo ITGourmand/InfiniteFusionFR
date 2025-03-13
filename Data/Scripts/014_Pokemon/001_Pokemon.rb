@@ -123,34 +123,34 @@ class Pokemon
   S_CHANCE_VALIDATOR = 16
 
   def print_all_attributes
-    echoln("Spriteform Body: #{@spriteform_body}")
-    echoln("Spriteform Head: #{@spriteform_head}")
-    echoln("Species: #{@species}")
-    echoln("Forced Form: #{@forced_form}")
-    echoln("Time Form Set: #{@time_form_set}")
-    echoln("Experience: #{@exp}")
-    echoln("EXP When Fused Head: #{@exp_when_fused_head}")
-    echoln("EXP When Fused Body: #{@exp_when_fused_body}")
-    echoln("EXP Gained Since Fused: #{@exp_gained_since_fused}")
-    echoln("Hat: #{@hat}")
-    echoln("Hat X: #{@hat_x}")
-    echoln("Hat Y: #{@hat_y}")
+    echoln("Sprite Corps: #{@spriteform_body}")
+    echoln("Sprite Tête: #{@spriteform_head}")
+    echoln("Espèce: #{@species}")
+    echoln("Forme Forcée: #{@forced_form}")
+    echoln("Forme par l'Heure: #{@time_form_set}")
+    echoln("Expérience: #{@exp}")
+    echoln("EXP de la Tête Fusionnée: #{@exp_when_fused_head}")
+    echoln("EXP du Corps Fusionnée: #{@exp_when_fused_body}")
+    echoln("EXP Gagnée Depuis Fusion: #{@exp_gained_since_fused}")
+    echoln("Chapeau: #{@hat}")
+    echoln("Chapeau X: #{@hat_x}")
+    echoln("Chapeau Y: #{@hat_y}")
     echoln("Steps to Hatch: #{@steps_to_hatch}")
-    echoln("HP: #{@hp}")
-    echoln("Status: #{@status}")
-    echoln("Status Count: #{@statusCount}")
-    echoln("Glitter: #{@glitter}")
-    echoln("Head Shiny: #{@head_shiny}")
-    echoln("Body Shiny: #{@body_shiny}")
-    echoln("Debug Shiny: #{@debug_shiny}")
-    echoln("Natural Shiny: #{@natural_shiny}")
+    echoln("PV: #{@hp}")
+    echoln("Statut: #{@status}")
+    echoln("Compteur de Statut: #{@statusCount}")
+    echoln("Brillance: #{@glitter}")
+    echoln("Tête Chromatique: #{@head_shiny}")
+    echoln("Corps Chromatique: #{@body_shiny}")
+    echoln("Chromatique Debug: #{@debug_shiny}")
+    echoln("Chromatique Naturel: #{@natural_shiny}")
 
-    echoln("Calculated ability: #{@ability}")
-    echoln("Abilities hash: #{getAbilityList()}")
+    echoln("Talents Calculée: #{@ability}")
+    echoln("Liste des Talents: #{getAbilityList()}")
 
-    echoln("Ability Index: #{@ability_index}")
-    echoln("Body Original Ability Index: #{@body_original_ability_index}")
-    echoln("Head Original Ability Index: #{@head_original_ability_index}")
+    echoln("Index du Talent: #{@ability_index}")
+    echoln("Index du Talent Corps: #{@body_original_ability_index}")
+    echoln("Index du Talent Tête: #{@head_original_ability_index}")
 
     move1, move2, move3, move4 = "", "", "", ""
 
@@ -159,28 +159,28 @@ class Pokemon
     move3 = @moves[2].id if @moves[2]
     move4 = @moves[3].id if @moves[3]
 
-    echoln("Moves: #{move1} #{move2} #{move3} #{move4}")
-    echoln("First Moves: #{@first_moves}")
-    echoln("Ribbons: #{@ribbons}")
-    echoln("Cool: #{@cool}, Beauty: #{@beauty}, Cute: #{@cute}, Smart: #{@smart}, Tough: #{@tough}, Sheen: #{@sheen}")
+    echoln("Attaques: #{move1} #{move2} #{move3} #{move4}")
+    echoln("Premières Attaques: #{@first_moves}")
+    echoln("Rubbans: #{@ribbons}")
+    echoln("Sang-Froid: #{@cool}, Beauté: #{@beauty}, Grâce: #{@cute}, Intelligence: #{@smart}, Robustesse: #{@tough}, Éclat: #{@sheen}")
     echoln("Pokerus: #{@pokerus}")
-    echoln("Happiness: #{@happiness}")
+    echoln("Bonheur: #{@happiness}")
     echoln("Poke Ball: #{@poke_ball}")
-    echoln("Markings: #{@markings}")
+    echoln("Marquages: #{@markings}")
     echoln("IV: #{@iv}")
-    echoln("IV Maxed: #{@ivMaxed}")
+    echoln("IV Maxé: #{@ivMaxed}")
     echoln("EV: #{@ev}")
-    echoln("Total HP: #{@totalhp}, Attack: #{@attack}, Defense: #{@defense}, Sp. Attack: #{@spatk}, Sp. Defense: #{@spdef}, Speed: #{@speed}")
-    echoln("Owner: #{@owner}")
-    echoln("Obtain Method: #{@obtain_method}")
-    echoln("Obtain Map: #{@obtain_map}")
-    echoln("Obtain Text: #{@obtain_text}")
-    echoln("Obtain Level: #{@obtain_level}")
-    echoln("Hatched Map: #{@hatched_map}")
-    echoln("Fused: #{@fused}")
-    echoln("Personal ID: #{@personalID}")
-    echoln("Hidden Power Type: #{@hiddenPowerType}")
-    echoln("Scale: #{sprite_scale}")
+    echoln("PV Total: #{@totalhp}, Attaque: #{@attack}, Défense: #{@defense}, Att. Spé: #{@spatk}, Déf. Spé: #{@spdef}, Vitesse: #{@speed}")
+    echoln("Propriétaire: #{@owner}")
+    echoln("Méthode d'Obtention: #{@obtain_method}")
+    echoln("Lieu d'Obtention: #{@obtain_map}")
+    echoln("Obtention: #{@obtain_text}")
+    echoln("Niveau d'Obtention: #{@obtain_level}")
+    echoln("Lieu d'Eclosion: #{@hatched_map}")
+    echoln("Fusionné: #{@fused}")
+    echoln("ID Personnel: #{@personalID}")
+    echoln("Type de Puissance Cachée: #{@hiddenPowerType}")
+    echoln("Taille: #{sprite_scale}")
 
     # Add other attribute print statements here
   end
@@ -411,7 +411,7 @@ class Pokemon
   # @param value [Integer] new level (between 1 and the maximum level)
   def level=(value)
     if value < 1 || value > GameData::GrowthRate.max_level
-      raise ArgumentError.new(_INTL("The level number ({1}) is invalid.", value))
+      raise ArgumentError.new(_INTL("Le numéro de niveau ({1}) n'est pas valide.", value))
     end
     @exp = growth_rate.minimum_exp_for_level(value)
     @level = value
@@ -468,7 +468,7 @@ class Pokemon
     return if !able?
     new_status = GameData::Status.try_get(value)
     if !new_status
-      raise ArgumentError, _INTL('Attempted to set {1} as Pokémon status', value.class.name)
+      raise ArgumentError, _INTL('A tenté de définir {1} comme un statut Pokémon', value.class.name)
     end
     @status = new_status.id
   end
@@ -821,7 +821,7 @@ class Pokemon
   # @param mail [Mail, nil] mail to be held by this Pokémon
   def mail=(mail)
     if !mail.nil? && !mail.is_a?(Mail)
-      raise ArgumentError, _INTL('Invalid value {1} given', mail.inspect)
+      raise ArgumentError, _INTL('Valeur non valide donnée {1}', mail.inspect)
     end
     @mail = mail
   end
@@ -1192,7 +1192,7 @@ class Pokemon
     when "revivalherb"
       gain = [-15, -15, -20][happiness_range]
     else
-      raise _INTL("Unknown happiness-changing method: {1}", method.to_s)
+      raise _INTL("Méthode inconnue pour changer le bonheur: {1}", method.to_s)
     end
     if gain > 0
       gain += 1 if @obtain_map == $game_map.map_id
@@ -1213,11 +1213,11 @@ class Pokemon
 
     choices = [
       #_INTL("Evolve both!"),
-      _INTL("Evolve head!"),
-      _INTL("Evolve body!"),
-      _INTL("Don't evolve")
+      _INTL("Évoluer la tête!"),
+      _INTL("Évoluer le corps!"),
+      _INTL("Ne pas évoluer")
     ]
-    choice = pbMessage(_INTL('Both halves of {1} are ready to evolve!', self.name), choices, 0)
+    choice = pbMessage(_INTL('Les deux moitiés de {1} sont prêtes à évoluer!', self.name), choices, 0)
     # if choice == 0  #EVOLVE BOTH
     #   newspecies = getFusionSpecies(body_evolution,head_evolution)
     if choice == 0 #EVOLVE HEAD

@@ -96,7 +96,7 @@ class PokemonPokedexMenuScreen
     dexnames = Settings.pokedex_names
     $Trainer.pokedex.accessible_dexes.each do |dex|
       if dexnames[dex].nil?
-        commands.push(_INTL("Full Pokédex"))
+        commands.push(_INTL("Pokédex Complet"))
       elsif dexnames[dex].is_a?(Array)
         commands.push(dexnames[dex][0])
       else
@@ -107,9 +107,9 @@ class PokemonPokedexMenuScreen
                       pbGetRegionalDexLength(dex)])
     end
 
-    commands.push(_INTL("Owned Pokémon"))
+    commands.push(_INTL("Pokémon possédé"))
 
-    commands.push(_INTL("Exit"))
+    commands.push(_INTL("Quitter"))
     @scene.pbStartScene(commands,commands2)
     loop do
       cmd = @scene.pbScene

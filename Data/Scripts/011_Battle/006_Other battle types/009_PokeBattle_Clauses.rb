@@ -64,7 +64,7 @@ class PokeBattle_Battler
     if ((@battle.rules["modifiedsleepclause"]) || (!selfsleep && @battle.rules["sleepclause"])) &&
        pbHasStatusPokemon?(:SLEEP)
       if showMessages
-        @battle.pbDisplay(_INTL("But {1} couldn't sleep!",pbThis(true)))
+        @battle.pbDisplay(_INTL("Mais {1} n'arrive pas dormir!",pbThis(true)))
       end
       return false
     end
@@ -104,7 +104,7 @@ class PokeBattle_Move_022   # Double Team
 
   def pbMoveFailed?(user,targets)
     if !damagingMove? && @battle.rules["evasionclause"]
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("Mais cela échoue!"))
       return true
     end
     return __clauses__pbMoveFailed?(user,targets)
@@ -118,7 +118,7 @@ class PokeBattle_Move_034   # Minimize
 
   def pbMoveFailed?(user,targets)
     if !damagingMove? && @battle.rules["evasionclause"]
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("Mais cela échoue!"))
       return true
     end
     return __clauses__pbMoveFailed?(user,targets)
@@ -132,7 +132,7 @@ class PokeBattle_Move_067   # Skill Swap
 
   def pbFailsAgainstTarget?(user,target)
     if @battle.rules["skillswapclause"]
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("Mais cela échoue!"))
       return true
     end
     return __clauses__pbFailsAgainstTarget?(user,target)
@@ -146,7 +146,7 @@ class PokeBattle_Move_06A   # Sonic Boom
 
   def pbFailsAgainstTarget?(user,target)
     if @battle.rules["sonicboomclause"]
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("Mais cela échoue!"))
       return true
     end
     return __clauses__pbFailsAgainstTarget?(user,target)
@@ -160,7 +160,7 @@ class PokeBattle_Move_06B   # Dragon Rage
 
   def pbFailsAgainstTarget?(user,target)
     if @battle.rules["sonicboomclause"]
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("Mais cela échoue!"))
       return true
     end
     return __clauses__pbFailsAgainstTarget?(user,target)
@@ -174,7 +174,7 @@ class PokeBattle_Move_070   # OHKO moves
 
   def pbFailsAgainstTarget?(user,target)
     if @battle.rules["ohkoclause"]
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("Mais cela échoue!"))
       return true
     end
     return __clauses__pbFailsAgainstTarget?(user,target)
@@ -204,7 +204,7 @@ class PokeBattle_Move_0E0   # Self-Destruct
       count  = @battle.pbAbleNonActiveCount(user.idxOwnSide)
       count += @battle.pbAbleNonActiveCount(user.idxOpposingSide)
       if count==0
-        @battle.pbDisplay(_INTL("{1}'s team was disqualified!",user.pbThis))
+        @battle.pbDisplay(_INTL("L'équipe de {1} a été disqualifiée!",user.pbThis))
         @battle.decision = (user.opposes?) ? 1 : 2
         return false
       end
@@ -221,7 +221,7 @@ class PokeBattle_Move_0E5   # Perish Song
   def pbFailsAgainstTarget?(user,target)
     if @battle.rules["perishsongclause"] &&
        @battle.pbAbleNonActiveCount(user.idxOwnSide)==0
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("Mais cela échoue!"))
       return true
     end
     return __clauses__pbFailsAgainstTarget?(user,target)
@@ -236,7 +236,7 @@ class PokeBattle_Move_0E7   # Destiny Bond
   def pbFailsAgainstTarget?(user,target)
     if @battle.rules["perishsongclause"] &&
        @battle.pbAbleNonActiveCount(user.idxOwnSide)==0
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("Mais cela échoue!"))
       return true
     end
     return __clauses__pbFailsAgainstTarget?(user,target)

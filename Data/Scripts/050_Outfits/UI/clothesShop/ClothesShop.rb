@@ -1,8 +1,8 @@
 def genericOutfitsShopMenu(stock = [], itemType = nil, versions = false, isShop=true, message=nil)
   commands = []
-  commands[cmdBuy = commands.length] = _INTL("Buy")
-  commands[cmdQuit = commands.length] = _INTL("Quit")
-  message = _INTL("Welcome! How may I serve you?") if !message
+  commands[cmdBuy = commands.length] = _INTL("Acheter")
+  commands[cmdQuit = commands.length] = _INTL("Quitter")
+  message = _INTL("Que voulez-vous choisir ?") if !message
   cmd = pbMessage(message, commands, cmdQuit + 1)
   loop do
     if cmdBuy >= 0 && cmd == cmdBuy
@@ -12,7 +12,7 @@ def genericOutfitsShopMenu(stock = [], itemType = nil, versions = false, isShop=
       presenter.pbBuyScreen
       break
     else
-      pbMessage(_INTL("Please come again!"))
+      pbMessage(_INTL("N'hésite pas à revenir !"))
       break
     end
   end
@@ -99,11 +99,11 @@ end
 
 def changeOutfit()
   commands = []
-  commands[cmdHat = commands.length] = _INTL("Change hat")
-  commands[cmdClothes = commands.length] = _INTL("Change clothes")
-  commands[cmdQuit = commands.length] = _INTL("Quit")
+  commands[cmdHat = commands.length] = _INTL("Changer de chapeau")
+  commands[cmdClothes = commands.length] = _INTL("Changer de vêtement")
+  commands[cmdQuit = commands.length] = _INTL("Quitter")
 
-  cmd = pbMessage(_INTL("What would you like to do?"), commands, cmdQuit + 1)
+  cmd = pbMessage(_INTL("Que voulez vous faire?"), commands, cmdQuit + 1)
   loop do
     if cmd == cmdClothes
       changeClothesMenu()

@@ -23,10 +23,13 @@ class FusionSelectOptionsScene < PokemonOption_Scene
 
   def initUIElements
     @sprites["title"] = Window_UnformattedTextPokemon.newWithSize(
-      _INTL("Select your Pokémon's ability and nature"), 0, 0, Graphics.width, 64, @viewport)
+      _INTL("Sélectionnez le talent et la nature"), 0, 0, Graphics.width, 64, @viewport)
     @sprites["textbox"] = pbCreateMessageWindow
     @sprites["textbox"].letterbyletter = false
     pbSetSystemFont(@sprites["textbox"].contents)
+    @sprites["title"].opacity=0
+    @sprites["title"] = Window_UnformattedTextPokemon.newWithSize(
+       _INTL("de votre Pokémon"), 0, 25, Graphics.width, 100, @viewport)
     @sprites["title"].opacity=0
   end
 
@@ -37,11 +40,11 @@ class FusionSelectOptionsScene < PokemonOption_Scene
 
 
   def getAbilityName(ability)
-    return GameData::Ability.get(ability.id).real_name
+    return ability.name
   end
 
   def getAbilityDescription(ability)
-    return GameData::Ability.get(ability.id).real_description
+    return ability.description
   end
 
   def getNatureName(nature)
@@ -50,7 +53,7 @@ class FusionSelectOptionsScene < PokemonOption_Scene
 
   def getNatureDescription(nature)
     change= GameData::Nature.get(nature.id).stat_changes
-    return "Neutral nature" if change.empty?
+    return "Nature neutre" if change.empty?
     positiveChange = change[0]
     negativeChange = change[1]
     return _INTL("+ {1}\n- {2}",GameData::Stat.get(positiveChange[0]).name,GameData::Stat.get(negativeChange[0]).name)
@@ -79,7 +82,7 @@ class FusionSelectOptionsScene < PokemonOption_Scene
 
     options = []
     if shouldSelectNickname
-      options << EnumOption.new(_INTL("Nickname"), [_INTL(@pokemon1.name), _INTL(@pokemon2.name)],
+      options << EnumOption.new(_INTL("Surnom"), [_INTL(@pokemon1.name), _INTL(@pokemon2.name)],
                                 proc { 0 },
                                 proc { |value|
                                   if value ==0
@@ -87,10 +90,10 @@ class FusionSelectOptionsScene < PokemonOption_Scene
                                   else
                                     @nickname = @pokemon2.name
                                   end
-                                }, "Select the Pokémon's nickname")
+                                }, "Choisissez le nom du Pokémon")
     end
 
-    options << EnumOption.new(_INTL("Ability"), [_INTL(getAbilityName(@abilityList[0])), _INTL(getAbilityName(@abilityList[1]))],
+    options << EnumOption.new(_INTL("Talent"), [_INTL(getAbilityName(@abilityList[0])), _INTL(getAbilityName(@abilityList[1]))],
                      proc { 0 },
                      proc { |value|
                        @selectedAbility=@abilityList[value]
