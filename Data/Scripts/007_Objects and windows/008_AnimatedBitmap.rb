@@ -35,59 +35,6 @@ def hue_nocolor(level)
     end
   end
 end
-def checkgreen()
-  green_count = 0
-  total_pixels = width * height
-
-  for y in 0...height
-    for x in 0...width
-      color = get_pixel(x, y)
-      if color.alpha == 0
-        total_pixels -= 1
-        next
-      end
-      next if (color.green <= color.blue || color.green <= color.red)
-      green_count += 1
-    end
-  end
-  return green_count > (total_pixels / 3)
-end
-
-def checkred()
-  red_count = 0
-  total_pixels = width * height
-
-  for y in 0...height
-    for x in 0...width
-      color = get_pixel(x, y)
-      if color.alpha == 0
-        total_pixels -= 1
-        next
-      end
-      next if (color.red <= color.blue || color.red <= color.green)
-      red_count += 1
-    end
-  end
-  return red_count > (total_pixels / 3)
-end
-
-def checkblue()
-  blue_count = 0
-  total_pixels = width * height
-
-  for y in 0...height
-    for x in 0...width
-      color = get_pixel(x, y)
-      if color.alpha == 0
-        total_pixels -= 1
-        next
-      end
-      next if (color.blue <= color.green || color.blue <= color.red)
-      blue_count += 1
-    end
-  end
-  return blue_count > (total_pixels / 3)
-end
 
 def hue_yellow(intensity = 255)
   intensity = [[intensity, 0].max, 255].min
@@ -184,14 +131,13 @@ class AnimatedBitmap
   end
 
   def shiftColors(offset = 0)
-    if offset == 300 
-      if @bitmap.bitmap.checkgreen()
-        @bitmap.bitmap.hue_yellow(20)
-      elsif @bitmap.bitmap.checkred()
-        @bitmap.bitmap.hue_pink(20)
-      elsif @bitmap.bitmap.checkblue()
-        @bitmap.bitmap.hue_cyan(20)
-      end
+    
+    if offset == 300
+      @bitmap.bitmap.hue_pink(20)
+    elsif  offset == 301
+      @bitmap.bitmap.hue_yellow(20)
+    elsif  offset == 302
+      @bitmap.bitmap.hue_cyan(20)
     else
       @bitmap.bitmap.hue_change(offset)
     end
