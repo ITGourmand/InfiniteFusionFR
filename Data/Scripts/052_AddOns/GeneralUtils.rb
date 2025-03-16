@@ -153,19 +153,38 @@ end
 
 
 
-def addShinyStarsToGraphicsArray(imageArray, xPos, yPos, shinyBody, shinyHead, debugShiny, srcx = nil, srcy = nil, width = nil, height = nil,
-                                 showSecondStarUnder = false, showSecondStarAbove = false)
+def addShinyStarsToGraphicsArray(imageArray, xPos, yPos, shinyBody, shinyHead, debugShiny, srcx = nil, srcy = nil, width = nil, height = nil, showSecondStarUnder = false, showSecondStarAbove = false, showSecondStarAfter = false, centraliseStar = false)
   color = nil
-  if debugShiny
-    imageArray.push(["Graphics/Pictures/shiny_debug", xPos, yPos, srcx, srcy, width, height, color])
+  if !(shinyBody && shinyHead)
+    if debugShiny
+      imageArray.push(["Graphics/Pictures/shiny_debug", xPos, yPos, srcx, srcy, width, height, color])
+    else
+      imageArray.push(["Graphics/Pictures/shiny", xPos, yPos, srcx, srcy, width, height, color])
+    end
   else
-    imageArray.push(["Graphics/Pictures/shiny", xPos, yPos, srcx, srcy, width, height, color])
-  end
-  if shinyBody && shinyHead
+    # Centralize the first Star
+    if centraliseStar
+      if showSecondStarUnder
+        yPos -= 8
+      elsif showSecondStarAbove
+        yPos += 8
+      elsif showSecondStarAfter
+        xPos -= 8
+      else
+        xPos += 8
+      end
+    end
+    if debugShiny
+      imageArray.push(["Graphics/Pictures/shiny_debug", xPos, yPos, srcx, srcy, width, height, color])
+    else
+      imageArray.push(["Graphics/Pictures/shiny", xPos, yPos, srcx, srcy, width, height, color])
+    end
     if showSecondStarUnder
       yPos += 15
     elsif showSecondStarAbove
       yPos -= 15
+    elsif showSecondStarAfter
+      xPos += 15
     else
       xPos -= 15
     end

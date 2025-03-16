@@ -42,7 +42,13 @@ module GameData
         head_number = getHeadID(dex_number, body_number)
       end
       if isBodyShiny && isHeadShiny && SHINY_COLOR_OFFSETS[body_number] && SHINY_COLOR_OFFSETS[head_number] && (SHINY_BW_OFFSETS[body_number] + SHINY_BW_OFFSETS[head_number] == 0)
-        offset = SHINY_COLOR_OFFSETS[body_number] + SHINY_COLOR_OFFSETS[head_number]
+        if (SHINY_COLOR_OFFSETS[body_number] || SHINY_COLOR_OFFSETS[head_number]) > 302 && (SHINY_COLOR_OFFSETS[body_number] || SHINY_COLOR_OFFSETS[head_number]) < 300
+          offset = SHINY_COLOR_OFFSETS[body_number] + SHINY_COLOR_OFFSETS[head_number]
+        elsif SHINY_COLOR_OFFSETS[body_number] >= 300 && SHINY_COLOR_OFFSETS[body_number] <= 302
+          offset = SHINY_COLOR_OFFSETS[head_number]
+        else 
+          offset = SHINY_COLOR_OFFSETS[body_number]
+        end
       elsif isHeadShiny && SHINY_COLOR_OFFSETS[head_number]
         offset = SHINY_COLOR_OFFSETS[head_number]
       elsif isBodyShiny && SHINY_COLOR_OFFSETS[body_number]
