@@ -1,5 +1,12 @@
 [
     {
+        "id": "absolhat",
+        "name": "Chapeau Absol",
+        "description": "Un chapeau élégant inspiré de l’ombre mystérieuse d'Absol.",
+        "price": 5000,
+        "tags": "pokemon-absol,"
+    },
+    {
         "id": "aerodactylSkull",
         "name": "Crâne de Ptéra",
         "description": "Un crâne de Ptéra qui s'adapte parfaitement à celui d'un entraîneur.",
@@ -119,6 +126,13 @@
         "howToGet": "gym reward"
     },
     {
+        "id": "bruxishcrown",
+        "name": "Couronne Fleur",
+        "description": "Une couronne ressemblant à l’hameçon en forme de fleur d’un Denticrisse.",
+        "price": 5000,
+        "tags": "hairclip,headband,pokemon-bruxish,"
+    },
+    {
         "id": "bugantenna",
         "name": "Antennes d'Insecte",
         "description": "De longues antennes qui vous donnent l'apparence d'un Pokémon de type Insecte.",
@@ -127,6 +141,13 @@
         "price": 0,
         "tags": "headband,azalea",
         "howToGet": "type trainer"
+    },
+    {
+        "id": "cafe",
+        "name": "Béret Solide",
+        "description": "Un béret robuste et pratique, parfait pour les aventuriers.",
+        "price": 500,
+        "tags": "vermillion,"
     },
     {
         "id": "calem",
@@ -156,6 +177,13 @@
         "howToGet": "gym reward"
     },
     {
+        "id": "clay",
+        "name": "Chapeau de Cowboy Blanc",
+        "description": "Un large chapeau de cow-boy populaire parmi les habitants d'Unys, notamment le champion Bardane.",
+        "price": 7500,
+        "tags": "hat,unova"
+    },
+    {
         "id": "clairbow",
         "name": "Chignon en Fil Rouge",
         "description": "Un Chignon fait d'un cordon rouge épais..",
@@ -174,6 +202,13 @@
         "price": 2000,
         "tags": "headband,pokemon-clefairy,pokemon-cleffa,pokemon-clefable",
         "howToGet": "gym reward"
+    },
+    {
+        "id": "clownnose",
+        "name": "Nez de Clown",
+        "description": "Un nez de clown rouge vif, parfait pour ajouter une touche de folie à votre look.",
+        "price": 15000,
+        "tags": "mask,special,"
     },
     {
         "id": "cloak",
@@ -250,6 +285,13 @@
         "howToGet": "type trainer"
     },
     {
+        "id": "dragonitehorns",
+        "name": "Cornes de Dracolosse",
+        "description": "De grandes cornes inspirées de Dracolosse.",
+        "price": 4500,
+        "tags": "hat,pokemon-dratini,pokemon-dragonair,pokemon-dragonite,"
+    },
+    {
         "id": "drifloon",
         "name": "Chapeau Baudrive",
         "description": "Un chapeau en caoutchouc violet en forme de Baudrive.",
@@ -278,6 +320,27 @@
         "price": 0,
         "tags": "nest,",
         "howToGet": "stay idle in celadon"
+    },
+    {
+        "id": "electrivireheadset",
+        "name": "Casque Élekable",
+        "description": "Un casque électrique inspiré d’Élekable, un accessoire parfait pour les amateurs d'énergie.",
+        "price": 10000,
+        "tags": "hat,pokemon-elekid,pokemon-electabuzz,pokemon-electivire,"
+    },
+    {
+        "id": "elioSM",
+        "name": "Casquette Grise",
+        "description": "Un simple chapeau gris, idéal pour les dresseurs cherchant discrétion et confort.",
+        "price": 1500,
+        "tags": "hat,alola,"
+    },
+    {
+        "id": "elioUSUM",
+        "name": "Chapeau Bicolore",
+        "description": "Un chapeau bicolore élégant, qui apporte une touche de modernité à toute tenue.",
+        "price": 1500,
+        "tags": "hat,alola,"
     },
     {
         "id": "egg",
@@ -333,6 +396,7 @@
         "id": "firefigther",
         "name": "Casque de Pompier",
         "description": "Un casque fait pour les héros courageux qui risquent leur vie chaque jour.",
+        "done": "yes",
         "price": 0,
         "tags": "hat, cinnabar,",
         "howToGet": "type trainer"
@@ -425,7 +489,7 @@
         "howToGet": "regional set"
     },
     {
-        "id": "goldfortuft",
+        "id": "gold2",
         "name": "Casquette Noire/Or (Cheveux)",
         "description": "Une casquette noire et jaune, portée à l'envers. Elle est populaire parmi les jeunes dresseurs à Johto.",
         "done": "yes",
@@ -445,11 +509,18 @@
         "howToGet": "reward for beating the ilex forest shedinja encounter? reward for showing a shedinja to someone?"
     },
     {
+        "id": "haxorushelmet",
+        "name": "Casque Mâchoire",
+        "description": "Un casque imposant en forme de mâchoire de Tranchodon. Il est conçu pour effrayer vos ennemis! ",
+        "price": 8000,
+        "tags": "pokemon-axew,pokemon-fraxure,pokemon-haxorus,"
+    },
+    {
         "id": "headlacecovering",
         "name": "Couvre-chef en Dentelle",
         "description": "Un délicat voile en dentelle transparent porté sur la tête.",
         "done": "yes",
-        "price": 4500,
+        "price": 1500,
         "tags": "hat,vermillion"
     },
     {
@@ -514,6 +585,22 @@
         "len": 59,
         "price": 1000,
         "tags": "hat,celadon,"
+    },
+    {
+        "id": "hilda",
+        "name": "Casquette Rose & Blanche",
+        "description": "Un chapeau rose et blanc au design raffiné, populaire parmi les jeunes dresseurs d'Unys.",
+        "done": "yes",
+        "price": 2000,
+        "tags": "hat,trainer,unova,"
+    },
+    {
+        "id": "hilda2",
+        "name": "Casquette Rose & Blanche (Cheveux)",
+        "description": "Un chapeau rose et blanc conçu spécialement pour les coiffures en \"Queue Haute\".",
+        "done": "yes",
+        "price": 2000,
+        "tags": "hat,trainer,unova,"
     },
     {
         "id": "hilbert",
@@ -607,6 +694,7 @@
         "id": "ludicolosombrero",
         "name": "Sombrero Ludicolo",
         "description": "Un sombrero festif souvent porté lors de fêtes.",
+        "done": "yes",
         "len": 53,
         "price": 18000,
         "tags": "hat,pokemon-lotad,pokemon-lombre,pokemon-ludicolo,weather-warm,"
@@ -625,6 +713,7 @@
         "id": "lycanrochooddown",
         "name": "Capuche Lougaroc (baissée)",
         "description": "Une capuche duveteuse. Baissée pour ceux qui veulent un peu de soleil.",
+        "done": "yes",
         "price": 12000,
         "tags": "pokemon-rockruff,pokemon-lycanroc_d,pokemon-lycanroc_n,"
     },
@@ -632,6 +721,7 @@
         "id": "lycanrochoodup",
         "name": "Capuche Lougaroc (levée)",
         "description": "Une capuche duveteuse. Levée pour ceux qui évitent le soleil",
+        "done": "yes",
         "price": 12000,
         "tags": "pokemon-rockruff,pokemon-lycanroc_d,pokemon-lycanroc_n,"
     },
@@ -644,6 +734,13 @@
         "price": 2000,
         "tags": "hat,trainer,johto,",
         "howToGet": "regional set"
+    },
+    {
+        "id": "maid",
+        "name": "Bonnet de Servante",
+        "description": "Un bonnet simple et charmant, qui évoque un style vintage et intemporel.",
+        "price": 1500,
+        "tags": "hat,"
     },
     {
         "id": "magicap",
@@ -725,11 +822,11 @@
         "howToGet": "regional set"
     },
     {
-        "id": "nateforhair",
+        "id": "nate2",
         "name": "Visière Rouge (Cheveux)",
         "description": "Une visière rouge avec une Poké Ball noir et blanc sur le devant. Elle est populaire parmi les jeunes dresseurs à Unys.",
         "done": "yes",
-        "len": 105,
+        "len": 110,
         "price": 2000,
         "tags": "hat,trainer,unova,",
         "howToGet": "regional set"
@@ -952,10 +1049,17 @@
         "name": "Visière Rouge et Blanche",
         "description": "Une visière rouge et blanche claire. Elle est populaire parmi les jeunes dresseurs à Unys.",
         "done": "yes",
-        "len": 75,
+        "len": 70,
         "price": 2000,
         "tags": "hat,trainer,unova,",
         "howToGet": "regional set"
+    },
+    {
+        "id": "rosa2",
+        "name": "Visière Rose & Blanche (Cheveux)",
+        "description": "Une visière rose et blanche, parfaite pour les coiffures \"Couette à Mèches Longues\".",
+        "price": 2000,
+        "tags": "hat,trainer,unova,"
     },
     {
         "id": "roseradeF",
@@ -1006,8 +1110,9 @@
         "id": "santa",
         "name": "Chapeau Festif",
         "description": "Un bonnet chaud et confortable porté pendant la saison des fêtes.",
+        "done": "yes",
         "price": 25000,
-        "tags": "hat,"
+        "tags": "hat,pokemon-delibird,"
     },
     {
         "id": "seacaptain",
@@ -1030,14 +1135,28 @@
         "howToGet": "trainer clothing store?"
     },
     {
+        "id": "seleneUSUM",
+        "name": "Chapeau de Soleil Alola",
+        "description": "Un chapeau de soleil orné de fleurs, très prisé par les jeunes dresseurs d'Alola.",
+        "price": 2000,
+        "tags": "hat, weather-warm,alola,"
+    },
+    {
         "id": "serena",
         "name": "Chapeau Rouge + Lunettes",
         "description": "Un chapeau rouge surmonté de lunettes de soleil blanches. Il est populaire parmi les jeunes dresseurs à Kalos.",
         "done": "yes",
-        "len": 86,
+        "len": 88,
         "price": 2000,
         "tags": "hat,trainer,kalos,",
         "howToGet": "trainer clothing store?"
+    },
+    {
+        "id": "simpleheadband",
+        "name": "Bandeau",
+        "description": "Un bandeau simple mais pratique, idéal pour garder les cheveux en place lors des aventures.",
+        "price": 500,
+        "tags": "headband,default,"
     },
     {
         "id": "skierF",
@@ -1141,6 +1260,13 @@
         "howToGet": "stay idle on mt. moon summit"
     },
     {
+        "id": "sudowoodohorns",
+        "name": "Corne Simularbre",
+        "description": "Une corne ramifiée faite de roche, tombée d’un Simularbre. Elle dégage une aura unique.",
+        "price": 5000,
+        "tags": "pokemon-bonsly,pokemon-sudowoodo,hairclip,headband,"
+    },
+    {
         "id": "sylveonbow",
         "name": " Noeud Nymphali",
         "description": "Un joli nœud rose pour cheveux ressemblant à celui de Nymphali.",
@@ -1164,6 +1290,14 @@
         "len": 35,
         "price": 10000,
         "tags": "hat,"
+    },
+    {
+        "id": "trevenantforestkingcrown",
+        "name": "Couronne du Roi Sylvestre",
+        "description": "Une couronne majestueuse, symbole de la royauté des forêts, associée à la puissance des Pokémon Plante.",
+        "price": 15000,
+        "tags": "hat,pokemon-phantump,pokemon-trevenant,",
+        "howToGet": "Ilex forest at night"
     },
     {
         "id": "triangularsunglasses",
@@ -1201,9 +1335,17 @@
         "howToGet": "trainer clothing store?"
     },
     {
+        "id": "voltorbitembarrette",
+        "name": "Barrette Pokéball",
+        "description": "Une barrette en forme de Pokéball, parfaite pour ajouter une touche de style à n’importe quelle coiffure.",
+        "price": 1500,
+        "tags": "hariclip,pokemon-voltorb,pokemon-electrode,"
+    },
+    {
         "id": "waterdress",
         "name": "Chapeau de Paille",
         "description": "Un chapeau simple en paille, typiquement porté par les attrapeurs de insectes.",
+        "done": "yes",
         "price": 1500,
         "tags": "hat,pewter,",
         "howToGet": "trainer clothing store?"

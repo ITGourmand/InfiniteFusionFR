@@ -14,7 +14,6 @@ class Interpreter
       command_end
       return true
     end
-
     # Make current command's parameters available for reference via @parameters
     @parameters = @list[@index].parameters
     # Branch by command code

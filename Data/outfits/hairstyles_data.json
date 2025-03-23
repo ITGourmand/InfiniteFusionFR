@@ -12,7 +12,7 @@
         "name": "Chauve",
         "description": "Un look entièrement chauve. Pas de cheveux, pas de souci, juste un crâne pur et assumé !",
         "done": "yes",
-        "price": 0,
+        "price": 500,
         "tags": "no-hair"
     },
     {
@@ -87,6 +87,7 @@
     },
     {
         "id": "dancer",
+        "name": "Dancer",
         "done": "yes",
         "price": 500,
         "tags": "fuchsia",
@@ -139,7 +140,16 @@
     },
     {
         "id": "fusionnerd",
+        "name": "Frange Balayée",
+        "description": "Une coupe audacieuse et asymétrique où les mèches forment une vague stylée.",
         "price": 1000
+    },
+    {
+        "id": "gardevoir",
+        "name": "Frange Gardienne",
+        "description": "Une frange soignée qui couvre un oeil, inspirée du charme élégant de Gardevoir.",
+        "price": 3000,
+        "howToGet": "saffron boutique"
     },
     {
         "id": "gary",
@@ -194,6 +204,13 @@
         "tags": "default"
     },
     {
+        "id": "hilda",
+        "name": "Queue Haute",
+        "description": "Une queue-de-cheval volumineuse qui montre que vous êtes prête pour l’aventure. Très populaire parmi les nouveaux dresseurs d’Unys!",
+        "price": 1500,
+        "tags": "unova,"
+    },
+    {
         "id": "hime",
         "name": "Coupe Hime",
         "description": "Une coupe traditionnelle japonaise avec des cheveux raides, une frange droite et deux longues mèches latérales.",
@@ -203,7 +220,10 @@
     },
     {
         "id": "ho-oh",
-        "price": 5000
+        "name": "Crête Phénix",
+        "description": "Une coupe flamboyante avec une queue-de-cheval haute et courbée, évoquant les plumes majestueuses d’Ho-Oh.",
+        "price": 5000,
+        "howToGet": "saffron boutique"
     },
     {
         "id": "janine",
@@ -220,6 +240,13 @@
         "name": "Vague Rocket",
         "description": "Un style dramatique et élégant avec des cheveux ultra-longs balayés en arrière, formant une vague haute défiant la gravité.",
         "price": 2000
+    },
+    {
+        "id": "kris",
+        "name": "Couettes Rebelles",
+        "description": "Des couettes pleines de ressort qui semblent défier la gravité elle-même.",
+        "price": 1500,
+        "tags": "johto,"
     },
     {
         "id": "kurt",
@@ -315,6 +342,13 @@
         "description": "Une coupe élégante rappelant la crinière d'un Lougaroc",
         "price": 3000,
         "tags": "special"
+    },
+    {
+        "id": "lyra",
+        "name": "Couettes Enjouées",
+        "description": "Des couettes rebondissantes qui dégagent une énergie insouciante et pleine de vie",
+        "price": 1500,
+        "tags": "johto,"
     },
     {
         "id": "mawile",
@@ -446,7 +480,7 @@
         "tags": "default,"
     },
     {
-        "id": "pompadourdelinquentoutfit",
+        "id": "pompadour",
         "name": "Pompadour",
         "price": 2000,
         "tags": "violet,"
@@ -500,7 +534,26 @@
         "howToGet": "Celadon special"
     },
     {
-        "id": "samurai"
+        "id": "sabrinaGSC",
+        "name": "Coupe Clairvoyante",
+        "description": "Une coupe mi-longue avec une frange distincte qui encadre le visage. Ce style a été popularisé par la Championne Sabrina.",
+        "price": 2000
+    },
+    {
+        "id": "sabrinaRBY",
+        "name": "Mèches Télékinétiques",
+        "description": "Une coiffure mystérieuse, comme si elle flottait sous l’influence d’une force invisible."
+    },
+    {
+        "id": "sada",
+        "name": "Coupe Paradoxe",
+        "description": "Un style énigmatique qui semble venir d’une autre époque... ou d’un autre monde.",
+        "tags": "paldea,"
+    },
+    {
+        "id": "samurai",
+        "name": "Samurai",
+        "description": "Une coiffure tirée des plus grands samouraïs, cette coiffure montre un signe de respect dans la ville de Rosalia."
     },
     {
         "id": "short1",
@@ -526,6 +579,11 @@
         "done": "yes",
         "price": 500,
         "tags": "default,"
+    },
+    {
+        "id": "sonia",
+        "name": "Queue Latérale",
+        "description": "Une élégante queue-de-cheval portée sur le côté, popularisée par une assistante de recherche de Galar."
     },
     {
         "id": "SpecialLatias",

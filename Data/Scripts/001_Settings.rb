@@ -5,9 +5,9 @@
 #==============================================================================#
 module Settings
   # The version of your game. It has to adhere to the MAJOR.MINOR.PATCH format.
-  GAME_VERSION = '6.4.5'
-  GAME_VERSION_NUMBER = "6.4.5"
-  LATEST_GAME_RELEASE = "6.4"
+  GAME_VERSION = '6.5.1'
+  GAME_VERSION_NUMBER = "6.5.1"
+  LATEST_GAME_RELEASE = "6.5"
 
   POKERADAR_LIGHT_ANIMATION_RED_ID = 17
   POKERADAR_LIGHT_ANIMATION_GREEN_ID = 18
@@ -63,6 +63,8 @@ module Settings
   SPRITES_FILE_URL = "https://raw.githubusercontent.com/infinitefusion/infinitefusion-e18/main/Data/sprites/CUSTOM_SPRITES"
   BASE_SPRITES_FILE_URL = "https://raw.githubusercontent.com/infinitefusion/infinitefusion-e18/main/Data/sprites/BASE_SPRITES"
 
+  CREDITS_FILE_URL = "https://infinitefusion.net/Sprite Credits.csv"
+  CUSTOM_DEX_FILE_URL = "https://raw.githubusercontent.com/infinitefusion/pif-downloadables/refs/heads/master/dex.json"
 
   STARTUP_MESSAGES = ""
 
@@ -105,8 +107,8 @@ module Settings
   BASE_POKEMON_SPRITESHEET_URL = "https://infinitefusion.net/spritesheets/spritesheets_base/"
   CUSTOM_FUSIONS_SPRITESHEET_URL = "https://infinitefusion.net/spritesheets/spritesheets_custom/"
 
-  BASE_POKEMON_SPRITESHEET_TRUE_SIZE_URL = "https://infinitefusion.net/spritesheets_truesize/spritesheets_base/"
-  CUSTOM_FUSIONS_SPRITESHEET_TRUE_SIZE_URL = "https://infinitefusion.net/spritesheets_truesize/spritesheets_custom/"
+  BASE_POKEMON_SPRITESHEET_TRUE_SIZE_URL = ""
+  CUSTOM_FUSIONS_SPRITESHEET_TRUE_SIZE_URL = ""
 
   RIVAL_STARTER_PLACEHOLDER_SPECIES = :MEW #(MEW)
   VAR_1_PLACEHOLDER_SPECIES = :DIALGA
@@ -290,7 +292,7 @@ module Settings
 
   # The name of the person who created the Pokémon storage system.
   def self.storage_creator_name
-    return _INTL("Bill")
+    return _INTL("Leo")
   end
 
   # The number of boxes in Pokémon storage.
@@ -486,7 +488,7 @@ module Settings
     [562, 50, :NINJASK,45,50],          #Boon Island
     [603, 50, :KECLEON,45,50],          #Chrono Island
     [654, 50, :WHIMSICOTT,32,45],        #Brine Road
-    [654, 50, :SCRAGGY,32,45]        #Kindle Road
+    [559, 50, :SCRAGGY,32,45]        #Kindle Road
   ]
 
   #=============================================================================
@@ -573,7 +575,8 @@ module Settings
 
   # Available menu frames. These are graphic files in "Graphics/Windowskins/".
   MENU_WINDOWSKINS = [
-    "choice 1",
+    "default_transparent",
+    "default_opaque",
     "choice 2",
     "choice 3",
     "choice 4",

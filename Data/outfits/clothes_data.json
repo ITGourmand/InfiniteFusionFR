@@ -99,6 +99,13 @@
         "howToGet": "type trainer"
     },
     {
+        "id": "butler",
+        "name": "Haut Majordome",
+        "description": "Un couvre-chef élégant porté par les majordomes les plus distingués, symbole de raffinement et de service impeccable",
+        "price": 5000,
+        "tags": "special,"
+    },
+    {
         "id": "bughakamapants",
         "name": "Pantalon Hakama Insecte",
         "description": "Un pantalon traditionnel inspiré du type Insecte, avec un filet pour capturer des Pokémon Bug!",
@@ -130,7 +137,7 @@
         "description": "Une longue cape noire et mystérieuse, parfaite pour les dresseurs occultes.",
         "len": 65,
         "done": "yes",
-        "price": 10000,
+        "price": 6500,
         "tags": "lavender,",
         "howToGet": "city exclusive outfit"
     },
@@ -183,12 +190,26 @@
         "howToGet": "found at sky pillar"
     },
     {
+        "id": "Eri",
+        "name": "Casquette Captain",
+        "description": "Un chapeau robuste porté par les leaders, inspirant courage et discipline aux dresseurs sous leurs ordres.",
+        "tags": "paldea,"
+    },
+    {
         "id": "fantasyadventurersoutfit",
         "name": "Tenue Voyageur",
+        "description": "Un habit robuste et pratique, conçu pour les dresseurs parcourant le monde aux côtés de leurs Pokémon.",
         "done": "yes",
         "price": 0,
         "tags": "special,",
         "howToGet": "Given by exotic pokemon quest npc after completing all the quests"
+    },
+    {
+        "id": "fauxwrap",
+        "name": "Voile Spectral",
+        "description": "Une robe légère qui semble onduler comme une illusion. Les rumeurs disent qu'elle serait inspirée d’un Pokémon capable de se fondre dans l’air.",
+        "price": 3500,
+        "tags": "ecruteak"
     },
     {
         "id": "fighting",
@@ -238,9 +259,18 @@
         "howToGet": "cinnabar lab after fusing 100 times"
     },
     {
+        "id": "ghostoutfit",
+        "name": "Tenue Spectral",
+        "description": "Une tenue sombre et éthérée qui semble flotter légèrement. Parfaite pour ceux qui veulent s’immerger dans l’aura des Pokémon Spectre.",
+        "tags": "type-ghost,special",
+        "howToGet": "type trainer"
+    },
+    {
         "id": "glitzerset",
         "name": "Glitch",
-        "price": 2550
+        "description": "Une tenue étrange aux motifs instables, comme si elle défiait les lois de la réalité Pokémon.",
+        "price": 2550,
+        "tags": "special,"
     },
     {
         "id": "gothhoodie",
@@ -320,6 +350,14 @@
         "howToGet": "city-exclusive outfit"
     },
     {
+        "id": "kris",
+        "name": "Tenue Cristal",
+        "description": "Une tenue populaire à Johto, portée par les jeunes dresseuses pleines d’ambition. Son éclat rappelle les gemmes du Mont Creuset.",
+        "price": 4000,
+        "tags": "johto",
+        "howToGet": "regional"
+    },
+    {
         "id": "lady",
         "name": "Robe d'Été",
         "description": "Une robe blanche élégante avec un ruban à la taille, incarnant grâce et raffinement.",
@@ -353,6 +391,7 @@
         "len": 74,
         "done": "yes",
         "price": 0,
+        "tags": "special,",
         "howToGet": "starting outfit"
     },
     {
@@ -387,6 +426,13 @@
         "description": "Un manteau robuste inspiré du pelage rugueux de Lougaroc, idéal pour les terrains escarpés.",
         "price": 18000,
         "tags": "pokemon-rockruff,pokemon-lycanroc_d,pokemon-lycanroc_n,"
+    },
+    {
+        "id": "maid",
+        "name": "Uniforme de Gouvernant",
+        "description": "Une tenue élégante et soignée, souvent portée dans les grandes demeures.",
+        "price": 5000,
+        "tags": "special,"
     },
     {
         "id": "marshweater",
@@ -572,6 +618,22 @@
         "tags": "pokemon-budew,pokemon-roserade,pokemon-roselia,celadon"
     },
     {
+        "id": "sada",
+        "name": "Tenue Antique (F)",
+        "description": "Un vêtement rudimentaire inspiré des premières dresseuses de l’histoire. Il rappelle un Pokémon anciens.",
+        "price": 10000,
+        "tags": "special",
+        "howToGet": "fossil guy final"
+    },
+    {
+        "id": "sado",
+        "name": "Tenue Antique (M)",
+        "description": "Une tenue rustique qui évoque l’époque où les humains et Pokémon vivaient en parfaite harmonie dans la nature.",
+        "price": 10000,
+        "tags": "special",
+        "howToGet": "fossil guy final"
+    },
+    {
         "id": "sandshrewoutfit",
         "name": "Tenue Sabelette",
         "description": "Un ensemble avec pantalon et cape dont la texture imite la peau de Sabelette, parfait pour se fondre dans le désert.",
@@ -650,6 +712,13 @@
         "done": "yes",
         "price": 1500,
         "tags": "default"
+    },
+    {
+        "id": "trevenantforestkingcloak",
+        "name": "Manteau du Roi Sylvestre",
+        "description": "Une cape majestueuse aux teintes de la forêt, réservée à ceux qui veulent gagner la confiance des Pokémon Plante.",
+        "price": 25000,
+        "tags": "pokemon-phantump,pokemon-trevenant,"
     },
     {
         "id": "urbanelectric",
