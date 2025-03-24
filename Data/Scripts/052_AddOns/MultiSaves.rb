@@ -46,7 +46,14 @@
 def onLoadExistingGame()
   migrateOldSavesToCharacterCustomization()
   clear_all_images()
+  loadDateSpecificChanges()
+end
 
+def loadDateSpecificChanges()
+  current_date = Time.new
+  if (current_date.day == 1 && current_date.month == 4)
+    $Trainer.hat2=HAT_CLOWN if $Trainer.unlocked_hats.include?(HAT_CLOWN)
+  end
 end
 
 def onStartingNewGame() end
@@ -379,9 +386,22 @@ class PokemonLoadScreen
   def check_for_spritepack_update()
     $updated_spritesheets = [] if !$updated_spritesheets
     if new_spritepack_was_released()
-      reset_updated_spritesheets_cache()
-      $updated_spritesheets = []
-    end
+      pbFadeOutIn() {
+        return if !downloadAllowed?()
+        should_update = pbConfirmMessage("A new spritepack was released. Would you like to let the game update your game's sprites automatically?")
+        if should_update
+          updateCreditsFile()
+          updateOnlineCustomSpritesFile()
+          reset_updated_spritesheets_cache()
+          spritesLoader = BattleSpriteLoader.new
+          spritesLoader.clear_sprites_cache(:CUSTOM)
+          spritesLoader.clear_sprites_cache(:BASE)
+
+          $updated_spritesheets = []
+          pbMessage("Data files updated. New sprites will now be downloaded as you play!")
+        end
+    }
+      end
   end
 
   def reset_updated_spritesheets_cache()
@@ -426,9 +446,7 @@ class PokemonLoadScreen
 
   def pbStartLoadScreen
     updateHttpSettingsFile
-    updateCreditsFile
     updateCustomDexFile
-    updateOnlineCustomSpritesFile
     newer_version = find_newer_available_version
     if newer_version
       pbMessage(_INTL("Version {1} is now available! Please use the game's installer to download the newest version. Check the Discord for more information.", newer_version))
@@ -444,6 +462,7 @@ class PokemonLoadScreen
       pbMessage(_INTL("{1} new custom sprites were imported into the game", $game_temp.nb_imported_sprites.to_s))
     end
     checkEnableSpritesDownload
+
     $game_temp.nb_imported_sprites = nil
     copyKeybindings()
     save_file_list = SaveData::AUTO_SLOTS + SaveData::MANUAL_SLOTS
@@ -473,16 +492,16 @@ class PokemonLoadScreen
         end
       end
 
-      commands[cmd_new_game = commands.length] = _INTL('Nouvelle partie')
+      commands[cmd_new_game = commands.length] = _INTL('New Game')
       if new_game_plus
-        commands[cmd_new_game_plus = commands.length] = _INTL('Nouvelle partie +')
+        commands[cmd_new_game_plus = commands.length] = _INTL('New Game +')
       end
       commands[cmd_options = commands.length] = _INTL('Options')
       commands[cmd_language = commands.length] = _INTL('Language') if Settings::LANGUAGES.length >= 2
       commands[cmd_discord = commands.length] = _INTL('Discord')
       commands[cmd_wiki = commands.length] = _INTL('Wiki')
       commands[cmd_debug = commands.length] = _INTL('Debug') if $DEBUG
-      commands[cmd_quit = commands.length] = _INTL('Quitter le jeu')
+      commands[cmd_quit = commands.length] = _INTL('Quit Game')
       cmd_left = -3
       cmd_right = -2
 
@@ -507,11 +526,11 @@ class PokemonLoadScreen
           @scene.pbEndScene
           Game.load(@save_data)
           $game_switches[SWITCH_V5_1] = true
+          check_for_spritepack_update()
           ensureCorrectDifficulty()
           setGameMode()
           initialize_alt_sprite_substitutions()
           $PokemonGlobal.autogen_sprites_cache = {}
-          check_for_spritepack_update()
           preload_party(@save_data[:player])
           return
         when cmd_new_game
@@ -591,10 +610,10 @@ end
 class PokemonSaveScreen
   def doSave(slot)
     if Game.save(slot)
-      pbMessage(_INTL("\\se[]{1} a sauvegardé la partie.\\me[GUI save game]\\wtnp[30]", $Trainer.name))
+      pbMessage(_INTL("\\se[]{1} saved the game.\\me[GUI save game]\\wtnp[30]", $Trainer.name))
       return true
     else
-      pbMessage(_INTL("\\se[]Savegarde interrompue.\\wtnp[30]"))
+      pbMessage(_INTL("\\se[]Save failed.\\wtnp[30]"))
       return false
     end
   end
@@ -608,11 +627,11 @@ class PokemonSaveScreen
       ret = slotSelect
     else
       choices = [
-        _INTL("Sauvegarder dans #{$Trainer.save_slot}"),
-        _INTL("Sauvegarder dans un autre slot"),
-        _INTL("Ne pas sauvegarder")
+        _INTL("Save to #{$Trainer.save_slot}"),
+        _INTL("Save to another slot"),
+        _INTL("Don't save")
       ]
-      opt = pbMessage(_INTL('Voulez-vous sauvegarder le jeu?'), choices, 3)
+      opt = pbMessage(_INTL('Would you like to save the game?'), choices, 3)
       if opt == 0
         pbSEPlay('GUI save choice')
         ret = doSave($Trainer.save_slot)
@@ -638,7 +657,7 @@ class PokemonSaveScreen
       slot = SaveData::MANUAL_SLOTS[index]
       # Confirm if slot not empty
       if !File.file?(SaveData.get_full_path(slot)) ||
-        pbConfirmMessageSerious(_INTL("Êtes-vous sûr de vouloir écraser la sauvegarde dans #{slot}?")) # If the slot names were changed this grammar might need adjustment.
+        pbConfirmMessageSerious(_INTL("Are you sure you want to overwrite the save in #{slot}?")) # If the slot names were changed this grammar might need adjustment.
         pbSEPlay('GUI save choice')
         ret = doSave(slot)
       end
@@ -650,7 +669,7 @@ class PokemonSaveScreen
   # Handles the UI for the save slot select screen. Returns the index of the chosen slot, or -1.
   # Based on pbShowCommands
   def slotSelectCommands(choices, choice_info, defaultCmd = 0)
-    msgwindow = Window_AdvancedTextPokemon.new(_INTL("Quel slot sauvegarder?"))
+    msgwindow = Window_AdvancedTextPokemon.new(_INTL("Which slot to save in?"))
     msgwindow.z = 99999
     msgwindow.visible = true
     msgwindow.letterbyletter = true
@@ -791,6 +810,7 @@ module Game
   end
 
   def self.backup_savefile(save_path, slot)
+    begin
     backup_dir = File.join(File.dirname(save_path), "backups")
     Dir.mkdir(backup_dir) if !Dir.exist?(backup_dir)
 
@@ -818,6 +838,10 @@ module Game
         echoln excess_backups
         excess_backups.each { |old_backup| File.delete(old_backup) }
       end
+    end
+    rescue => e
+      echoln ("There was an error while creating a backup savefile.")
+      echoln("Error: #{e.message}")
     end
   end
 

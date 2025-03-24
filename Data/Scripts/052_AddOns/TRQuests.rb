@@ -4,6 +4,26 @@ def isWearingTeamRocketOutfit()
   return (isWearingClothes(CLOTHES_TEAM_ROCKET_MALE) || isWearingClothes(CLOTHES_TEAM_ROCKET_FEMALE)) && isWearingHat(HAT_TEAM_ROCKET)
 end
 
+def isWearingFavoriteOutfit()
+  favorites = {
+    hat: $Trainer.favorite_hat,
+    hat2: $Trainer.favorite_hat2,
+    clothes: $Trainer.favorite_clothes
+  }
+  favorites.select! { |item, favorite| !favorite.nil? }
+  return false if favorites.empty?
+  return favorites.all? do |item, favorite|
+    case item
+    when :hat
+      $Trainer.hat == favorite
+    when :hat2
+      $Trainer.hat2 == favorite
+    when :clothes
+      $Trainer.clothes == favorite
+    end
+  end
+end
+
 def obtainRocketOutfit()
   Kernel.pbReceiveItem(:ROCKETUNIFORM)
   gender = pbGet(VAR_TRAINER_GENDER)
@@ -29,12 +49,9 @@ def acceptTRQuest(id, show_description = true)
 end
   
 def addRocketQuest(id)
-  echoln $Trainer.quests.length
-
   $Trainer.quests = [] if $Trainer.quests.class == NilClass
   quest = TR_QUESTS[id]
   $Trainer.quests << quest if quest
-  echoln $Trainer.quests.length
 end
 
 def showNewTRMissionMessage(title, description, show_description)
@@ -65,17 +82,17 @@ def finishTRQuest(id, status, silent = false)
 end
 
 TR_QUESTS = {
-  "tr_cerulean_1" => Quest.new(0, "Bestioles Effrayantes", "Le Capitaine de la Team Rocket vous a chargé d'éliminer l'infestation d'Insectes dans le QG temporaire de la Team Rocket à Azuria.", QuestBranchRocket, "rocket_petrel", "Cerulean City", TRQuestColor),
-  "tr_cerulean_2" => Quest.new(0, "Zone Interdite à la Pêche", "Intimidez les pêcheurs du Pont Pépite jusqu'à ce qu'ils quittent la zone.", QuestBranchRocket, "rocket_petrel", "Cerulean City", TRQuestColor),
-  "tr_cerulean_3" => Quest.new(0, "Pokémon Désobéissant", "Ramenez le Pokémon donné par le Capitaine de la Team Rocket en le mettant K.O. pour lui donner une leçon.", QuestBranchRocket, "rocket_petrel", "Cerulean City", TRQuestColor),
-  "tr_cerulean_4" => Quest.new(0, "Braquage de Pokémon!", "Suivez Petrel et allez voler un Pokémon rare à une jeune fille.", QuestBranchRocket, "rocket_petrel", "Cerulean City", TRQuestColor),
+  "tr_cerulean_1" => Quest.new("tr_cerulean_1", "Bestioles Effrayantes", "Le Capitaine de la Team Rocket vous a chargé d'éliminer l'infestation d'Insectes dans le QG temporaire de la Team Rocket à Azuria.", QuestBranchRocket, "rocket_petrel", "Cerulean City", TRQuestColor),
+  "tr_cerulean_2" => Quest.new("tr_cerulean_2", "Zone Interdite à la Pêche", "Intimidez les pêcheurs du Pont Pépite jusqu'à ce qu'ils quittent la zone.", QuestBranchRocket, "rocket_petrel", "Cerulean City", TRQuestColor),
+  "tr_cerulean_3" => Quest.new("tr_cerulean_3", "Pokémon Désobéissant", "Ramenez le Pokémon donné par le Capitaine de la Team Rocket en le mettant K.O. pour lui donner une leçon.", QuestBranchRocket, "rocket_petrel", "Cerulean City", TRQuestColor),
+  "tr_cerulean_4" => Quest.new("tr_cerulean_4", "Braquage de Pokémon!", "Suivez Petrel et allez voler un Pokémon rare à une jeune fille.", QuestBranchRocket, "rocket_petrel", "Cerulean City", TRQuestColor),
 
-  "tr_celadon_1" => Quest.new(0, "Fournir les Nouveaux Venus", "Catch 4 Pokémon with Rocket Balls in the outskirts of Celadon City.", QuestBranchRocket, "rocket_archer", "Celadon City", TRQuestColor),
-  "tr_celadon_2" => Quest.new(0, "Interpellation!", "Interceptez la cargaison de CT destinée au Magasin de Céladopole et faites-vous passer pour le livreur afin de livrer de fausses CT.", QuestBranchRocket, "rocket_archer", "Celadon City", TRQuestColor),
-  "tr_celadon_3" => Quest.new(0, "Collectionneur de Pokémon", "Allez rencontrer un collectionneur de Pokémon sur la Route 22, près de Jadielle, et récupérez son Pokémon rare.", QuestBranchRocket, "rocket_archer", "Celadon City", TRQuestColor),
-  "tr_celadon_4" => Quest.new(0, "Arrêt de l'Opération", "Le QG de la Team Rocket est en train d'être attaqué! Regroupez-vous avec le reste des sbires dans le Tunnel de Doublonville!", QuestBranchRocket, "rocket_archer", "Goldenrod City", TRQuestColor),
+  "tr_celadon_1" => Quest.new("tr_celadon_1", "Fournir les Nouveaux Venus", "Catch 4 Pokémon with Rocket Balls in the outskirts of Celadon City.", QuestBranchRocket, "rocket_archer", "Celadon City", TRQuestColor),
+  "tr_celadon_2" => Quest.new("tr_celadon_2", "Interpellation!", "Interceptez la cargaison de CT destinée au Magasin de Céladopole et faites-vous passer pour le livreur afin de livrer de fausses CT.", QuestBranchRocket, "rocket_archer", "Celadon City", TRQuestColor),
+  "tr_celadon_3" => Quest.new("tr_celadon_3", "Collectionneur de Pokémon", "Allez rencontrer un collectionneur de Pokémon sur la Route 22, près de Jadielle, et récupérez son Pokémon rare.", QuestBranchRocket, "rocket_archer", "Celadon City", TRQuestColor),
+  "tr_celadon_4" => Quest.new("tr_celadon_4", "Arrêt de l'Opération", "Le QG de la Team Rocket est en train d'être attaqué! Regroupez-vous avec le reste des sbires dans le Tunnel de Doublonville!", QuestBranchRocket, "rocket_archer", "Goldenrod City", TRQuestColor),
 
-  "tr_pinkan" => Quest.new(0, "l'Ile Guimauve!", "Aidez la Team Rocket dans un braquage d'une réserve naturelle de Pokémon!", QuestBranchRocket, "rocket_archer", "Goldenrod City", TRQuestColor),
+  "tr_pinkan" => Quest.new("tr_pinkan", "l'Ile Guimauve!", "Aidez la Team Rocket dans un braquage d'une réserve naturelle de Pokémon!", QuestBranchRocket, "rocket_archer", "Goldenrod City", TRQuestColor),
 
 }
 

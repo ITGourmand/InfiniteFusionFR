@@ -295,7 +295,7 @@ class PokemonPokedexInfo_Scene
     end
   end
 
-  def drawPageInfo
+  def drawPageInfo(reloading=false)
     @sprites["background"].setBitmap(_INTL("Graphics/Pictures/Pokedex/bg_info"))
     overlay = @sprites["overlay"].bitmap
     base = Color.new(88, 88, 80)
@@ -325,14 +325,14 @@ class PokemonPokedexInfo_Scene
     textpos = [
       [_INTL("{1}{2} {3}", indexText, " ", species_data.name),
        246, 36, 0, Color.new(248, 248, 248), Color.new(0, 0, 0)],
-      [_INTL("Taille"), 314, 152, 0, base, shadow],
-      [_INTL("Poids"), 314, 184, 0, base, shadow]
-    ]
-    if $Trainer.owned?(@species)
-      # Write the category
-      textpos.push([_INTL("Pokémon {1}", species_data.category), 246, 68, 0, base, shadow])
-      # Write the height and weight
-      height = species_data.height
+       [_INTL("Taille"), 314, 152, 0, base, shadow],
+       [_INTL("Poids"), 314, 184, 0, base, shadow]
+     ]
+     if $Trainer.owned?(@species)
+       # Write the category
+       textpos.push([_INTL("Pokémon {1}", species_data.category), 246, 68, 0, base, shadow])
+       # Write the height and weight
+       height = species_data.height
       weight = species_data.weight
       if System.user_language[3..4] == "US" # If the user is in the United States
         inches = (height / 0.254).round
@@ -349,7 +349,7 @@ class PokemonPokedexInfo_Scene
       #
       #
       #$PokemonSystem.use_generated_dex_entries=true if $PokemonSystem.use_generated_dex_entries ==nil
-      drawEntryText(overlay, species_data)
+      drawEntryText(overlay, species_data, reloading)
 
       # Draw the footprint
       footprintfile = GameData::Species.footprint_filename(@species, @form)
@@ -388,7 +388,7 @@ class PokemonPokedexInfo_Scene
   end
 
 
-  def drawEntryText(overlay, species_data)
+  def   drawEntryText(overlay, species_data, reloading=false)
     baseColor = Color.new(88, 88, 80)
     shadow = Color.new(168, 184, 184)
     shadowCustom = Color.new(160, 200, 150)
@@ -401,7 +401,7 @@ class PokemonPokedexInfo_Scene
         shadowColor = shadowCustom
       else
         if $PokemonSystem.use_generated_dex_entries && species_data.is_a?(GameData::FusedSpecies)
-          @randomEntryText = species_data.get_random_dex_entry if !@randomEntryText
+          @randomEntryText = species_data.get_random_dex_entry if !reloading
           entryText = @randomEntryText
           shadowColor = shadow
         else
@@ -450,7 +450,7 @@ class PokemonPokedexInfo_Scene
   def reloadDexEntry()
     overlay = @sprites["overlay"].bitmap
     overlay.clear
-    drawPageInfo
+    drawPageInfo(true)
   end
 
   def changeEntryPage()
@@ -489,12 +489,11 @@ class PokemonPokedexInfo_Scene
     end
   end
 
+  #unused
   def getAIDexEntry(pokemonID, name)
     begin
       head_number = get_head_number_from_symbol(pokemonID).to_s
       body_number = get_body_number_from_symbol(pokemonID).to_s
-
-      
 
       # Ensure the file exists, if not, create it
       unless File.exist?(Settings::AI_DEX_ENTRIES_PATH)
@@ -714,7 +713,7 @@ class PokemonPokedexInfo_Scene
       pbUpdate
       dorefresh = false
       if Input.trigger?(Input::ACTION)
-        changeEntryPage()
+        #changeEntryPage()
       elsif Input.trigger?(Input::BACK)
         pbPlayCloseMenuSE
         break

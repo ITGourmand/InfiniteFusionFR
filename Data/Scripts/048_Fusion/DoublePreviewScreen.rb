@@ -116,9 +116,6 @@ class DoublePreviewScreen
     #hasCustom = customSpriteExistsBase(body_pokemon,head_pokemon)
     hasCustom = customSpriteExists(body_pokemon,head_pokemon)
     previewwindow = PictureWindow.new(bitmap)
-
-
-    
     previewwindow.x = x
     previewwindow.y = y
     previewwindow.z = 100000

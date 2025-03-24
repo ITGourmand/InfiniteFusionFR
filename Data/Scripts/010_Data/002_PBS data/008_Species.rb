@@ -190,39 +190,37 @@ module GameData
     def always_use_generated
       return @alwaysUseGeneratedSprite
     end
-
     # @return [String] the translated name of this species
     def name
-      names = pbGetMessage(MessageTypes::Species, @id_number)
-      if names.nil? || names.empty?
-        return @real_name
-      else
-        return names
-      end
+      return @real_name
+      #return pbGetMessage(MessageTypes::Species, @id_number)
     end
-    
+
     # @return [String] the translated name of this form of this species
     def form_name
-      # return @real_form_name
-      return pbGetMessage(MessageTypes::FormNames, @id_number)
+      return @real_form_name
+      #return pbGetMessage(MessageTypes::FormNames, @id_number)
     end
 
     # @return [String] the translated Pokédex category of this species
     def category
-      # return @real_category
-      return pbGetMessage(MessageTypes::Kinds, @id_number)
+      return @real_category
+      #return pbGetMessage(MessageTypes::Kinds, @id_number)
     end
 
     # @return [String] the translated Pokédex entry of this species
     def pokedex_entry
-      # return @real_pokedex_entry
-      return pbGetMessage(MessageTypes::Entries, @id_number)
+      return @real_pokedex_entry
+      #return pbGetMessage(MessageTypes::Entries, @id_number)
     end
 
     def is_fusion
       return @id_number > Settings::NB_POKEMON
     end
 
+    def is_triple_fusion
+      return @id_number >= Settings::ZAPMOLCUNO_NB
+    end
     def get_body_species
       return @species
     end

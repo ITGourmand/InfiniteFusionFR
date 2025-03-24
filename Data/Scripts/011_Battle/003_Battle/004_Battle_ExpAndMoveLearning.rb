@@ -44,7 +44,7 @@ class PokeBattle_Battle
           eachInTeam(0, 0) do |pkmn, i|
             next if !pkmn.able?
             next if b.participants.include?(i) || expShare.include?(i)
-            pbDisplayPaused(_INTL("Votre Pokémon de votre team a également obtenu des points d'expérience!")) if showMessage
+            pbDisplayPaused(_INTL("Your party Pokémon in waiting also got Exp. Points!")) if showMessage
             showMessage = false
             pbGainEVsOne(i, b)
             pbGainExpOne(i, b, numPartic, expShare, expAll, false)
@@ -261,7 +261,9 @@ class PokeBattle_Battle
     return if pkmn.moves.any? { |m| m && m.id == newMove }
     # Pokémon has space for the new move; just learn it
     if pkmn.moves.length < Pokemon::MAX_MOVES
-      pkmn.moves.push(Pokemon::Move.new(newMove))
+      move = Pokemon::Move.new(newMove)
+      pkmn.moves.push(move)
+      pkmn.add_learned_move(move)
       pbDisplay(_INTL("{1} a appris {2}!", pkmnName, moveName)) { pbSEPlay("Pkmn move learnt") }
       if battler
         battler.moves.push(PokeBattle_Move.from_pokemon_move(self, pkmn.moves.last))
@@ -271,7 +273,7 @@ class PokeBattle_Battle
     end
     # Pokémon already knows the maximum number of moves; try to forget one to learn the new move
     loop do
-      pbDisplayPaused(_INTL("{1} veut apprendre {2}, mais il connaît déjà {3}.",
+       pbDisplayPaused(_INTL("{1} veut apprendre {2}, mais il connaît déjà {3}.",
                             pkmnName, moveName, pkmn.moves.length.to_word))
       if pbDisplayConfirm(_INTL("Oubliez une attaque pour apprendre {1}?", moveName))
         pbDisplayPaused(_INTL("Quel attaque doit être oublié?"))
@@ -279,7 +281,9 @@ class PokeBattle_Battle
         if forgetMove >= 0
           oldMoveName = pkmn.moves[forgetMove].name
           pkmn.moves[forgetMove] = Pokemon::Move.new(newMove) # Replaces current/total PP
+          pkmn.add_learned_move(newMove)
           battler.moves[forgetMove] = PokeBattle_Move.from_pokemon_move(self, pkmn.moves[forgetMove]) if battler
+
           pbDisplayPaused(_INTL("1, 2, et... ... ... Ta-da!"))
           pbDisplayPaused(_INTL("{1} a oublié comment utiliser {2}. Et...", pkmnName, oldMoveName))
           pbDisplay(_INTL("{1} a appris {2}!", pkmnName, moveName)) { pbSEPlay("Pkmn move learnt") }

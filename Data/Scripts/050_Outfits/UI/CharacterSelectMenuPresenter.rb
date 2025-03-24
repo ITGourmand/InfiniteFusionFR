@@ -225,7 +225,7 @@ class CharacterSelectMenuPresenter
   def applyHairEasterEggs()
     @hairstyle = HAIR_RIVAL if @name == "Gary" && @gender == 1
     @hairstyle = HAIR_BROCK if @name == "Brock" && @gender == 1
-    @hairstyle = HAIR_MISTY if @name == "Misty" && @gender == 0
+    @hairstyle = HAIR_MISTY1 if @name == "Misty" && @gender == 0
 
   end
 

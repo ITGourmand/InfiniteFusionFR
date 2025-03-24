@@ -97,7 +97,7 @@ class PokemonMartAdapter
     return nil
   end
 
-  def doSpecialItemAction(specialType)
+  def doSpecialItemAction(specialType,itemId=nil)
     return nil
   end
 

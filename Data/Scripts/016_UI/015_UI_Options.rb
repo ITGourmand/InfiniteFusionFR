@@ -23,6 +23,7 @@ class PokemonSystem
   attr_accessor :on_mobile
   attr_accessor :type_icons
   attr_accessor :use_generated_dex_entries
+  attr_accessor :use_custom_eggs
 
   def initialize
     @textspeed = 1 # Text speed (0=slow, 1=normal, 2=fast)
@@ -33,8 +34,8 @@ class PokemonSystem
     @screensize = (Settings::SCREEN_SCALE * 2).floor - 1 # 0=half size, 1=full size, 2=full-and-a-half size, 3=double size
     @language = 0 # Language (see also Settings::LANGUAGES in script PokemonSystem)
     @runstyle = 0 # Default movement speed (0=walk, 1=run)
-    @bgmvolume = 100 # Volume of background music and ME
-    @sevolume = 100 # Volume of sound effects
+    @bgmvolume = 40 # Volume of background music and ME
+    @sevolume = 40 # Volume of sound effects
     @textinput = 1 # Text input mode (0=cursor, 1=keyboard)
     @quicksurf = 0
     @battle_type = 0
@@ -45,6 +46,7 @@ class PokemonSystem
     @on_mobile = false
     @type_icons = true
     @use_generated_dex_entries = true
+    @use_custom_eggs = true
   end
 end
 
@@ -250,13 +252,6 @@ class Window_PokemonOption < Window_DrawableCommand
 
   def itemCount
     return @options.length + 1
-  end
-
-  def drawCursor(index,rect)
-    if self.index==index
-      pbCopyBitmap(self.contents,@selarrow.bitmap,rect.x,rect.y)
-    end
-    return Rect.new(rect.x+16,rect.y,rect.width-16,rect.height)
   end
 
   def dont_draw_item(index)

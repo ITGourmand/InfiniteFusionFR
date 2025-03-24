@@ -118,7 +118,7 @@ end
 # def playInViewPort(viewport)
 #   @finished=false
 #   @currentFrame = 1
-#   @initialTime = Time.nowF
+#   @initialTime = Time.now
 #   @timeElapsed = Time.now
 #
 #   pbBGMPlay(@bgm)
@@ -142,7 +142,7 @@ def showLoadingScreen
      picture = Sprite.new(@viewport)
      picture.bitmap = pbBitmap(intro_frames_path)
      picture.visible=true
-     pbWait(Graphics.frame_rate / 20)
+     Graphics.update
      picture.dispose
 end
 

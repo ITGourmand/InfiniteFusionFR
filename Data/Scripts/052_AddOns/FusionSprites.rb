@@ -9,7 +9,7 @@ module GameData
       else
         ret = self.front_sprite_bitmap(species, pkmn.shiny?, pkmn.bodyShiny?, pkmn.headShiny?)
       end
-      ret.scale_bitmap(pkmn.sprite_scale) #for pokemon with size differences
+      ret.scale_bitmap(pkmn.sprite_scale) if ret #for pokemon with size differences
       return ret
     end
 
@@ -360,7 +360,7 @@ def get_random_alt_letter_for_unfused(dex_num, onlyMain = true)
   else
     letters_list= list_all_sprites_letters(spriteName)
   end
-  letters_list << ""  #add main sprite
+  letters_list << ""  # add main sprite
   return letters_list.sample
 end
 
@@ -371,7 +371,7 @@ def list_main_sprites_letters(spriteName)
     main_sprites << key if value == "main"
   end
 
-  #add temp sprites if no main sprites found
+  # add temp sprites if no main sprites found
   if main_sprites.empty?
     all_sprites.each do |key, value|
       main_sprites << key if value == "temp"

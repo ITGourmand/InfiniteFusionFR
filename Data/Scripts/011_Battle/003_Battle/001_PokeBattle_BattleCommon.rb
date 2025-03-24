@@ -39,7 +39,7 @@ module PokeBattle_BattleCommon
     end
   end
 
-  #def pbChoosePokemon(variableNumber, nameVarNumber, ableProc = nil, allowIneligible = false)
+  # def pbChoosePokemon(variableNumber, nameVarNumber, ableProc = nil, allowIneligible = false)
   # def swapCaughtPokemon(caughtPokemon)
   #   pbChoosePokemon(1,2,
   #                   proc {|poke|
@@ -247,27 +247,10 @@ module PokeBattle_BattleCommon
     echoln isOnLastBall
     # Critical capture check
     if isOnLastBall
-      c = 0
-      numOwned = $Trainer.pokedex.owned_count
-      if numOwned > 600;
-        c = x * 5 / 12
-      elsif numOwned > 450;
-        c = x * 4 / 12
-      elsif numOwned > 300;
-        c = x * 3 / 12
-      else
-        c = x * 2 / 12
-      end
-      # elsif numOwned > 150;
-      #   c = x * 2 / 12
-      # elsif numOwned > 30;
-      #   c = x / 12
-      # end
-      # Calculate the number of shakes
+      c = x * 6 / 12
       if c > 0 && pbRandom(256) < c
         @criticalCapture = true
-        return 4 if pbRandom(65536) < y
-        return 0
+        return 4
       end
     end
     # Calculate the number of shakes

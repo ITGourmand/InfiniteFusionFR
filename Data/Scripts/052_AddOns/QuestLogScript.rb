@@ -328,6 +328,9 @@ class Questlog
     @box = 0
     @completed = []
     @ongoing = []
+
+
+    fix_broken_TR_quests()
     for q in $Trainer.quests
       @ongoing << q if !q.completed && @ongoing.include?(q)
       @completed << q if q.completed && @completed.include?(q)
@@ -385,13 +388,13 @@ class Questlog
       if @scene == 0
         break if Input.trigger?(Input::B)
         pbList(@sel_one) if Input.trigger?(Input::C)
-        pbSwitch(:DOWN) if Input.trigger?(Input::DOWN)
+        pbSwitch(:DOWN) if Input.press?(Input::DOWN)
         pbSwitch(:UP) if Input.trigger?(Input::UP)
       end
       if @scene == 1
         pbMain if Input.trigger?(Input::B)
-        pbMove(:DOWN) if Input.trigger?(Input::DOWN)
-        pbMove(:UP) if Input.trigger?(Input::UP)
+        pbMove(:DOWN) if Input.press?(Input::DOWN)
+        pbMove(:UP) if Input.press?(Input::UP)
         pbLoad(0) if Input.trigger?(Input::C)
         pbArrows
       end
@@ -585,7 +588,6 @@ class Questlog
   end
 
   def pbMain
-    pbWait(1)
     12.times do |i|
       Graphics.update
       @sprites["main"].opacity -= 32 if @sprites["main"] rescue nil
@@ -743,10 +745,11 @@ class Questlog
         end
       end
     end
+    pbWait(4)
   end
 
   def pbList(id)
-    pbWait(1)
+    pbWait(2)
     @sel_two = 0
     @page = 0
     @scene = 1

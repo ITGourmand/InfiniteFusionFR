@@ -50,7 +50,7 @@ class PokemonGameOption_Scene < PokemonOption_Scene
                                 proc { $Trainer.selected_difficulty },
                                 proc { |value|
                                   setDifficulty(value)
-                                  @manually_changed_difficulty=true
+                                  @manually_changed_difficulty = true
                                 }, ["Tous les Pokémon de l'équipe gagnent de l'expérience. Sinon, même difficulté que la difficulté normale.",
                                     "L'expérience par défaut. Les niveaux sont similaires aux jeux officiels.",
                                     "Niveaux plus élevés et IA plus intelligente. Tous les dresseurs ont accès à des objets de soin."]
@@ -111,7 +111,7 @@ class PokemonGameOption_Scene < PokemonOption_Scene
                      "Téléchargez automatiquement les sprites personnalisés manquants et les entrées Pokédex depuis Internet"
       )
     #
-    generated_entries_option_selected=$PokemonSystem.use_generated_dex_entries ? 1 : 0
+    generated_entries_option_selected = $PokemonSystem.use_generated_dex_entries ? 1 : 0
     options << EnumOption.new(_INTL("Autogen dex entries"), [_INTL("Off"), _INTL("On")],
                               proc { generated_entries_option_selected },
                               proc { |value|
@@ -124,7 +124,17 @@ class PokemonGameOption_Scene < PokemonOption_Scene
                               ]
     )
 
-    if $game_switches && ($game_switches[SWITCH_NEW_GAME_PLUS] || $game_switches[SWITCH_BEAT_THE_LEAGUE]) #beat the league
+    custom_eggs_option_selected = $PokemonSystem.use_custom_eggs ? 1 : 0
+    options << EnumOption.new(_INTL("Oeuf Custom"), [_INTL("On"), _INTL("Off")],
+                              proc { custom_eggs_option_selected },
+                              proc { |value|
+                                $PokemonSystem.use_custom_eggs = value == 1
+                              },
+                              ["Les Oeufs ont different sprites pour chaque Pokemon.",
+                               "Les Oeufs ont different tous le même sprite."]
+    )
+
+    if $game_switches && ($game_switches[SWITCH_NEW_GAME_PLUS] || $game_switches[SWITCH_BEAT_THE_LEAGUE]) # beat the league
       options <<
         EnumOption.new(_INTL("Type de combat"), [_INTL("1v1"), _INTL("2v2"), _INTL("3v3")],
                        proc { $PokemonSystem.battle_type },
@@ -183,15 +193,12 @@ class PokemonGameOption_Scene < PokemonOption_Scene
                                 ["Combine les deux icônes de groupe de Pokémon",
                                  "Utilise la même icône de groupe pour toutes les fusions"]
       )
-      battle_type_icon_option_selected=$PokemonSystem.type_icons ? 1 : 0
+      battle_type_icon_option_selected = $PokemonSystem.type_icons ? 1 : 0
       options << EnumOption.new(_INTL("Icons des Types"), [_INTL("Off"), _INTL("On")],
                                 proc { battle_type_icon_option_selected },
                                 proc { |value| $PokemonSystem.type_icons = value == 1 },
                                 "Affiche le type de Pokémon ennemi dans les combats."
       )
-
-
-
     end
     options << EnumOption.new(_INTL("Taille de l'écran"), [_INTL("S"), _INTL("M"), _INTL("L"), _INTL("XL"), _INTL("Full")],
                               proc { [$PokemonSystem.screensize, 4].min },
@@ -215,7 +222,7 @@ class PokemonGameOption_Scene < PokemonOption_Scene
                               "Empêche le passage à un niveau supérieur au Pokémon de niveau le plus élevé du prochain leader du gymnase"
     )
 
-    device_option_selected=$PokemonSystem.on_mobile ? 1 : 0
+    device_option_selected = $PokemonSystem.on_mobile ? 1 : 0
     options << EnumOption.new(_INTL("Appareil"), [_INTL("PC"), _INTL("Mobile")],
                               proc { device_option_selected },
                               proc { |value| $PokemonSystem.on_mobile = value == 1 },

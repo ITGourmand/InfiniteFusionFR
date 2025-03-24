@@ -344,7 +344,7 @@ Events.onMapSceneChange += proc { |_sender, e|
   scene = e[0]
   mapChanged = e[1]
   next if !scene || !scene.spriteset
-  # Update map trail
+    # Update map trail
   if $game_map
     $PokemonGlobal.mapTrail = [] if !$PokemonGlobal.mapTrail
     if $PokemonGlobal.mapTrail[0] != $game_map.map_id
@@ -411,10 +411,23 @@ def pbFacingTileRegular(direction = nil, event = nil)
   return [$game_map.map_id, x + x_offset, y + y_offset]
 end
 
-# Returns whether event is in line with the player, is facing the player and is
+def pbEventNextToPlayer?(event,player)
+  return false if !event || !player
+  return false if $PokemonGlobal.sliding
+  if event.x == player.x
+    return event.y == player.y+1 || event.y == player.y-1
+  elsif event.y == player.y
+    return event.x == player.x-1 || event.x == player.x+1
+  end
+  return false
+end
+
+
+# Returns whether event is in line with the player, is
 # within distance tiles of the player.
 def pbEventFacesPlayer?(event, player, distance)
-  return false if !event || !player || distance <= 0
+  return pbEventNextToPlayer?(event,player) if distance == 0
+  return false if !event || !player || distance < 0
   x_min = x_max = y_min = y_max = -1
   case event.direction
   when 2 # Down
@@ -472,6 +485,7 @@ end
 def pbFacingEachOther(event1, event2)
   return pbEventFacesPlayer?(event1, event2, 1) && pbEventFacesPlayer?(event2, event1, 1)
 end
+
 
 #===============================================================================
 # Audio playing
