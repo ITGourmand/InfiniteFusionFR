@@ -82,7 +82,7 @@ def purchaseCardBackground(price = 1000)
   end
 
   if purchasable_cards.length <= 0
-    pbMessage("There are no more Trainer Card backgrounds available for purchase!")
+    pbMessage("Il n’y a plus de fond de carte de dresseur disponibles à l’achat!")
     return
   end
 
@@ -93,27 +93,27 @@ def purchaseCardBackground(price = 1000)
     name = getDisplayedName(card)
     commands.push([index, name, card])
   end
-  pbMessage("\\GWhich background would you like to purchase?")
+  pbMessage("\\GQuel arrière-plan souhaitez-vous acheter?")
   chosen = pbListScreen("Trainer card", TrainerCardBackgroundLister.new(purchasable_cards))
   echoln chosen
   if chosen != nil
     name = getDisplayedName(chosen)
-    if pbConfirmMessage("\\GPurchase the \\C[1]#{name} Trainer Card background\\C[0] for $#{price.to_s}?")
+    if pbConfirmMessage("\\GAchetez l'arrière-plan de la carte Trainer \\C[1]#{name}\\C[0] pour $#{price.to_s}?")
       if $Trainer.money < price
         pbSEPlay("GUI sel buzzer", 80)
-        pbMessage("\\G\\C[2]Insufficient funds")
+        pbMessage("\\G\\C[2]Fonds insuffisants")
         return false
       end
-      pbSEPlay("Mart buy item")
+      pbSEPlay("Acheter un article")
       $Trainer.money -= price
       unlock_card_background(chosen)
       pbSEPlay("Item get")
-      pbMessage("\\GYou purchased the #{name} Trainer Card background!")
-      if pbConfirmMessage("Would you like to swap your current Trainer Card for the newly purchased one?")
+      pbMessage("\\GVous avez acheté le fond de carte de dresseur #{name}!")
+      if pbConfirmMessage("Souhaitez-vous échanger votre carte de formateur actuelle contre celle que vous venez d'acheter?")
         pbSEPlay("GUI trainer card open")
         $Trainer.card_background = chosen
       else
-        pbMessage("You can swap the background at anytime when viewing your Trainer Card.")
+        pbMessage("Vous pouvez changer l'arrière-plan à tout moment lorsque vous consultez votre carte d'entraîneur.")
       end
       echoln $Trainer.unlocked_card_backgrounds
       return true

@@ -24,15 +24,15 @@ class ClothesShopPresenter < PokemonMartScreen
       previous_input = choice
       case choice
       when 0 #NEXT
-        pbSEPlay("GUI Placer dans le stockage", 80, 100)
+        pbSEPlay("GUI storage put down", 80, 100)
         shiftClothesColor(10)
         ret = true
       when 1 #PREVIOUS
-        pbSEPlay("GUI Placer dans le stockage", 80, 100)
+        pbSEPlay("GUI storage put down", 80, 100)
         shiftClothesColor(-10)
         ret = true
       when 2 #Reset
-        pbSEPlay("GUI Placer dans le stockage", 80, 100)
+        pbSEPlay("GUI storage put down", 80, 100)
         $Trainer.clothes_color = 0
         ret = false
       when 3 #Confirm

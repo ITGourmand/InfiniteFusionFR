@@ -1,7 +1,7 @@
 class ClothesShopPresenter < PokemonMartScreen
 
   def removeHat(item)
-    pbSEPlay("GUI déposé dans le stockage")
+    pbSEPlay("GUI storage put down")
     @adapter.toggleEvent(item)
     @scene.select_specific_item(nil,true)
   end
@@ -76,12 +76,12 @@ class ClothesShopPresenter < PokemonMartScreen
     putOnHat($Trainer.hat2,true,true)
 
     playOutfitChangeAnimation()
-    pbMessage(_INTL("You put on the hat(s)!\\wtnp[30]"))
+    pbMessage(_INTL("Tu as mis le chapeau!\\wtnp[30]"))
   end
 
   def dyeOptions(secondary_hat=false,item)
     original_color = secondary_hat ? $Trainer.hat2_color : $Trainer.hat_color
-    options = ["Shift up", "Shift down", "Reset", "Confirm", "Never Mind"]
+    options = ["Monter", "Descendre", "Réinitialiser", "Confirmer", "Annuler"]
     previous_input = 0
     while (true)
       choice = pbShowCommands(nil, options, options.length, previous_input,200)
@@ -125,14 +125,14 @@ class ClothesShopPresenter < PokemonMartScreen
   end
 
   def playerHatActionsMenu(item)
-    cmd_confirm = "Confirm"
-    cmd_remove = "Remove hat"
-    cmd_cancel = "Cancel"
-    cmd_dye = "Dye Kit"
-    cmd_swap = "Swap hat positions"
+    cmd_confirm = "Confirmer"
+    cmd_remove = "Enlever le chapeau"
+    cmd_cancel = "Annuler"
+    cmd_dye = "Kit de Teinture"
+    cmd_swap = "Changer de chapeau"
 
     options = build_options_menu(item,cmd_confirm,cmd_remove,cmd_dye,cmd_swap,cmd_cancel)
-    choice = pbMessage("What would you like to do?", options, -1,nil,0)
+    choice = pbMessage("Qu'aimeriez-vous faire?", options, -1,nil,0)
     if options[choice] == cmd_remove
       removeHat(item)
       return true

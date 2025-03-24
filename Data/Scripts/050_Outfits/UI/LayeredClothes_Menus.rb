@@ -28,7 +28,7 @@ def selectHairstyle(all_unlocked = false)
       selector.changeToNextHairstyle(-1, all_unlocked)
       display_outfit_preview()
     when 2 #Toggle hat
-      pbSEPlay("Stockage du GUI mis en place", 80, 100)
+      pbSEPlay("GUI storage put down", 80, 100)
       if hat == $Trainer.hat
         $Trainer.hat = nil
       else
@@ -76,17 +76,17 @@ def selectHairColor
       ret = false
     when 1 #NEXT
       #playOutfitChangeAnimation()
-      pbSEPlay("Prendre un objet du stockage", 80, 100)
+      pbSEPlay("GUI storage pick up", 80, 100)
       shiftHairColor(10)
       display_outfit_preview()
       ret = true
     when 2 #PREVIOUS
-      pbSEPlay("Prendre un objet du stockage", 80, 100)
+      pbSEPlay("GUI storage pick up", 80, 100)
       shiftHairColor(-10)
       display_outfit_preview()
       ret = true
     when 3 #Toggle hat
-      pbSEPlay("Placer dans le stockage", 80, 100)
+      pbSEPlay("GUI storage put down", 80, 100)
       if hat == $Trainer.hat
         $Trainer.hat = nil
       else
@@ -94,7 +94,7 @@ def selectHairColor
       end
       display_outfit_preview()
     when 4 #Reset
-      pbSEPlay("Placer dans le stockage", 80, 100)
+      pbSEPlay("GUI storage put down", 80, 100)
       $Trainer.hair_color = 0
       display_outfit_preview()
       ret = false
@@ -125,17 +125,17 @@ def selectHatColor
     previous_input = choice
     case choice
     when 0 #NEXT
-      pbSEPlay("Prendre un objet du stockage", 80, 100)
+      pbSEPlay("GUI storage pick up", 80, 100)
       shiftHatColor(10)
       display_outfit_preview()
       ret = true
     when 1 #PREVIOUS
-      pbSEPlay("Prendre un objet du stockage", 80, 100)
+      pbSEPlay("GUI storage pick up", 80, 100)
       shiftHatColor(-10)
       display_outfit_preview()
       ret = true
     when 2 #Reset
-      pbSEPlay("Placer dans le stockage", 80, 100)
+      pbSEPlay("GUI storage put down", 80, 100)
       $Trainer.hat_color = 0
       display_outfit_preview()
       refreshPlayerOutfit()
@@ -164,17 +164,17 @@ def selectClothesColor
     previous_input = choice
     case choice
     when 0 #NEXT
-      pbSEPlay("Prendre un objet du stockage", 80, 100)
+      pbSEPlay("GUI storage pick up", 80, 100)
       shiftClothesColor(10)
       display_outfit_preview()
       ret = true
     when 1 #PREVIOUS
-      pbSEPlay("Prendre un objet du stockage", 80, 100)
+      pbSEPlay("GUI storage pick up", 80, 100)
       shiftClothesColor(-10)
       display_outfit_preview()
       ret = true
     when 2 #Reset
-      pbSEPlay("Prendre un objet du stockage", 80, 100)
+      pbSEPlay("GUI storage pick up", 80, 100)
       $Trainer.clothes_color = 0
       display_outfit_preview()
       refreshPlayerOutfit()

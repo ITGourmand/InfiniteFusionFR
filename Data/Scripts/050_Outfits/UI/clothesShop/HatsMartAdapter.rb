@@ -43,7 +43,7 @@ class HatsMartAdapter < OutfitsMartAdapter
   end
 
   def switchVersion(item,delta=1)
-    pbSEPlay("GUI Déposer dans le stockage", 80, 100)
+    pbSEPlay("GUI storage put down", 80, 100)
     return toggleSecondHat if isShop?
     @is_secondary_hat = !@is_secondary_hat
   end
