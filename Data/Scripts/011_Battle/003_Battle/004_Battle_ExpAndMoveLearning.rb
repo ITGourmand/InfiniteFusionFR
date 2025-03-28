@@ -234,7 +234,7 @@ class PokeBattle_Battle
       pkmn.calc_stats
       battler.pbUpdate(false) if battler
       @scene.pbRefreshOne(battler.index) if battler
-      pbDisplayPaused(_INTL("{1} a grandi jusqu'au niveau {2}!", pkmn.name, curLevel))
+      pbDisplayPaused(_INTL("{1} monte jusqu'au Lv.{2}!", pkmn.name, curLevel))
       if !$game_switches[SWITCH_NO_LEVELS_MODE]
         @scene.pbLevelUp(pkmn, battler, oldTotalHP, oldAttack, oldDefense,
                          oldSpAtk, oldSpDef, oldSpeed)

@@ -152,9 +152,9 @@ def pbChangeLevel(pkmn, newlevel, scene)
     pkmn.calc_stats
     scene.pbRefresh
     if scene.is_a?(PokemonPartyScreen)
-      scene.pbDisplay(_INTL("{1} a grandi jusqu'au Lv.{2}!", pkmn.name, pkmn.level))
+      scene.pbDisplay(_INTL("{1} monte jusqu'au Lv.{2}!", pkmn.name, pkmn.level))
     else
-      pbMessage(_INTL("{1} a grandi jusqu'au Lv.{2}!", pkmn.name, pkmn.level))
+      pbMessage(_INTL("{1} monte jusqu'au Lv.{2}!", pkmn.name, pkmn.level))
     end
     attackdiff = pkmn.attack - attackdiff
     defensediff = pkmn.defense - defensediff

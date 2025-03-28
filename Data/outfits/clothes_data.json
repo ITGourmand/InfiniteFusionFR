@@ -107,8 +107,8 @@
     },
     {
         "id": "bughakamapants",
-        "name": "Pantalon Hakama Insecte",
-        "description": "Un pantalon traditionnel inspiré du type Insecte, avec un filet pour capturer des Pokémon Bug!",
+        "name": "Kimono Hakama Insecte",
+        "description": "Un Kimono traditionnel inspiré du type Insecte, avec un filet pour capturer des Pokémon Bug!",
         "done": "yes",
         "price": 10000,
         "tags": "azalea,special,",
@@ -133,8 +133,8 @@
     },
     {
         "id": "cloak",
-        "name": "Cape Noire",
-        "description": "Une longue cape noire et mystérieuse, parfaite pour les dresseurs occultes.",
+        "name": "Moulant Noire",
+        "description": "Une tenue serrée noire et mystérieuse, parfaite pour attirer les regards.",
         "len": 65,
         "done": "yes",
         "price": 6500,
@@ -191,8 +191,8 @@
     },
     {
         "id": "Eri",
-        "name": "Casquette Captain",
-        "description": "Un chapeau robuste porté par les leaders, inspirant courage et discipline aux dresseurs sous leurs ordres.",
+        "name": "Tenue Captain",
+        "description": "Une tenue porté par les leaders, inspirant courage et discipline aux dresseurs sous leurs ordres.",
         "tags": "paldea,"
     },
     {

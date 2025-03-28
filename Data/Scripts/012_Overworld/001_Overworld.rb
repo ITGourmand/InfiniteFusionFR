@@ -910,7 +910,7 @@ def pbReceiveItem(item, quantity = 1, item_name = "", music = nil, canRandom = t
   elsif itemname.starts_with_vowel?
     pbMessage(_INTL("\\me[{1}]Vous avez obtenu #{text_color}{2}\\c[0]!\\wtnp[30]", meName, itemname))
   else
-    pbMessage(_INTL("\\me[{1}]Vous avez obtenu un #{text_color}{2}\\c[0]!\\wtnp[30]", meName, itemname))
+    pbMessage(_INTL("\\me[{1}]Vous avez obtenu #{text_color}{2}\\c[0]!\\wtnp[30]", meName, itemname))
   end
   promptRegisterItem(item)
   if $PokemonBag.pbStoreItem(item, quantity) # If item can be added
