@@ -287,7 +287,11 @@ def useSleepingBag()
   pbFadeOutIn {
     Kernel.pbMessage(_INTL("{1} a dormi un moment...", $Trainer.name))
   }
-  time = pbGetTimeNow.strftime("%I:%M %p")
+  if Settings::LANGUAGES.length >= 2 && $PokemonSystem.language == 1
+    time = pbGetTimeNow.strftime("%H:%M")
+  else
+    time = pbGetTimeNow.strftime("%I:%M %p")
+  end
   newDay = getDayOfTheWeek()
   if newDay != oldDay
     Kernel.pbMessage(_INTL("L'heure actuelle est maintenant {1} le {2}.", time, newDay.downcase.capitalize))
