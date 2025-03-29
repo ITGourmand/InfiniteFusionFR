@@ -19,7 +19,7 @@ Discord: https://discord.com/invite/Atgn53bah5
 
 Reddit: https://www.reddit.com/user/CremeOk1958/
 
-Github: https://github.com/kurayamiblackheart/kurayshinyrevamp (You are here!)
+Github: [InfiniteFusionFR](https://github.com/ITGourmand/InfiniteFusionFR) (Tu es déjà la!)
 
 YouTube: https://www.youtube.com/@AnthonyGourmand
 
