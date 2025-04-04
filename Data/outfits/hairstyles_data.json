@@ -2,7 +2,7 @@
     {
         "id": "afro",
         "name": "Afro Touffu",
-        "description": "Une coupe afro dense et volumineuse, impossible à ignorer. Parfait pour affirmer son style !",
+        "description": "Une coupe afro dense et volumineuse, impossible a ignorer. Parfait pour affirmer son style !",
         "done": "yes",
         "price": 500,
         "tags": "default"
@@ -10,23 +10,23 @@
     {
         "id": "bald",
         "name": "Chauve",
-        "description": "Un look entièrement chauve. Pas de cheveux, pas de souci, juste un crâne pur et assumé !",
+        "description": "Un look entierement chauve. Pas de cheveux, pas de souci, juste un crane pur et assume !",
         "done": "yes",
         "price": 500,
         "tags": "no-hair"
     },
     {
         "id": "bfro",
-        "name": "Afro Décoiffé",
-        "description": "Un afro aplati et légèrement en bataille, donnant un style unique et facile à entretenir.",
+        "name": "Afro Decoiffe",
+        "description": "Un afro aplati et legerement en bataille, donnant un style unique et facile a entretenir.",
         "done": "yes",
         "price": 500,
         "tags": "default"
     },
     {
         "id": "bob",
-        "name": "Carré Élégant",
-        "description": "Une coupe au carré net et moderne, avec des cheveux à hauteur du menton qui encadrent parfaitement le visage.",
+        "name": "Carre Elegant",
+        "description": "Une coupe au carre net et moderne, avec des cheveux a hauteur du menton qui encadrent parfaitement le visage.",
         "done": "yes",
         "price": 500,
         "tags": "default"
@@ -34,7 +34,7 @@
     {
         "id": "bowlcut",
         "name": "Coupe au Bol",
-        "description": "Une coupe classique et symétrique où les cheveux sont taillés uniformément tout autour de la tête.",
+        "description": "Une coupe classique et symetrique ou les cheveux sont tailles uniformement tout autour de la tete.",
         "done": "yes",
         "price": 500,
         "tags": "default"
@@ -42,7 +42,7 @@
     {
         "id": "brock",
         "name": "Pics Courts/Droits",
-        "description": "Des pointes courtes soigneusement arrangées pour un look à la fois strict et impressionnant. Popularisée par Pierre, le Champion d'Arène de Kanto.",
+        "description": "Des pointes courtes soigneusement arrangees pour un look a la fois strict et impressionnant. Popularisee par Pierre, le Champion d'Arene de Kanto.",
         "len": 109,
         "done": "yes",
         "price": 2000,
@@ -51,8 +51,8 @@
     },
     {
         "id": "bugsy",
-        "name": "Frange Carrée",
-        "description": "Une coupe mi-longue avec une frange carrée désordonnée. On la retrouve souvent chez les jeunes Chasseurs d’Insectes.",
+        "name": "Frange Carree",
+        "description": "Une coupe mi-longue avec une frange carree desordonnee. On la retrouve souvent chez les jeunes Chasseurs dInsectes.",
         "len": 95,
         "done": "yes",
         "price": 2000,
@@ -62,7 +62,7 @@
     {
         "id": "buzzcut",
         "name": "Buzz Cut",
-        "description": "Une coupe rasée nette et soignée, idéale pour un style épuré et sans entretien.",
+        "description": "Une coupe rasee nette et soignee, ideale pour un style epure et sans entretien.",
         "done": "yes",
         "price": 500,
         "tags": "default"
@@ -70,7 +70,7 @@
     {
         "id": "clair",
         "name": "Queue de Cheval/Frange",
-        "description": "Une longue chevelure attachée en une queue de cheval volumineuse. Ce style a été popularisé par Sandra, la Championne de Johto.",
+        "description": "Une longue chevelure attachee en une queue de cheval volumineuse. Ce style a ete popularise par Sandra, la Championne de Johto.",
         "len": 99,
         "done": "yes",
         "price": 2000,
@@ -79,8 +79,8 @@
     },
     {
         "id": "cornrows",
-        "name": "Tresses Serrées",
-        "description": "Des tresses plaquées le long du cuir chevelu, créant un motif élégant et soigné.",
+        "name": "Tresses Serrees",
+        "description": "Des tresses plaquees le long du cuir chevelu, creant un motif elegant et soigne.",
         "done": "yes",
         "price": 500,
         "tags": "default"
@@ -95,8 +95,8 @@
     },
     {
         "id": "elm",
-        "name": "Cheveux Plaqués",
-        "description": "Des cheveux courts soigneusement coiffés en arrière pour un look sérieux et professionnel. Popularisé par le Professeur Orme",
+        "name": "Cheveux Plaques",
+        "description": "Des cheveux courts soigneusement coiffes en arriere pour un look serieux et professionnel. Popularise par le Professeur Orme",
         "done": "yes",
         "price": 500,
         "tags": "goldenrod,",
@@ -105,7 +105,7 @@
     {
         "id": "emo",
         "name": "Frange Emo",
-        "description": "Une coupe stylisée avec des mèches longues et inclinées pour un look dramatique et rebelle.",
+        "description": "Une coupe stylisee avec des meches longues et inclinees pour un look dramatique et rebelle.",
         "done": "yes",
         "price": 500,
         "tags": "default"
@@ -113,7 +113,7 @@
     {
         "id": "erika",
         "name": "Cheveux Bandana",
-        "description": "Une coupe mi-longue avec des cheveux droits encadrant un bandana gris. Popularisée par Erika, la Championne de Céladopole.",
+        "description": "Une coupe mi-longue avec des cheveux droits encadrant un bandana gris. Popularisee par Erika, la Championne de Celadopole.",
         "len": 113,
         "done": "yes",
         "price": 2000,
@@ -122,7 +122,7 @@
     },
     {
         "id": "fade",
-        "name": "Coupe Dégradée",
+        "name": "Coupe Degradee",
         "description": "Une coupe progressivement plus courts, se fondant parfaitement avec des cheveux plus longs sur le dessus.",
         "done": "yes",
         "price": 500,
@@ -131,7 +131,7 @@
     {
         "id": "falkner",
         "name": "Frange Tombante",
-        "description": "Une frange mi-longue qui flotte élégamment au vent. Popularisée par Albert, le Champion de Mauville.",
+        "description": "Une frange mi-longue qui flotte elegamment au vent. Popularisee par Albert, le Champion de Mauville.",
         "len": 104,
         "done": "yes",
         "price": 2000,
@@ -140,21 +140,21 @@
     },
     {
         "id": "fusionnerd",
-        "name": "Frange Balayée",
-        "description": "Une coupe audacieuse et asymétrique où les mèches forment une vague stylée.",
+        "name": "Frange Balayee",
+        "description": "Une coupe audacieuse et asymetrique ou les meches forment une vague stylee.",
         "price": 1000
     },
     {
         "id": "gardevoir",
         "name": "Frange Gardienne",
-        "description": "Une frange soignée qui couvre un oeil, inspirée du charme élégant de Gardevoir.",
+        "description": "Une frange soignee qui couvre un oeil, inspiree du charme elegant de Gardevoir.",
         "price": 3000,
         "howToGet": "saffron boutique"
     },
     {
         "id": "gary",
         "name": "Pics Rebelles",
-        "description": "Des mèches en pointe qui dégagent une attitude sûre d’elle et un brin insolente. Populaire chez les jeunes dresseurs de Kanto.",
+        "description": "Des meches en pointe qui degagent une attitude sure delle et un brin insolente. Populaire chez les jeunes dresseurs de Kanto.",
         "len": 114,
         "done": "yes",
         "price": 500,
@@ -164,14 +164,14 @@
     {
         "id": "glitzerset",
         "name": "Baie Palma",
-        "description": "Une coupe mignonne inspirée d'une Baie Palma!",
+        "description": "Une coupe mignonne inspiree d'une Baie Palma!",
         "price": 2000,
         "tags": "kin"
     },
     {
         "id": "happinysuit",
-        "name": "Queue de Cheval Bouclée",
-        "description": "Une adorable queue de cheval bouclée, inspirée du style de Ptiravi. Parfait pour les fans de bébés Pokémon !",
+        "name": "Queue de Cheval Bouclee",
+        "description": "Une adorable queue de cheval bouclee, inspiree du style de Ptiravi. Parfait pour les fans de bebes Pokemon !",
         "len": 108,
         "price": 3000,
         "tags": "long, tied, smooth, pokemon,",
@@ -179,8 +179,8 @@
     },
     {
         "id": "HexManiac",
-        "name": "Mèche Sauvage",
-        "description": "Une chevelure indomptable donnant l’impression d’être possédée. Populaire chez les Mystimaniacs.",
+        "name": "Meche Sauvage",
+        "description": "Une chevelure indomptable donnant limpression detre possedee. Populaire chez les Mystimaniacs.",
         "len": 107,
         "done": "yes",
         "price": 500,
@@ -189,7 +189,7 @@
     },
     {
         "id": "highbun",
-        "name": "Chignon Élégante",
+        "name": "Chignon Elegante",
         "description": "Un Chignon rappelant la fourrure de Lockpin",
         "done": "yes",
         "price": 500,
@@ -197,7 +197,7 @@
     },
     {
         "id": "highpony",
-        "name": "Queue Haute Élégante",
+        "name": "Queue Haute Elegante",
         "description": "Une queue de cheval haute rappelant la fourrure de Lockpin",
         "done": "yes",
         "price": 500,
@@ -206,29 +206,29 @@
     {
         "id": "hilda",
         "name": "Queue Haute",
-        "description": "Une queue-de-cheval volumineuse qui montre que vous êtes prête pour l’aventure. Très populaire parmi les nouveaux dresseurs d’Unys!",
+        "description": "Une queue-de-cheval volumineuse qui montre que vous etes prete pour laventure. Tres populaire parmi les nouveaux dresseurs dUnys!",
         "price": 1500,
         "tags": "unova,"
     },
     {
         "id": "hime",
         "name": "Coupe Hime",
-        "description": "Une coupe traditionnelle japonaise avec des cheveux raides, une frange droite et deux longues mèches latérales.",
+        "description": "Une coupe traditionnelle japonaise avec des cheveux raides, une frange droite et deux longues meches laterales.",
         "done": "yes",
         "price": 500,
         "tags": "default"
     },
     {
         "id": "ho-oh",
-        "name": "Crête Phénix",
-        "description": "Une coupe flamboyante avec une queue-de-cheval haute et courbée, évoquant les plumes majestueuses d’Ho-Oh.",
+        "name": "Crete Phenix",
+        "description": "Une coupe flamboyante avec une queue-de-cheval haute et courbee, evoquant les plumes majestueuses dHo-Oh.",
         "price": 5000,
         "howToGet": "saffron boutique"
     },
     {
         "id": "janine",
-        "name": "Queue de Cheval Épineuse",
-        "description": "Des cheveux plaqués et attachés en une queue de cheval hérissée. Popularisée par Janine, la fille de Koga.",
+        "name": "Queue de Cheval Epineuse",
+        "description": "Des cheveux plaques et attaches en une queue de cheval herissee. Popularisee par Janine, la fille de Koga.",
         "len": 114,
         "done": "yes",
         "price": 2000,
@@ -238,20 +238,20 @@
     {
         "id": "jessie",
         "name": "Vague Rocket",
-        "description": "Un style dramatique et élégant avec des cheveux ultra-longs balayés en arrière, formant une vague haute défiant la gravité.",
+        "description": "Un style dramatique et elegant avec des cheveux ultra-longs balayes en arriere, formant une vague haute defiant la gravite.",
         "price": 2000
     },
     {
         "id": "kris",
         "name": "Couettes Rebelles",
-        "description": "Des couettes pleines de ressort qui semblent défier la gravité elle-même.",
+        "description": "Des couettes pleines de ressort qui semblent defier la gravite elle-meme.",
         "price": 1500,
         "tags": "johto,"
     },
     {
         "id": "kurt",
-        "name": "Cheveux Raides Gominés",
-        "description": "Des cheveux mi-longs soigneusement plaqués en arrière. Popularisée par Fargas, le célèbre artisan des PokéBalls.",
+        "name": "Cheveux Raides Gomines",
+        "description": "Des cheveux mi-longs soigneusement plaques en arriere. Popularisee par Fargas, le celebre artisan des PokeBalls.",
         "len": 114,
         "done": "yes",
         "price": 2000,
@@ -260,8 +260,8 @@
     },
     {
         "id": "lady",
-        "name": "Ondulations Élégantes",
-        "description": "Une coiffure sophistiquée aux ondulations délicates, parfaite pour un style raffiné.",
+        "name": "Ondulations Elegantes",
+        "description": "Une coiffure sophistiquee aux ondulations delicates, parfaite pour un style raffine.",
         "done": "yes",
         "price": 500,
         "tags": "default"
@@ -269,7 +269,7 @@
     {
         "id": "lance",
         "name": "Pics Sauvages",
-        "description": "Des mèches hérissées vers le ciel. Un choix audacieux ! Popularisé par Peter, le Maître de la Ligue.",
+        "description": "Des meches herissees vers le ciel. Un choix audacieux ! Popularise par Peter, le Maitre de la Ligue.",
         "len": 85,
         "price": 2000,
         "tags": "short, untied, spiky, ",
@@ -277,16 +277,16 @@
     },
     {
         "id": "lass",
-        "name": "Couettes Gonflées",
-        "description": "Des cheveux mi-longs attachés en deux couettes moelleuses, pour un look joyeux et pétillant.",
+        "name": "Couettes Gonflees",
+        "description": "Des cheveux mi-longs attaches en deux couettes moelleuses, pour un look joyeux et petillant.",
         "done": "yes",
         "price": 500,
         "tags": "default"
     },
     {
         "id": "leaf",
-        "name": "Mèches Désordonnées",
-        "description": "Une coupe mi-longue et ébouriffée, souvent disciplinée par le port constant d’une casquette.",
+        "name": "Meches Desordonnees",
+        "description": "Une coupe mi-longue et ebouriffee, souvent disciplinee par le port constant dune casquette.",
         "len": 82,
         "done": "yes",
         "price": 500,
@@ -295,8 +295,8 @@
     },
     {
         "id": "lenora",
-        "name": "Carré Asymétrique",
-        "description": "Un carré lisse avec une frange balayée sur le côté. Popularisée par Aloé, la Championne d’Ogoesse.",
+        "name": "Carre Asymetrique",
+        "description": "Un carre lisse avec une frange balayee sur le cote. Popularisee par Aloe, la Championne dOgoesse.",
         "done": "yes",
         "price": 1500,
         "tags": "unova,",
@@ -305,7 +305,7 @@
     {
         "id": "lowbraids",
         "name": "Tresses Basses",
-        "description": "Des cheveux longs attachés en tresses basses reposant sur les épaules. Un style mignon et pratique pour les dresseurs en voyage.",
+        "description": "Des cheveux longs attaches en tresses basses reposant sur les epaules. Un style mignon et pratique pour les dresseurs en voyage.",
         "len": 110,
         "done": "yes",
         "price": 500,
@@ -313,7 +313,7 @@
     },
     {
         "id": "lowpony",
-        "name": "Queue Basse Élégante",
+        "name": "Queue Basse Elegante",
         "description": "Une queue de cheval basse rappelant la fourrure de Lockpin",
         "done": "yes",
         "price": 500,
@@ -322,7 +322,7 @@
     {
         "id": "lucy",
         "name": "Boucles Volumineuses",
-        "description": "De longues boucles pleines de volume qui encadrent délicatement le visage et descendent jusqu’aux épaules.",
+        "description": "De longues boucles pleines de volume qui encadrent delicatement le visage et descendent jusquaux epaules.",
         "done": "yes",
         "price": 1500,
         "tags": "hoenn,",
@@ -331,7 +331,7 @@
     {
         "id": "lunarbob",
         "name": "Coupe Lunaire",
-        "description": "Une coupe au carré en forme de croissant de lune, avec une silhouette lisse et incurvée.",
+        "description": "Une coupe au carre en forme de croissant de lune, avec une silhouette lisse et incurvee.",
         "price": 5000,
         "tags": "special",
         "howToGet": "quest? cresselia outfit"
@@ -339,21 +339,21 @@
     {
         "id": "lycanrocshorthair",
         "name": "Coupe Lupine",
-        "description": "Une coupe élégante rappelant la crinière d'un Lougaroc",
+        "description": "Une coupe elegante rappelant la criniere d'un Lougaroc",
         "price": 3000,
         "tags": "special"
     },
     {
         "id": "lyra",
-        "name": "Couettes Enjouées",
-        "description": "Des couettes rebondissantes qui dégagent une énergie insouciante et pleine de vie",
+        "name": "Couettes Enjouees",
+        "description": "Des couettes rebondissantes qui degagent une energie insouciante et pleine de vie",
         "price": 1500,
         "tags": "johto,"
     },
     {
         "id": "mawile",
         "name": "Queue Crocs de Mysdibule",
-        "description": "Une coiffure unique avec une queue de cheval ornée d’accessoires ressemblant aux mâchoires de Mysdibule.",
+        "description": "Une coiffure unique avec une queue de cheval ornee daccessoires ressemblant aux machoires de Mysdibule.",
         "len": 103,
         "done": "yes",
         "price": 5000,
@@ -362,8 +362,8 @@
     },
     {
         "id": "may",
-        "name": "Frange Latérale Dégradée",
-        "description": "Des cheveux mi-longs et bruns, avec une frange et des mèches balayées sur le côté. Très prisé par les jeunes dresseurs de Hoenn.",
+        "name": "Frange Laterale Degradee",
+        "description": "Des cheveux mi-longs et bruns, avec une frange et des meches balayees sur le cote. Tres prise par les jeunes dresseurs de Hoenn.",
         "done": "yes",
         "price": 1500,
         "tags": "hoenn,",
@@ -372,7 +372,7 @@
     {
         "id": "mikufairy",
         "name": "Doubles Queues Flottantes",
-        "description": "Une coiffure féerique avec deux longues queues de cheval ondulantes, donnant un air enchanteur.",
+        "description": "Une coiffure feerique avec deux longues queues de cheval ondulantes, donnant un air enchanteur.",
         "done": "yes",
         "price": 2000,
         "tags": "goldenrod,"
@@ -380,7 +380,7 @@
     {
         "id": "mikutwintails",
         "name": "Doubles Queues Hautes",
-        "description": "De longues couettes attachées bien hautes, avec une frange droite sur le côté pour un style pétillant et joueur.",
+        "description": "De longues couettes attachees bien hautes, avec une frange droite sur le cote pour un style petillant et joueur.",
         "done": "yes",
         "price": 2000,
         "tags": "goldenrod,"
@@ -388,7 +388,7 @@
     {
         "id": "miror",
         "name": "Afro Bicolore",
-        "description": "Un grand afro arborant un motif en zigzag de deux couleurs différentes. Un choix audacieux, digne des Dresseurs les plus disco!",
+        "description": "Un grand afro arborant un motif en zigzag de deux couleurs differentes. Un choix audacieux, digne des Dresseurs les plus disco!",
         "len": 103,
         "done": "yes",
         "price": 5000,
@@ -396,8 +396,8 @@
     },
     {
         "id": "mistyGSC",
-        "name": "Cheveux Mi-longs Hérissés",
-        "description": "Une coupe mi-longue en bataille, parfaite pour un look dynamique. Popularisée par Ondine, la Championne d'Azuria.",
+        "name": "Cheveux Mi-longs Herisses",
+        "description": "Une coupe mi-longue en bataille, parfaite pour un look dynamique. Popularisee par Ondine, la Championne d'Azuria.",
         "len": 100,
         "done": "yes",
         "price": 2000,
@@ -406,8 +406,8 @@
     },
     {
         "id": "mistyRBY",
-        "name": "Couette Épineuse sur le Côté",
-        "description": "Des cheveux courts hérissés avec une couette relevée sur le côté. Popularisée par Ondine, la Championne de Kanto.",
+        "name": "Couette Epineuse sur le Cote",
+        "description": "Des cheveux courts herisses avec une couette relevee sur le cote. Popularisee par Ondine, la Championne de Kanto.",
         "len": 92,
         "done": "yes",
         "price": 2000,
@@ -416,8 +416,8 @@
     },
     {
         "id": "mohawk",
-        "name": "Crête Courte",
-        "description": "Une coupe punk avec une crête courte et le reste des cheveux rasé. Un style apprécié des motards et des rebelles.",
+        "name": "Crete Courte",
+        "description": "Une coupe punk avec une crete courte et le reste des cheveux rase. Un style apprecie des motards et des rebelles.",
         "len": 106,
         "done": "yes",
         "price": 500,
@@ -426,8 +426,8 @@
     },
     {
         "id": "nate",
-        "name": "Mèches Courtes et Décoiffées",
-        "description": "Des pointes courtes et ébouriffées qui se marient bien avec une casquette. Très populaire parmi les jeunes dresseurs d'Unys.",
+        "name": "Meches Courtes et Decoiffees",
+        "description": "Des pointes courtes et ebouriffees qui se marient bien avec une casquette. Tres populaire parmi les jeunes dresseurs d'Unys.",
         "len": 110,
         "done": "yes",
         "price": 1500,
@@ -437,7 +437,7 @@
     {
         "id": "nhair",
         "name": "Queue de Cheval Sauvage",
-        "description": "Une queue de cheval basse et décontractée, donnant une allure mystérieuse. Courante chez les dresseurs d'Unys.",
+        "description": "Une queue de cheval basse et decontractee, donnant une allure mysterieuse. Courante chez les dresseurs d'Unys.",
         "len": 98,
         "done": "yes",
         "price": 1500,
@@ -446,8 +446,8 @@
     },
     {
         "id": "officeworkerF",
-        "name": "Cheveux Longs Jusqu'à la Taille",
-        "description": "Une chevelure descendant jusqu’à la taille. Très apprécié par les dresseurs exerçant dans le monde des affaires.",
+        "name": "Cheveux Longs Jusqu'a la Taille",
+        "description": "Une chevelure descendant jusqua la taille. Tres apprecie par les dresseurs exercant dans le monde des affaires.",
         "len": 114,
         "done": "yes",
         "price": 500,
@@ -456,8 +456,8 @@
     },
     {
         "id": "painter",
-        "name": "Mèches sur le Côté",
-        "description": "Des cheveux courts avec des mèches douces et légères encadrant le visage, souvent portés par les artistes.",
+        "name": "Meches sur le Cote",
+        "description": "Des cheveux courts avec des meches douces et legeres encadrant le visage, souvent portes par les artistes.",
         "len": 102,
         "done": "yes",
         "price": 500,
@@ -466,7 +466,7 @@
     {
         "id": "pigtails",
         "name": "Couettes Ludiques",
-        "description": "Des couettes hautes et rebondies, nouées avec des rubans pour un style jeune et dynamique.",
+        "description": "Des couettes hautes et rebondies, nouees avec des rubans pour un style jeune et dynamique.",
         "done": "yes",
         "price": 500,
         "tags": "default,"
@@ -474,7 +474,7 @@
     {
         "id": "pixie",
         "name": "Coupe Pixie",
-        "description": "Une coupe avec des côtés taillés de près et un peu de longueur sur le dessus pour un look aérien et moderne.",
+        "description": "Une coupe avec des cotes tailles de pres et un peu de longueur sur le dessus pour un look aerien et moderne.",
         "done": "yes",
         "price": 500,
         "tags": "default,"
@@ -488,7 +488,7 @@
     {
         "id": "red",
         "name": "Cheveux Courts",
-        "description": "Des cheveux courts et hérissés, aplatis par le port constant d’une casquette.",
+        "description": "Des cheveux courts et herisses, aplatis par le port constant dune casquette.",
         "len": 67,
         "done": "yes",
         "price": 500,
@@ -497,8 +497,8 @@
     },
     {
         "id": "richboy",
-        "name": "Plaquée sur le Côté",
-        "description": "Une coupe soignée avec une raie marquée et les cheveux plaqués, pour une allure raffinée et impeccable.",
+        "name": "Plaquee sur le Cote",
+        "description": "Une coupe soignee avec une raie marquee et les cheveux plaques, pour une allure raffinee et impeccable.",
         "done": "yes",
         "price": 500,
         "tags": "default,"
@@ -506,7 +506,7 @@
     {
         "id": "rosa",
         "name": "Chignons avec Longues Couettes",
-        "description": "Une coiffure originale avec deux grands chignons latéraux se prolongeant en longues couettes. Très populaire chez les jeunes dresseurs d’Unys.",
+        "description": "Une coiffure originale avec deux grands chignons lateraux se prolongeant en longues couettes. Tres populaire chez les jeunes dresseurs dUnys.",
         "len": 127,
         "done": "yes",
         "price": 1500,
@@ -516,7 +516,7 @@
     {
         "id": "roseradeF",
         "name": "Coiffure Roserade (M)",
-        "description": "Des cheveux mi-longs en piques, inspirés de la fleur de tête de Roserade.",
+        "description": "Des cheveux mi-longs en piques, inspires de la fleur de tete de Roserade.",
         "len": 76,
         "done": "yes",
         "price": 500,
@@ -526,7 +526,7 @@
     {
         "id": "roseradeM",
         "name": "Coiffure Roserade (C)",
-        "description": "Des cheveux courts et hérissés, reprenant le style iconique de la fleur de Roserade.",
+        "description": "Des cheveux courts et herisses, reprenant le style iconique de la fleur de Roserade.",
         "len": 69,
         "done": "yes",
         "price": 500,
@@ -536,28 +536,28 @@
     {
         "id": "sabrinaGSC",
         "name": "Coupe Clairvoyante",
-        "description": "Une coupe mi-longue avec une frange distincte qui encadre le visage. Ce style a été popularisé par la Championne Sabrina.",
+        "description": "Une coupe mi-longue avec une frange distincte qui encadre le visage. Ce style a ete popularise par la Championne Sabrina.",
         "price": 2000
     },
     {
         "id": "sabrinaRBY",
-        "name": "Mèches Télékinétiques",
-        "description": "Une coiffure mystérieuse, comme si elle flottait sous l’influence d’une force invisible."
+        "name": "Meches Telekinetiques",
+        "description": "Une coiffure mysterieuse, comme si elle flottait sous linfluence dune force invisible."
     },
     {
         "id": "sada",
         "name": "Coupe Paradoxe",
-        "description": "Un style énigmatique qui semble venir d’une autre époque... ou d’un autre monde.",
+        "description": "Un style enigmatique qui semble venir dune autre epoque... ou dun autre monde.",
         "tags": "paldea,"
     },
     {
         "id": "samurai",
         "name": "Samurai",
-        "description": "Une coiffure tirée des plus grands samouraïs, cette coiffure montre un signe de respect dans la ville de Rosalia."
+        "description": "Une coiffure tiree des plus grands samourais, cette coiffure montre un signe de respect dans la ville de Rosalia."
     },
     {
         "id": "short1",
-        "name": "Frange Droite sur le Côté",
+        "name": "Frange Droite sur le Cote",
         "description": "Des cheveux lisses et courts encadrant le visage, parfaits pour un look frais et dynamique.",
         "len": 89,
         "done": "yes",
@@ -567,7 +567,7 @@
     {
         "id": "shortcut",
         "name": "Frange Droite",
-        "description": "Une frange droite et nette encadrant le visage, donnant un air juvénile et charmant.",
+        "description": "Une frange droite et nette encadrant le visage, donnant un air juvenile et charmant.",
         "len": 105,
         "done": "yes",
         "price": 500,
@@ -582,19 +582,19 @@
     },
     {
         "id": "sonia",
-        "name": "Queue Latérale",
-        "description": "Une élégante queue-de-cheval portée sur le côté, popularisée par une assistante de recherche de Galar."
+        "name": "Queue Laterale",
+        "description": "Une elegante queue-de-cheval portee sur le cote, popularisee par une assistante de recherche de Galar."
     },
     {
         "id": "SpecialLatias",
-        "name": "Bob Éon",
-        "description": "Un bob avec des couches et de longues boucles tournées vers l'extérieur, dégageant un charme doux et mystérieux.",
+        "name": "Bob Eon",
+        "description": "Un bob avec des couches et de longues boucles tournees vers l'exterieur, degageant un charme doux et mysterieux.",
         "price": 5000
     },
     {
         "id": "vetf",
-        "name": "Carré du Vétéran",
-        "description": "Une coupe courte et pratique avec un carré structuré et quelques couches discrètes, pour un style sérieux et pragmatique.",
+        "name": "Carre du Veteran",
+        "description": "Une coupe courte et pratique avec un carre structure et quelques couches discretes, pour un style serieux et pragmatique.",
         "done": "yes",
         "price": 500,
         "tags": "crimson",
@@ -602,16 +602,16 @@
     },
     {
         "id": "wavy",
-        "name": "Cheveux Ondulés",
-        "description": "Des cheveux mi-longs aux ondulations naturelles, pour une apparence douce et élégante.",
+        "name": "Cheveux Ondules",
+        "description": "Des cheveux mi-longs aux ondulations naturelles, pour une apparence douce et elegante.",
         "done": "yes",
         "price": 500,
         "tags": "default,"
     },
     {
         "id": "whitney",
-        "name": "Couettes Basses Hérissées",
-        "description": "Des couettes basses et légèrement en bataille, donnant une allure espiègle. Popularisée par Blanche, la Championne de Doublonville.",
+        "name": "Couettes Basses Herissees",
+        "description": "Des couettes basses et legerement en bataille, donnant une allure espiegle. Popularisee par Blanche, la Championne de Doublonville.",
         "len": 102,
         "done": "yes",
         "price": 500,

@@ -2,14 +2,14 @@
     {
         "id": "absolhat",
         "name": "Chapeau Absol",
-        "description": "Un chapeau élégant inspiré de l’ombre mystérieuse d'Absol.",
+        "description": "Un chapeau elegant inspire de lombre mysterieuse d'Absol.",
         "price": 5000,
         "tags": "pokemon-absol,"
     },
     {
         "id": "aerodactylSkull",
-        "name": "Crâne de Ptéra",
-        "description": "Un crâne de Ptéra qui s'adapte parfaitement à celui d'un entraîneur.",
+        "name": "Crane de Ptera",
+        "description": "Un crane de Ptera qui s'adapte parfaitement a celui d'un entraineur.",
         "done": "Yes",
         "len": 57,
         "price": 15000,
@@ -19,7 +19,7 @@
     {
         "id": "ash",
         "name": "Casquette Partenaire",
-        "description": "Une casquette iconique avec un \"L\" vert dessus. Elle évoque un léger sentiment de nostalgie pour une raison quelconque.",
+        "description": "Une casquette iconique avec un \"L\" vert dessus. Elle evoque un leger sentiment de nostalgie pour une raison quelconque.",
         "done": "Yes",
         "len": 88,
         "price": 8000,
@@ -28,8 +28,8 @@
     },
     {
         "id": "banefulfoxmask",
-        "name": "Masque de Renard Maléfique",
-        "description": "Un béret vert avec une rayure blanche. Il est populaire parmi les jeunes dresseurs à Unys.",
+        "name": "Masque de Renard Malefique",
+        "description": "Un beret vert avec une rayure blanche. Il est populaire parmi les jeunes dresseurs a Unys.",
         "done": "Yes",
         "len": 79,
         "price": 20000,
@@ -38,8 +38,8 @@
     },
     {
         "id": "bianca",
-        "name": "Béret Rayé",
-        "description": "Un béret vert avec une rayure blanche. Il est populaire parmi les jeunes dresseurs à Unys.",
+        "name": "Beret Raye",
+        "description": "Un beret vert avec une rayure blanche. Il est populaire parmi les jeunes dresseurs a Unys.",
         "done": "yes",
         "len": 81,
         "price": 3500,
@@ -49,7 +49,7 @@
     {
         "id": "biancaglasses",
         "name": "Lunettes Rouges",
-        "description": "Une paire de lunettes à demi-cercle avec une monture rouge, populaires à Unys.",
+        "description": "Une paire de lunettes a demi-cercle avec une monture rouge, populaires a Unys.",
         "done": "yes",
         "len": 70,
         "price": 1500,
@@ -59,7 +59,7 @@
     {
         "id": "blaineGlasses",
         "name": "Fausse Moustache",
-        "description": "De petites lunettes rondes avec une fausse moustache attachée.",
+        "description": "De petites lunettes rondes avec une fausse moustache attachee.",
         "done": "yes",
         "len": 54,
         "price": 18000,
@@ -68,8 +68,8 @@
     },
     {
         "id": "box",
-        "name": "Boîte en Carton",
-        "description": "Une boîte en carton avec un visage souriant griffonné sur le devant.",
+        "name": "Boite en Carton",
+        "description": "Une boite en carton avec un visage souriant griffonne sur le devant.",
         "done": "yes",
         "len": 60,
         "price": 500,
@@ -78,8 +78,8 @@
     },
     {
         "id": "breederbandana",
-        "name": "Bandana d'Éleveur",
-        "description": "Une bandane rouge avec une Poké Ball blanc sur le côté. Il est souvent porté par les Éleveurs de Pokémon.",
+        "name": "Bandana d'Eleveur",
+        "description": "Une bandane rouge avec une Poke Ball blanc sur le cote. Il est souvent porte par les Eleveurs de Pokemon.",
         "done": "yes",
         "len": 86,
         "price": 15000,
@@ -88,8 +88,8 @@
     },
     {
         "id": "breedervisor",
-        "name": "Casquette à Visière Verte",
-        "description": "Une Visière Verte et blanc. Il est souvent porté par les Éleveurs de Pokémon.",
+        "name": "Casquette a Visiere Verte",
+        "description": "Une Visiere Verte et blanc. Il est souvent porte par les Eleveurs de Pokemon.",
         "done": "yes",
         "len": 65,
         "price": 9000,
@@ -99,7 +99,7 @@
     {
         "id": "brendanORAS",
         "name": "Casquette Sportive",
-        "description": "Avec un bandana noir et un bonnet blanc. Il est populaire parmi les jeunes dresseurs à Hoenn.",
+        "description": "Avec un bandana noir et un bonnet blanc. Il est populaire parmi les jeunes dresseurs a Hoenn.",
         "done": "yes",
         "len": 86,
         "price": 3500,
@@ -108,8 +108,8 @@
     },
     {
         "id": "brendanRSE",
-        "name": "Casquette Émeraude",
-        "description": "Avec un bandana vert et un bonnet blanc. Il est populaire parmi les jeunes dresseurs à Hoenn.",
+        "name": "Casquette Emeraude",
+        "description": "Avec un bandana vert et un bonnet blanc. Il est populaire parmi les jeunes dresseurs a Hoenn.",
         "done": "yes",
         "len": 86,
         "price": 3500,
@@ -118,8 +118,8 @@
     },
     {
         "id": "brockpan",
-        "name": "Sainte Poêle",
-        "description": "Une poêle à frire portée comme un chapeau. Elle pourra servir à vous protéger de la pluie en cas de besoin!",
+        "name": "Sainte Poele",
+        "description": "Une poele a frire portee comme un chapeau. Elle pourra servir a vous proteger de la pluie en cas de besoin!",
         "done": "yes",
         "price": 18000,
         "tags": "hat,",
@@ -128,14 +128,14 @@
     {
         "id": "bruxishcrown",
         "name": "Couronne Fleur",
-        "description": "Une couronne ressemblant à l’hameçon en forme de fleur d’un Denticrisse.",
+        "description": "Une couronne ressemblant a lhamecon en forme de fleur dun Denticrisse.",
         "price": 5000,
         "tags": "hairclip,headband,pokemon-bruxish,"
     },
     {
         "id": "bugantenna",
         "name": "Antennes d'Insecte",
-        "description": "De longues antennes qui vous donnent l'apparence d'un Pokémon de type Insecte.",
+        "description": "De longues antennes qui vous donnent l'apparence d'un Pokemon de type Insecte.",
         "done": "yes",
         "len": 64,
         "price": 0,
@@ -144,15 +144,15 @@
     },
     {
         "id": "cafe",
-        "name": "Béret Solide",
-        "description": "Un béret robuste et pratique, parfait pour les aventuriers.",
+        "name": "Beret Solide",
+        "description": "Un beret robuste et pratique, parfait pour les aventuriers.",
         "price": 500,
         "tags": "vermillion,"
     },
     {
         "id": "calem",
         "name": "Casquette Rouge + Lunettes",
-        "description": "Une casquette rouge ornée de lunettes de soleil. Elle est populaire parmi les jeunes dresseurs à Kalos.",
+        "description": "Une casquette rouge ornee de lunettes de soleil. Elle est populaire parmi les jeunes dresseurs a Kalos.",
         "done": "yes",
         "len": 81,
         "price": 3500,
@@ -161,15 +161,15 @@
     },
     {
         "id": "carbink",
-        "name": "Serre-Tête Strassie",
-        "description": "Un serre-tête mignon et solide ressemblant à Strassie.",
+        "name": "Serre-Tete Strassie",
+        "description": "Un serre-tete mignon et solide ressemblant a Strassie.",
         "price": 5000,
         "tags": "hat,pokemon-carbink"
     },
     {
         "id": "chuckmoustache",
         "name": "Sourcils et Moustache",
-        "description": "Un ensemble de faux sourcils et moustache ressemblant à l'apparence iconique de Chuck.",
+        "description": "Un ensemble de faux sourcils et moustache ressemblant a l'apparence iconique de Chuck.",
         "done": "yes",
         "len": 67,
         "price": 18000,
@@ -186,7 +186,7 @@
     {
         "id": "clairbow",
         "name": "Chignon en Fil Rouge",
-        "description": "Un Chignon fait d'un cordon rouge épais..",
+        "description": "Un Chignon fait d'un cordon rouge epais..",
         "done": "yes",
         "len": 40,
         "price": 18000,
@@ -195,8 +195,8 @@
     },
     {
         "id": "clefairyearheadband",
-        "name": "Oreilles de Mélofée",
-        "description": "Un serre-tête rose ressemblant aux oreilles et à la boucle de cheveux de Mélofée.",
+        "name": "Oreilles de Melofee",
+        "description": "Un serre-tete rose ressemblant aux oreilles et a la boucle de cheveux de Melofee.",
         "done": "yes",
         "len": 65,
         "price": 2000,
@@ -206,14 +206,14 @@
     {
         "id": "clownnose",
         "name": "Nez de Clown",
-        "description": "Un nez de clown rouge vif, parfait pour ajouter une touche de folie à votre look.",
+        "description": "Un nez de clown rouge vif, parfait pour ajouter une touche de folie a votre look.",
         "price": 15000,
         "tags": "mask,special,"
     },
     {
         "id": "cloak",
         "name": "Capuche Sombre",
-        "description": "Une capuche sombre et mystérieuse qui cache le visage.",
+        "description": "Une capuche sombre et mysterieuse qui cache le visage.",
         "done": "yes",
         "len": 52,
         "price": 4500,
@@ -223,15 +223,15 @@
     {
         "id": "cowboy",
         "name": "Chapeau de Cowboy",
-        "description": "Un chapeau de 10 gallons, typique du Far West de la région de Rhode",
+        "description": "Un chapeau de 10 gallons, typique du Far West de la region de Rhode",
         "price": 8000,
         "tags": "hat,",
         "howToGet": "todo: sell at the moo moo ranch"
     },
     {
         "id": "creepydittomask",
-        "name": "Masque Métamorph",
-        "description": "Un masque avec le visage de Métamorph.",
+        "name": "Masque Metamorph",
+        "description": "Un masque avec le visage de Metamorph.",
         "done": "yes",
         "len": 32,
         "price": 12000,
@@ -240,8 +240,8 @@
     },
     {
         "id": "cresseliatiara",
-        "name": "Diadème Cresselia",
-        "description": "Un diadème élégant qui brille quand à la pleine lune. Il rappelle Cresselia.",
+        "name": "Diademe Cresselia",
+        "description": "Un diademe elegant qui brille quand a la pleine lune. Il rappelle Cresselia.",
         "done": "yes",
         "len": 83,
         "price": 25000,
@@ -250,7 +250,7 @@
     {
         "id": "cutecatears",
         "name": "Oreilles de Chat",
-        "description": "Pinces à cheveux en forme de petites oreilles de chat mignonnes.",
+        "description": "Pinces a cheveux en forme de petites oreilles de chat mignonnes.",
         "len": 44,
         "price": 9000,
         "tags": "hairclip,",
@@ -258,8 +258,8 @@
     },
     {
         "id": "cynthiaaccessory",
-        "name": "Pinces à Cheveux Noctali",
-        "description": "Des pinces à cheveux en forme de petites gouttes rappelant les queues de Noctali.",
+        "name": "Pinces a Cheveux Noctali",
+        "description": "Des pinces a cheveux en forme de petites gouttes rappelant les queues de Noctali.",
         "len": 68,
         "price": 20000,
         "tags": "hairclip,pokemon-umbreon",
@@ -268,7 +268,7 @@
     {
         "id": "dawnDPP",
         "name": "Bonnet Blanc et Rose",
-        "description": "Un bonnet blanc avec une Poké Ball rose à l'avant. Il est populaire parmi les jeunes dresseurs à Sinnoh",
+        "description": "Un bonnet blanc avec une Poke Ball rose a l'avant. Il est populaire parmi les jeunes dresseurs a Sinnoh",
         "done": "yes",
         "len": 98,
         "price": 3000,
@@ -278,7 +278,7 @@
     {
         "id": "designerheadphones",
         "name": " Casque Design",
-        "description": "Un casque stylés avec un design électrisant qui ajoute du Peps à votre look.",
+        "description": "Un casque styles avec un design electrisant qui ajoute du Peps a votre look.",
         "done": "yes",
         "price": 30000,
         "tags": "hat",
@@ -287,7 +287,7 @@
     {
         "id": "dragonitehorns",
         "name": "Cornes de Dracolosse",
-        "description": "De grandes cornes inspirées de Dracolosse.",
+        "description": "De grandes cornes inspirees de Dracolosse.",
         "price": 4500,
         "tags": "hat,pokemon-dratini,pokemon-dragonair,pokemon-dragonite,"
     },
@@ -303,8 +303,8 @@
     },
     {
         "id": "duskullmask",
-        "name": "Masque Skelénox",
-        "description": "Un crâne ressemblant au visage de Skelénox.",
+        "name": "Masque Skelenox",
+        "description": "Un crane ressemblant au visage de Skelenox.",
         "done": "yes",
         "len": 41,
         "price": 15000,
@@ -313,8 +313,8 @@
     },
     {
         "id": "eevee",
-        "name": "Tête Évoli",
-        "description": "Un Évoli qui aime se percher sur la tête d'un dresseur.",
+        "name": "Tete Evoli",
+        "description": "Un Evoli qui aime se percher sur la tete d'un dresseur.",
         "done": "yes",
         "len": "yes",
         "price": 0,
@@ -323,29 +323,29 @@
     },
     {
         "id": "electrivireheadset",
-        "name": "Casque Élekable",
-        "description": "Un casque électrique inspiré d’Élekable, un accessoire parfait pour les amateurs d'énergie.",
+        "name": "Casque Elekable",
+        "description": "Un casque electrique inspire dElekable, un accessoire parfait pour les amateurs d'energie.",
         "price": 10000,
         "tags": "hat,pokemon-elekid,pokemon-electabuzz,pokemon-electivire,"
     },
     {
         "id": "elioSM",
         "name": "Casquette Grise",
-        "description": "Un simple chapeau gris, idéal pour les dresseurs cherchant discrétion et confort.",
+        "description": "Un simple chapeau gris, ideal pour les dresseurs cherchant discretion et confort.",
         "price": 1500,
         "tags": "hat,alola,"
     },
     {
         "id": "elioUSUM",
         "name": "Chapeau Bicolore",
-        "description": "Un chapeau bicolore élégant, qui apporte une touche de modernité à toute tenue.",
+        "description": "Un chapeau bicolore elegant, qui apporte une touche de modernite a toute tenue.",
         "price": 1500,
         "tags": "hat,alola,"
     },
     {
         "id": "egg",
         "name": "Chapeau Oeuf",
-        "description": "Cet oeuf ne peut pas éclore, mais c'est un chapeau très stylé.",
+        "description": "Cet oeuf ne peut pas eclore, mais c'est un chapeau tres style.",
         "done": "yes",
         "len": 59,
         "price": 15000,
@@ -354,8 +354,8 @@
     },
     {
         "id": "emeraldSPEgem",
-        "name": "Émeraude Myst.",
-        "description": "Une émeraude mystérieuse placée sur le front du porteur. Elle scintille magnifiquement.",
+        "name": "Emeraude Myst.",
+        "description": "Une emeraude mysterieuse placee sur le front du porteur. Elle scintille magnifiquement.",
         "done": "yes",
         "len": 78,
         "price": 12000,
@@ -365,7 +365,7 @@
     {
         "id": "erikaHeadband",
         "name": "Bandeau Rouge",
-        "description": "Un beau bandeau rouge avec une Poké Ball blanc sur le côté.",
+        "description": "Un beau bandeau rouge avec une Poke Ball blanc sur le cote.",
         "done": "yes",
         "len": 60,
         "price": 18000,
@@ -374,8 +374,8 @@
     },
     {
         "id": "falknerscage",
-        "name": "Cage à Oiseau",
-        "description": "Une cage pour contenir les idées farfelues d'un dresseur.",
+        "name": "Cage a Oiseau",
+        "description": "Une cage pour contenir les idees farfelues d'un dresseur.",
         "done": "yes",
         "len": 49,
         "price": 18000,
@@ -385,7 +385,7 @@
     {
         "id": "fez",
         "name": "Fez",
-        "description": "Un chapeau traditionnel d'un pays lointain orné d'un gland noir.",
+        "description": "Un chapeau traditionnel d'un pays lointain orne d'un gland noir.",
         "done": "yes",
         "len": 74,
         "price": 5000,
@@ -395,7 +395,7 @@
     {
         "id": "firefigther",
         "name": "Casque de Pompier",
-        "description": "Un casque fait pour les héros courageux qui risquent leur vie chaque jour.",
+        "description": "Un casque fait pour les heros courageux qui risquent leur vie chaque jour.",
         "done": "yes",
         "price": 0,
         "tags": "hat, cinnabar,",
@@ -404,7 +404,7 @@
     {
         "id": "froghat",
         "name": "Chapeau Grenouille",
-        "description": "Littéralement le développeur du jeu sur ta petite tête.",
+        "description": "Litteralement le developpeur du jeu sur ta petite tete.",
         "done": "yes",
         "price": 8000,
         "tags": "hat,",
@@ -413,7 +413,7 @@
     {
         "id": "fusionnerd",
         "name": "Lunettes Fusion",
-        "description": "Une paire de lunettes VR sophistiquées. Elles ne servent à rien, mais elles sont cool!",
+        "description": "Une paire de lunettes VR sophistiquees. Elles ne servent a rien, mais elles sont cool!",
         "done": "yes",
         "len": 86,
         "price": 0,
@@ -423,7 +423,7 @@
     {
         "id": "giovannifedora",
         "name": "Chapeau Mafieux",
-        "description": "Un chapeau noir élégant.",
+        "description": "Un chapeau noir elegant.",
         "done": "yes",
         "len": 23,
         "price": 18000,
@@ -432,8 +432,8 @@
     },
     {
         "id": "glitzerset",
-        "name": "Masque Buggué",
-        "description": "Un masque étrange qui donne l'impression que tu viens de sortir d'un fichier sauvegardé corrompu. ",
+        "name": "Masque Buggue",
+        "description": "Un masque etrange qui donne l'impression que tu viens de sortir d'un fichier sauvegarde corrompu. ",
         "done": "yes",
         "price": 10000,
         "tags": "mask,special,",
@@ -442,7 +442,7 @@
     {
         "id": "glasses",
         "name": "Lunettes Rondes",
-        "description": "Une paire de lunettes rondes standard. Les verres sont purement décoratifs.",
+        "description": "Une paire de lunettes rondes standard. Les verres sont purement decoratifs.",
         "done": "yes",
         "len": 67,
         "price": 500,
@@ -451,8 +451,8 @@
     },
     {
         "id": "glasses2",
-        "name": "Lunettes à Demi-Cercle",
-        "description": "Une paire de lunettes standard sans cerclage au bas. Elles sont populaires chez les chercheurs Pokémon.",
+        "name": "Lunettes a Demi-Cercle",
+        "description": "Une paire de lunettes standard sans cerclage au bas. Elles sont populaires chez les chercheurs Pokemon.",
         "done": "yes",
         "len": 104,
         "price": 500,
@@ -461,8 +461,8 @@
     },
     {
         "id": "gloria",
-        "name": "Béret Plumeline",
-        "description": "Un béret vert foncé avec un Plumeline blanc. Il est populaire parmi les jeunes dresseurs à Galar.",
+        "name": "Beret Plumeline",
+        "description": "Un beret vert fonce avec un Plumeline blanc. Il est populaire parmi les jeunes dresseurs a Galar.",
         "done": "yes",
         "len": 86,
         "price": 2000,
@@ -472,7 +472,7 @@
     {
         "id": "goggles",
         "name": "Lunettes de Protection",
-        "description": "Des lunettes jaunes stylées à porter en bandeau.",
+        "description": "Des lunettes jaunes stylees a porter en bandeau.",
         "done": "yes",
         "len": 43,
         "price": 3500,
@@ -481,7 +481,7 @@
     {
         "id": "gold",
         "name": "Casquette Noire/Or",
-        "description": "Une casquette noire et jaune, portée à l'envers. Elle est populaire parmi les jeunes dresseurs à Johto.",
+        "description": "Une casquette noire et jaune, portee a l'envers. Elle est populaire parmi les jeunes dresseurs a Johto.",
         "done": "yes",
         "len": 86,
         "price": 2000,
@@ -491,7 +491,7 @@
     {
         "id": "gold2",
         "name": "Casquette Noire/Or (Cheveux)",
-        "description": "Une casquette noire et jaune, portée à l'envers. Elle est populaire parmi les jeunes dresseurs à Johto.",
+        "description": "Une casquette noire et jaune, portee a l'envers. Elle est populaire parmi les jeunes dresseurs a Johto.",
         "done": "yes",
         "len": 86,
         "price": 2000,
@@ -501,7 +501,7 @@
     {
         "id": "halo",
         "name": "Halo",
-        "description": "Un anneau doré flottant mystérieusement au-dessus de la tête du porteur.",
+        "description": "Un anneau dore flottant mysterieusement au-dessus de la tete du porteur.",
         "done": "yes",
         "len": 63,
         "price": 10000,
@@ -510,23 +510,23 @@
     },
     {
         "id": "haxorushelmet",
-        "name": "Casque Mâchoire",
-        "description": "Un casque imposant en forme de mâchoire de Tranchodon. Il est conçu pour effrayer vos ennemis! ",
+        "name": "Casque Machoire",
+        "description": "Un casque imposant en forme de machoire de Tranchodon. Il est concu pour effrayer vos ennemis! ",
         "price": 8000,
         "tags": "pokemon-axew,pokemon-fraxure,pokemon-haxorus,"
     },
     {
         "id": "headlacecovering",
         "name": "Couvre-chef en Dentelle",
-        "description": "Un délicat voile en dentelle transparent porté sur la tête.",
+        "description": "Un delicat voile en dentelle transparent porte sur la tete.",
         "done": "yes",
         "price": 1500,
         "tags": "hat,vermillion"
     },
     {
         "id": "headparas",
-        "name": "Paras sur la Tête",
-        "description": "Un Paras qui aime se percher sur la tête d'un dresseur.",
+        "name": "Paras sur la Tete",
+        "description": "Un Paras qui aime se percher sur la tete d'un dresseur.",
         "done": "yes",
         "price": 0,
         "tags": "nest,",
@@ -535,7 +535,7 @@
     {
         "id": "headphones",
         "name": "Casque Audio",
-        "description": "Un Casque élégants pour les dresseurs qui préfèrent écouter leur propre musique pendant leurs aventures!",
+        "description": "Un Casque elegants pour les dresseurs qui preferent ecouter leur propre musique pendant leurs aventures!",
         "done": "yes",
         "len": 99,
         "price": 6000,
@@ -544,7 +544,7 @@
     {
         "id": "hijabblack",
         "name": "Hijab Noir",
-        "description": "Un hijab noir élégant avec une finition lisse et raffinée.",
+        "description": "Un hijab noir elegant avec une finition lisse et raffinee.",
         "done": "yes",
         "len": 54,
         "price": 1000,
@@ -562,7 +562,7 @@
     {
         "id": "hijabdark",
         "name": "Hijab Sombre",
-        "description": "Un hijab de couleur profonde et riche qui offre une allure raffinée.",
+        "description": "Un hijab de couleur profonde et riche qui offre une allure raffinee.",
         "done": "yes",
         "len": 47,
         "price": 1000,
@@ -570,8 +570,8 @@
     },
     {
         "id": "hijablight",
-        "name": "Hijab Léger",
-        "description": "Un hijab léger de couleur douce pour une touche fraîche.",
+        "name": "Hijab Leger",
+        "description": "Un hijab leger de couleur douce pour une touche fraiche.",
         "done": "yes",
         "len": 50,
         "price": 1000,
@@ -580,7 +580,7 @@
     {
         "id": "hijabwhite",
         "name": "Hijab Blanc",
-        "description": "Un hijab blanc classique avec un look propre et sophistiqué.",
+        "description": "Un hijab blanc classique avec un look propre et sophistique.",
         "done": "yes",
         "len": 59,
         "price": 1000,
@@ -589,7 +589,7 @@
     {
         "id": "hilda",
         "name": "Casquette Rose & Blanche",
-        "description": "Un chapeau rose et blanc au design raffiné, populaire parmi les jeunes dresseurs d'Unys.",
+        "description": "Un chapeau rose et blanc au design raffine, populaire parmi les jeunes dresseurs d'Unys.",
         "done": "yes",
         "price": 2000,
         "tags": "hat,trainer,unova,"
@@ -597,15 +597,15 @@
     {
         "id": "hilda2",
         "name": "Casquette Rose & Blanche (Cheveux)",
-        "description": "Un chapeau rose et blanc conçu spécialement pour les coiffures en \"Queue Haute\".",
+        "description": "Un chapeau rose et blanc concu specialement pour les coiffures en \"Queue Haute\".",
         "done": "yes",
         "price": 2000,
         "tags": "hat,trainer,unova,"
     },
     {
         "id": "hilbert",
-        "name": "Béret Rouge Sombre",
-        "description": "Une casquette avec un logo Poké Ball sur l'avant. Elle est populaire parmi les jeunes dresseurs à Unys.",
+        "name": "Beret Rouge Sombre",
+        "description": "Une casquette avec un logo Poke Ball sur l'avant. Elle est populaire parmi les jeunes dresseurs a Unys.",
         "done": "yes",
         "len": 96,
         "price": 2000,
@@ -614,8 +614,8 @@
     },
     {
         "id": "karateHeadband",
-        "name": "Bandeau Karaté",
-        "description": "Un bandeau rouge attaché fermement autour du front. Il est porté par les dresseurs qui recherchent discipline et force.",
+        "name": "Bandeau Karate",
+        "description": "Un bandeau rouge attache fermement autour du front. Il est porte par les dresseurs qui recherchent discipline et force.",
         "done": "yes",
         "price": 6000,
         "tags": "headband,saffron,",
@@ -623,8 +623,8 @@
     },
     {
         "id": "kogascarf",
-        "name": "Écharpe",
-        "description": "Une écharpe flottante souvent portée par les ninjas et shinobis.",
+        "name": "Echarpe",
+        "description": "Une echarpe flottante souvent portee par les ninjas et shinobis.",
         "done": "yes",
         "len": 60,
         "price": 18000,
@@ -634,7 +634,7 @@
     {
         "id": "kris",
         "name": "Chapeau Jaune",
-        "description": "Un petit chapeau rond et ajusté. Il est populaire parmi les jeunes dresseurs à Johto.",
+        "description": "Un petit chapeau rond et ajuste. Il est populaire parmi les jeunes dresseurs a Johto.",
         "done": "yes",
         "len": 78,
         "price": 2000,
@@ -644,7 +644,7 @@
     {
         "id": "kurtsentaihelmet",
         "name": "Casque Coxyclaque",
-        "description": "Un casque ressemblant à la tête de Coxyclaque. Il est porté par une équipe de super-héros dans une émission pour enfants populaire.",
+        "description": "Un casque ressemblant a la tete de Coxyclaque. Il est porte par une equipe de super-heros dans une emission pour enfants populaire.",
         "done": "yes",
         "len": 98,
         "price": 25000,
@@ -654,7 +654,7 @@
     {
         "id": "lady",
         "name": "Chapeau Soleil",
-        "description": "Un chapeau à large bord rose très populaire chez les dames.",
+        "description": "Un chapeau a large bord rose tres populaire chez les dames.",
         "done": "yes",
         "len": 48,
         "price": 1500,
@@ -663,7 +663,7 @@
     {
         "id": "leaf",
         "name": "Chapeau Blanc",
-        "description": "Ton chapeau blanc emblématique. Toi et ton frère aimez parfois l'échanger.",
+        "description": "Ton chapeau blanc emblematique. Toi et ton frere aimez parfois l'echanger.",
         "done": "yes",
         "len": 71,
         "price": 100,
@@ -672,8 +672,8 @@
     },
     {
         "id": "lucasDPP",
-        "name": "Béret Plate Rouge",
-        "description": "Une casquette plate avec un logo Poké Ball sur le côté. Elle est populaire parmi les jeunes dresseurs à Sinnoh.",
+        "name": "Beret Plate Rouge",
+        "description": "Une casquette plate avec un logo Poke Ball sur le cote. Elle est populaire parmi les jeunes dresseurs a Sinnoh.",
         "done": "yes",
         "len": 93,
         "price": 2000,
@@ -682,8 +682,8 @@
     },
     {
         "id": "lucasPLA",
-        "name": "Béret Plate Rouge Sombre",
-        "description": "Une casquette plate sombre. Elle semble avoir été portée à Hisui il y a longtemps.",
+        "name": "Beret Plate Rouge Sombre",
+        "description": "Une casquette plate sombre. Elle semble avoir ete portee a Hisui il y a longtemps.",
         "done": "yes",
         "len": 62,
         "price": 2000,
@@ -693,7 +693,7 @@
     {
         "id": "ludicolosombrero",
         "name": "Sombrero Ludicolo",
-        "description": "Un sombrero festif souvent porté lors de fêtes.",
+        "description": "Un sombrero festif souvent porte lors de fetes.",
         "done": "yes",
         "len": 53,
         "price": 18000,
@@ -702,7 +702,7 @@
     {
         "id": "luluribbon",
         "name": "Grand Noeud Rouge et Blanc",
-        "description": "Un grand noeud pour la tête de couleur rouge et blanche.",
+        "description": "Un grand noeud pour la tete de couleur rouge et blanche.",
         "done": "yes",
         "len": 31,
         "price": 18000,
@@ -711,16 +711,16 @@
     },
     {
         "id": "lycanrochooddown",
-        "name": "Capuche Lougaroc (baissée)",
-        "description": "Une capuche duveteuse. Baissée pour ceux qui veulent un peu de soleil.",
+        "name": "Capuche Lougaroc (baissee)",
+        "description": "Une capuche duveteuse. Baissee pour ceux qui veulent un peu de soleil.",
         "done": "yes",
         "price": 12000,
         "tags": "pokemon-rockruff,pokemon-lycanroc_d,pokemon-lycanroc_n,"
     },
     {
         "id": "lycanrochoodup",
-        "name": "Capuche Lougaroc (levée)",
-        "description": "Une capuche duveteuse. Levée pour ceux qui évitent le soleil",
+        "name": "Capuche Lougaroc (levee)",
+        "description": "Une capuche duveteuse. Levee pour ceux qui evitent le soleil",
         "done": "yes",
         "price": 12000,
         "tags": "pokemon-rockruff,pokemon-lycanroc_d,pokemon-lycanroc_n,"
@@ -728,7 +728,7 @@
     {
         "id": "lyra",
         "name": "Chapeau Rond + Noeud",
-        "description": "Un grand chapeau doux avec un ruban et un nœud. Il est populaire parmi les jeunes dresseurs à Johto.",
+        "description": "Un grand chapeau doux avec un ruban et un nud. Il est populaire parmi les jeunes dresseurs a Johto.",
         "done": "yes",
         "len": 86,
         "price": 2000,
@@ -738,14 +738,14 @@
     {
         "id": "maid",
         "name": "Bonnet de Servante",
-        "description": "Un bonnet simple et charmant, qui évoque un style vintage et intemporel.",
+        "description": "Un bonnet simple et charmant, qui evoque un style vintage et intemporel.",
         "price": 1500,
         "tags": "hat,"
     },
     {
         "id": "magicap",
         "name": "Cagoule Magicarpe",
-        "description": "Une cagoule faite pour ressembler à un Magicarpe.",
+        "description": "Une cagoule faite pour ressembler a un Magicarpe.",
         "done": "yes",
         "len": 41,
         "price": 15000,
@@ -754,8 +754,8 @@
     },
     {
         "id": "magnemitepin",
-        "name": "Pinces à Cheveux Magnemite",
-        "description": "Des pinces à cheveux ressemblant à des Magnétis. Elles ont été popularisées par un influenceur à Paldea.",
+        "name": "Pinces a Cheveux Magnemite",
+        "description": "Des pinces a cheveux ressemblant a des Magnetis. Elles ont ete popularisees par un influenceur a Paldea.",
         "done": "yes",
         "len": 86,
         "price": 18000,
@@ -765,7 +765,7 @@
     {
         "id": "marshk",
         "name": "Masque Flobio",
-        "description": "Un masque élégant inspiré de Flobio.",
+        "description": "Un masque elegant inspire de Flobio.",
         "done": "yes",
         "len": 45,
         "price": 12000,
@@ -774,7 +774,7 @@
     {
         "id": "mayORAS",
         "name": "Bandana",
-        "description": "Un bandana rouge attaché autour du front avec un nœud. Il est populaire parmi les jeunes dresseurs à Hoenn.",
+        "description": "Un bandana rouge attache autour du front avec un nud. Il est populaire parmi les jeunes dresseurs a Hoenn.",
         "done": "yes",
         "len": 93,
         "price": 2000,
@@ -784,7 +784,7 @@
     {
         "id": "mayRSE",
         "name": "Bandana Rouge",
-        "description": "Un bandana rouge porté comme un chapeau. Il est populaire parmi les jeunes dresseurs à Hoenn.",
+        "description": "Un bandana rouge porte comme un chapeau. Il est populaire parmi les jeunes dresseurs a Hoenn.",
         "done": "yes",
         "len": 75,
         "price": 2000,
@@ -793,8 +793,8 @@
     },
     {
         "id": "mikufairy",
-        "name": "Fleur Féérique",
-        "description": "Une pince à cheveux en forme de fleur ressemblant à celle portée par une célèbre chanteuse.",
+        "name": "Fleur Feerique",
+        "description": "Une pince a cheveux en forme de fleur ressemblant a celle portee par une celebre chanteuse.",
         "done": "yes",
         "len": 69,
         "price": 0,
@@ -804,7 +804,7 @@
     {
         "id": "mortyHeadband",
         "name": "Bandeau Violet",
-        "description": "Un bandeau violet avec une aura étrange et menaçante.",
+        "description": "Un bandeau violet avec une aura etrange et menacante.",
         "done": "yes",
         "len": 46,
         "price": 18000,
@@ -813,8 +813,8 @@
     },
     {
         "id": "nate",
-        "name": "Visière Rouge",
-        "description": "Une visière rouge avec une Poké Ball noir et blanc sur le devant. Elle est populaire parmi les jeunes dresseurs à Unys.",
+        "name": "Visiere Rouge",
+        "description": "Une visiere rouge avec une Poke Ball noir et blanc sur le devant. Elle est populaire parmi les jeunes dresseurs a Unys.",
         "done": "yes",
         "len": 105,
         "price": 2000,
@@ -823,8 +823,8 @@
     },
     {
         "id": "nate2",
-        "name": "Visière Rouge (Cheveux)",
-        "description": "Une visière rouge avec une Poké Ball noir et blanc sur le devant. Elle est populaire parmi les jeunes dresseurs à Unys.",
+        "name": "Visiere Rouge (Cheveux)",
+        "description": "Une visiere rouge avec une Poke Ball noir et blanc sur le devant. Elle est populaire parmi les jeunes dresseurs a Unys.",
         "done": "yes",
         "len": 110,
         "price": 2000,
@@ -834,7 +834,7 @@
     {
         "id": "nhat",
         "name": "Casquette Grise et Noire",
-        "description": "Une casquette noire et gris. Elle est populaire parmi les dresseurs à Unys.",
+        "description": "Une casquette noire et gris. Elle est populaire parmi les dresseurs a Unys.",
         "done": "yes",
         "len": 66,
         "price": 2000,
@@ -843,8 +843,8 @@
     },
     {
         "id": "nursejoyhat",
-        "name": "Casquette d'Infirmière",
-        "description": "Une casquette blanche portant une croix rouge. Elle est habituellement portée par les infirmières.",
+        "name": "Casquette d'Infirmiere",
+        "description": "Une casquette blanche portant une croix rouge. Elle est habituellement portee par les infirmieres.",
         "len": 97,
         "price": 25000,
         "tags": "hat,pokemon-happiny,pokemon-chansey,pokemon-blissey",
@@ -853,7 +853,7 @@
     {
         "id": "ogremaskblue",
         "name": "Masque Source",
-        "description": "Un masque bleu en bois sculpté représentant le visage d'un ogre.",
+        "description": "Un masque bleu en bois sculpte representant le visage d'un ogre.",
         "done": "yes",
         "price": 10000,
         "tags": "mask,",
@@ -862,7 +862,7 @@
     {
         "id": "ogremaskgreen",
         "name": "Masque Sarcelle",
-        "description": "Un masque vert en bois sculpté représentant le visage d'un ogre.",
+        "description": "Un masque vert en bois sculpte representant le visage d'un ogre.",
         "done": "yes",
         "price": 10000,
         "tags": "mask,",
@@ -871,7 +871,7 @@
     {
         "id": "ogremaskgrey",
         "name": "Masque Angulaire",
-        "description": "Un masque gris en bois sculpté représentant le visage d'un ogre.",
+        "description": "Un masque gris en bois sculpte representant le visage d'un ogre.",
         "done": "yes",
         "price": 10000,
         "tags": "mask,",
@@ -880,7 +880,7 @@
     {
         "id": "ogremaskred",
         "name": "Masque Flamme",
-        "description": "Un masque rouge en bois sculpté représentant le visage d'un ogre.",
+        "description": "Un masque rouge en bois sculpte representant le visage d'un ogre.",
         "done": "yes",
         "price": 10000,
         "tags": "mask,",
@@ -899,7 +899,7 @@
     {
         "id": "pidgey",
         "name": "Nid de Roucool",
-        "description": "Un Roucool qui a décidé de construire un nid sur la tête d'un dresseur.",
+        "description": "Un Roucool qui a decide de construire un nid sur la tete d'un dresseur.",
         "done": "yes",
         "len": 65,
         "price": 0,
@@ -909,7 +909,7 @@
     {
         "id": "pikacap",
         "name": "Pikasquette",
-        "description": "Un joli chapeau fait pour ressembler à un Pikachu.",
+        "description": "Un joli chapeau fait pour ressembler a un Pikachu.",
         "done": "yes",
         "len": 39,
         "price": 2000,
@@ -918,7 +918,7 @@
     {
         "id": "pikaonesie",
         "name": "Capuche Pikachu",
-        "description": "Une capuche conçue pour ressembler à Pikachu, complète avec des oreilles et une expression joyeuse.",
+        "description": "Une capuche concue pour ressembler a Pikachu, complete avec des oreilles et une expression joyeuse.",
         "done": "yes",
         "len": 83,
         "price": 4000,
@@ -927,8 +927,8 @@
     },
     {
         "id": "pikhatchuf",
-        "name": "Pikachu sur la Tête",
-        "description": "Un Pikachu femelle qui aime se percher sur la tête d'un dresseur.",
+        "name": "Pikachu sur la Tete",
+        "description": "Un Pikachu femelle qui aime se percher sur la tete d'un dresseur.",
         "done": "yes",
         "len": 75,
         "price": 0,
@@ -937,8 +937,8 @@
     },
     {
         "id": "pikhatchum",
-        "name": "Pikachu sur la Tête",
-        "description": "Un Pikachu mâle qui aime se percher sur la tête d'un dresseur.",
+        "name": "Pikachu sur la Tete",
+        "description": "Un Pikachu male qui aime se percher sur la tete d'un dresseur.",
         "done": "yes",
         "len": 73,
         "price": 0,
@@ -947,15 +947,15 @@
     },
     {
         "id": "PKMBreeder",
-        "name": "Bandana Lâche",
-        "description": "Une bandane utilisé par des éleveurs. Il est porté de manière plus décontractée.",
+        "name": "Bandana Lache",
+        "description": "Une bandane utilise par des eleveurs. Il est porte de maniere plus decontractee.",
         "price": 15000,
         "tags": "hairclip,"
     },
     {
         "id": "poison",
         "name": "Capuche Poison (M)",
-        "description": "Une capuche violette ressemblant à un Abo. Elle est portée par les dresseurs ayant une affinité avec le type poison.",
+        "description": "Une capuche violette ressemblant a un Abo. Elle est portee par les dresseurs ayant une affinite avec le type poison.",
         "done": "yes",
         "len": 100,
         "price": 2500,
@@ -964,7 +964,7 @@
     {
         "id": "poisonf",
         "name": "Capuche Poison (F)",
-        "description": "Une capuche violette ressemblant à un Seviper. Elle est portée par les dresseurs ayant une affinité avec le type poison.",
+        "description": "Une capuche violette ressemblant a un Seviper. Elle est portee par les dresseurs ayant une affinite avec le type poison.",
         "done": "yes",
         "len": 102,
         "price": 2500,
@@ -973,7 +973,7 @@
     {
         "id": "postman",
         "name": "Chapeau Facteur",
-        "description": "Un chapeau porté par ceux qui manipulent les colis avec soin",
+        "description": "Un chapeau porte par ceux qui manipulent les colis avec soin",
         "done": "yes",
         "price": 8000,
         "tags": "hat,",
@@ -982,7 +982,7 @@
     {
         "id": "prycemask",
         "name": "Masque Oniglali",
-        "description": "Un masque de hockey ressemblant à un Oniglali, souvent porté par les fans de l'équipe Laser Glace.",
+        "description": "Un masque de hockey ressemblant a un Oniglali, souvent porte par les fans de l'equipe Laser Glace.",
         "done": "yes",
         "len": 83,
         "price": 18000,
@@ -992,7 +992,7 @@
     {
         "id": "Ramos",
         "name": "Casquette Plate Verte",
-        "description": "Une casquette plate verte popularisée par un certain Champion d'arène de Kalos.",
+        "description": "Une casquette plate verte popularisee par un certain Champion d'arene de Kalos.",
         "done": "yes",
         "price": 3500,
         "tags": "hat,kalos,"
@@ -1000,7 +1000,7 @@
     {
         "id": "ranger",
         "name": "Chapeau Ranger",
-        "description": "Un fedora rouge porté par les Rangers Pokémon pour se protéger du soleil ardent.",
+        "description": "Un fedora rouge porte par les Rangers Pokemon pour se proteger du soleil ardent.",
         "done": "yes",
         "len": 83,
         "price": 1500,
@@ -1009,7 +1009,7 @@
     {
         "id": "red",
         "name": "Casquette Rouge",
-        "description": "Ta casquette rouge emblématique. Toi et ton frère aimez parfois l'échanger.",
+        "description": "Ta casquette rouge emblematique. Toi et ton frere aimez parfois l'echanger.",
         "done": "yes",
         "len": 69,
         "price": 0,
@@ -1019,7 +1019,7 @@
     {
         "id": "registeelhelm",
         "name": "Casque Titan Acier",
-        "description": "Un casque en acier ressemblant à un titan légendaire perdu.",
+        "description": "Un casque en acier ressemblant a un titan legendaire perdu.",
         "done": "yes",
         "len": 54,
         "price": 25000,
@@ -1028,7 +1028,7 @@
     {
         "id": "riley",
         "name": "Fedora Bleu",
-        "description": "Un fedora bleu élégant ressemblant aux plumes de tête d'un Corboss",
+        "description": "Un fedora bleu elegant ressemblant aux plumes de tete d'un Corboss",
         "done": "yes",
         "len": 70,
         "price": 2000,
@@ -1046,8 +1046,8 @@
     },
     {
         "id": "rosa",
-        "name": "Visière Rouge et Blanche",
-        "description": "Une visière rouge et blanche claire. Elle est populaire parmi les jeunes dresseurs à Unys.",
+        "name": "Visiere Rouge et Blanche",
+        "description": "Une visiere rouge et blanche claire. Elle est populaire parmi les jeunes dresseurs a Unys.",
         "done": "yes",
         "len": 70,
         "price": 2000,
@@ -1056,15 +1056,15 @@
     },
     {
         "id": "rosa2",
-        "name": "Visière Rose & Blanche (Cheveux)",
-        "description": "Une visière rose et blanche, parfaite pour les coiffures \"Couette à Mèches Longues\".",
+        "name": "Visiere Rose & Blanche (Cheveux)",
+        "description": "Une visiere rose et blanche, parfaite pour les coiffures \"Couette a Meches Longues\".",
         "price": 2000,
         "tags": "hat,trainer,unova,"
     },
     {
         "id": "roseradeF",
         "name": "Masque Roserade (F)",
-        "description": "Un masque pour les yeux ressemblant à celui de Roserade.",
+        "description": "Un masque pour les yeux ressemblant a celui de Roserade.",
         "done": "yes",
         "len": 37,
         "price": 4500,
@@ -1073,7 +1073,7 @@
     {
         "id": "roseradeM",
         "name": "Masque Roserade (M)",
-        "description": "Un masque pour les yeux ressemblant à celui de Roserade.",
+        "description": "Un masque pour les yeux ressemblant a celui de Roserade.",
         "done": "yes",
         "len": 37,
         "price": 4500,
@@ -1081,16 +1081,16 @@
     },
     {
         "id": "sableyemask",
-        "name": "Masque Ténéfix",
-        "description": "Un déguisement étrange avec des yeux de gemmes, qui te permet de canaliser ton esprit de farceur.",
+        "name": "Masque Tenefix",
+        "description": "Un deguisement etrange avec des yeux de gemmes, qui te permet de canaliser ton esprit de farceur.",
         "done": "yes",
         "price": 4500,
         "tags": "mask,pokemon-sableye"
     },
     {
         "id": "sabrinasballs",
-        "name": "Boules Lévitation",
-        "description": "Quelques Poké Balls qui lévitent de manière permanente grâce à de l'énergie psychokinétique.",
+        "name": "Boules Levitation",
+        "description": "Quelques Poke Balls qui levitent de maniere permanente grace a de l'energie psychokinetique.",
         "done": "yes",
         "len": 69,
         "price": 18000,
@@ -1100,7 +1100,7 @@
     {
         "id": "sandshrewbeanie",
         "name": "Bonnet Sabelette",
-        "description": "Un bonnet cosy inspiré par la peau rugueuse d'un Sabelette.",
+        "description": "Un bonnet cosy inspire par la peau rugueuse d'un Sabelette.",
         "done": "yes",
         "len": 62,
         "price": 8000,
@@ -1109,7 +1109,7 @@
     {
         "id": "santa",
         "name": "Chapeau Festif",
-        "description": "Un bonnet chaud et confortable porté pendant la saison des fêtes.",
+        "description": "Un bonnet chaud et confortable porte pendant la saison des fetes.",
         "done": "yes",
         "price": 25000,
         "tags": "hat,pokemon-delibird,"
@@ -1117,7 +1117,7 @@
     {
         "id": "seacaptain",
         "name": "Chapeau de Capitaine",
-        "description": "Un chapeau blanc souvent porté par les capitaines de navires.",
+        "description": "Un chapeau blanc souvent porte par les capitaines de navires.",
         "done": "yes",
         "len": 47,
         "price": 16000,
@@ -1127,7 +1127,7 @@
     {
         "id": "seleneSM",
         "name": "Bonnet Plumeline",
-        "description": "Un bonnet avec un Plumeline en forme de fleur. Il est populaire parmi les jeunes dresseurs à Alola.",
+        "description": "Un bonnet avec un Plumeline en forme de fleur. Il est populaire parmi les jeunes dresseurs a Alola.",
         "done": "yes",
         "len": 84,
         "price": 2000,
@@ -1137,14 +1137,14 @@
     {
         "id": "seleneUSUM",
         "name": "Chapeau de Soleil Alola",
-        "description": "Un chapeau de soleil orné de fleurs, très prisé par les jeunes dresseurs d'Alola.",
+        "description": "Un chapeau de soleil orne de fleurs, tres prise par les jeunes dresseurs d'Alola.",
         "price": 2000,
         "tags": "hat, weather-warm,alola,"
     },
     {
         "id": "serena",
         "name": "Chapeau Rouge + Lunettes",
-        "description": "Un chapeau rouge surmonté de lunettes de soleil blanches. Il est populaire parmi les jeunes dresseurs à Kalos.",
+        "description": "Un chapeau rouge surmonte de lunettes de soleil blanches. Il est populaire parmi les jeunes dresseurs a Kalos.",
         "done": "yes",
         "len": 88,
         "price": 2000,
@@ -1154,14 +1154,14 @@
     {
         "id": "simpleheadband",
         "name": "Bandeau",
-        "description": "Un bandeau simple mais pratique, idéal pour garder les cheveux en place lors des aventures.",
+        "description": "Un bandeau simple mais pratique, ideal pour garder les cheveux en place lors des aventures.",
         "price": 500,
         "tags": "headband,default,"
     },
     {
         "id": "skierF",
         "name": "Bonnet Rose",
-        "description": "Un bonnet rose chaud souvent porté par les skieurs.",
+        "description": "Un bonnet rose chaud souvent porte par les skieurs.",
         "done": "yes",
         "len": 44,
         "price": 3500,
@@ -1169,8 +1169,8 @@
     },
     {
         "id": "skittyTV",
-        "name": "Télé Skitty",
-        "description": "Une télévision portable aux couleurs de Skitty. Utilise-la pour revoir tes replays de combats!",
+        "name": "Tele Skitty",
+        "description": "Une television portable aux couleurs de Skitty. Utilise-la pour revoir tes replays de combats!",
         "price": 5000,
         "tags": "hat,",
         "howToGet": "goldenrod radio tower"
@@ -1178,7 +1178,7 @@
     {
         "id": "sleepmask",
         "name": "Masque de Sommeil Wattouat",
-        "description": "Un masque pour les yeux ressemblant à celui de Wattouat.",
+        "description": "Un masque pour les yeux ressemblant a celui de Wattouat.",
         "done": "yes",
         "len": 38,
         "price": 8000,
@@ -1188,7 +1188,7 @@
     {
         "id": "slowking",
         "name": "Coquille Roigada",
-        "description": "Cette Coquille s'est accroché à ta tête, t'obligeant à évoluer un rois.",
+        "description": "Cette Coquille s'est accroche a ta tete, t'obligeant a evoluer un rois.",
         "done": "yes",
         "len": 78,
         "price": 15000,
@@ -1197,7 +1197,7 @@
     {
         "id": "snorlaxhat",
         "name": "Chapeau Ronflex",
-        "description": "Un chapeau conçu pour ressembler à la tête de Ronflex, avec son visage endormie emblématique.",
+        "description": "Un chapeau concu pour ressembler a la tete de Ronflex, avec son visage endormie emblematique.",
         "done": "yes",
         "price": 15000,
         "tags": "hat,pokemon-munchlax,pokemon-snorlax,"
@@ -1205,7 +1205,7 @@
     {
         "id": "snoruntcap",
         "name": "Chapeau Stalgamin",
-        "description": "Un chapeau d'hiver chaud conçu pour ressembler à un Stalgamin.",
+        "description": "Un chapeau d'hiver chaud concu pour ressembler a un Stalgamin.",
         "done": "yes",
         "len": 54,
         "price": 12000,
@@ -1213,8 +1213,8 @@
     },
     {
         "id": "splicer",
-        "name": "Béret Fusion",
-        "description": "Un béret conçu pour ressembler à un Pointeau ADN.",
+        "name": "Beret Fusion",
+        "description": "Un beret concu pour ressembler a un Pointeau ADN.",
         "done": "yes",
         "len": 39,
         "price": 18000,
@@ -1223,7 +1223,7 @@
     {
         "id": "squirtlesquadshades",
         "name": "Lunettes Squad",
-        "description": "Des lunettes stylées portées par le leader de la Squad Carapuce!",
+        "description": "Des lunettes stylees portees par le leader de la Squad Carapuce!",
         "done": "yes",
         "price": 8000,
         "tags": "glasses,pokemon-squirtle,pokemon-wartortle,pokemon-blastoise,",
@@ -1231,8 +1231,8 @@
     },
     {
         "id": "starmieclip",
-        "name": " Pince à Cheveux Staross",
-        "description": "Une pince à cheveux à la mode ressemblant à un Staross avec des algues et des coraux.",
+        "name": " Pince a Cheveux Staross",
+        "description": "Une pince a cheveux a la mode ressemblant a un Staross avec des algues et des coraux.",
         "done": "yes",
         "len": 70,
         "price": 18000,
@@ -1242,7 +1242,7 @@
     {
         "id": "surgeglasses",
         "name": "Lunettes de Soleil",
-        "description": "Des lunettes de soleil incroyablement stylées.",
+        "description": "Des lunettes de soleil incroyablement stylees.",
         "done": "yes",
         "len": 27,
         "price": 18000,
@@ -1251,8 +1251,8 @@
     },
     {
         "id": "swablu",
-        "name": "Tylton sur la Tête",
-        "description": "Un Tylton qui a décidé de se percher sur la tête d'un dresseur.",
+        "name": "Tylton sur la Tete",
+        "description": "Un Tylton qui a decide de se percher sur la tete d'un dresseur.",
         "done": "yes",
         "len": 57,
         "price": 0,
@@ -1262,14 +1262,14 @@
     {
         "id": "sudowoodohorns",
         "name": "Corne Simularbre",
-        "description": "Une corne ramifiée faite de roche, tombée d’un Simularbre. Elle dégage une aura unique.",
+        "description": "Une corne ramifiee faite de roche, tombee dun Simularbre. Elle degage une aura unique.",
         "price": 5000,
         "tags": "pokemon-bonsly,pokemon-sudowoodo,hairclip,headband,"
     },
     {
         "id": "sylveonbow",
         "name": " Noeud Nymphali",
-        "description": "Un joli nœud rose pour cheveux ressemblant à celui de Nymphali.",
+        "description": "Un joli nud rose pour cheveux ressemblant a celui de Nymphali.",
         "done": "yes",
         "len": 50,
         "price": 12000,
@@ -1278,7 +1278,7 @@
     {
         "id": "tophat",
         "name": "Haut de Forme Rouge",
-        "description": "Un élégant chapeau haut de forme avec un bandeau rouge.",
+        "description": "Un elegant chapeau haut de forme avec un bandeau rouge.",
         "len": 33,
         "price": 10000,
         "tags": "hat,"
@@ -1294,7 +1294,7 @@
     {
         "id": "trevenantforestkingcrown",
         "name": "Couronne du Roi Sylvestre",
-        "description": "Une couronne majestueuse, symbole de la royauté des forêts, associée à la puissance des Pokémon Plante.",
+        "description": "Une couronne majestueuse, symbole de la royaute des forets, associee a la puissance des Pokemon Plante.",
         "price": 15000,
         "tags": "hat,pokemon-phantump,pokemon-trevenant,",
         "howToGet": "Ilex forest at night"
@@ -1302,15 +1302,15 @@
     {
         "id": "triangularsunglasses",
         "name": "Lunettes Triangulaires",
-        "description": "Des lunettes de soleil stylées en forme de triangles.",
+        "description": "Des lunettes de soleil stylees en forme de triangles.",
         "done": "yes",
         "price": 2500,
         "tags": "glasses,violet,"
     },
     {
         "id": "tvhead",
-        "name": "Tête de Télé",
-        "description": "Une télévision portée comme un casque qui pourrait probablement être utilisée pour revoir tes combats... Si seulement elle fonctionnait !",
+        "name": "Tete de Tele",
+        "description": "Une television portee comme un casque qui pourrait probablement etre utilisee pour revoir tes combats... Si seulement elle fonctionnait !",
         "done": "yes",
         "price": 4500,
         "tags": "hat,"
@@ -1318,7 +1318,7 @@
     {
         "id": "veteranM",
         "name": "Casquette Plate Noire",
-        "description": "Une casquette plate noire, souvent portée par les dresseurs vétérans.",
+        "description": "Une casquette plate noire, souvent portee par les dresseurs veterans.",
         "done": "yes",
         "len": 49,
         "price": 3500,
@@ -1326,8 +1326,8 @@
     },
     {
         "id": "victor",
-        "name": "Bonnet Tricoté Gris",
-        "description": "Un bonnet tricoté gris. Il est populaire parmi les jeunes dresseurs à Galar.",
+        "name": "Bonnet Tricote Gris",
+        "description": "Un bonnet tricote gris. Il est populaire parmi les jeunes dresseurs a Galar.",
         "done": "yes",
         "len": 69,
         "price": 2000,
@@ -1336,15 +1336,15 @@
     },
     {
         "id": "voltorbitembarrette",
-        "name": "Barrette Pokéball",
-        "description": "Une barrette en forme de Pokéball, parfaite pour ajouter une touche de style à n’importe quelle coiffure.",
+        "name": "Barrette Pokeball",
+        "description": "Une barrette en forme de Pokeball, parfaite pour ajouter une touche de style a nimporte quelle coiffure.",
         "price": 1500,
         "tags": "hariclip,pokemon-voltorb,pokemon-electrode,"
     },
     {
         "id": "waterdress",
         "name": "Chapeau de Paille",
-        "description": "Un chapeau simple en paille, typiquement porté par les attrapeurs de insectes.",
+        "description": "Un chapeau simple en paille, typiquement porte par les attrapeurs de insectes.",
         "done": "yes",
         "price": 1500,
         "tags": "hat,pewter,",
@@ -1353,15 +1353,15 @@
     {
         "id": "western",
         "name": "Chapeau Safari",
-        "description": "Un chapeau porté par les gardiens de la zone safari.",
+        "description": "Un chapeau porte par les gardiens de la zone safari.",
         "done": "yes",
         "price": 6500,
         "tags": "hat,fuchsia,"
     },
     {
         "id": "wooperclips",
-        "name": "Pinces à Cheveux Axoloto",
-        "description": "Des pinces à cheveux ressemblant aux branchies violettes d'un Axoloto.",
+        "name": "Pinces a Cheveux Axoloto",
+        "description": "Des pinces a cheveux ressemblant aux branchies violettes d'un Axoloto.",
         "done": "yes",
         "len": 54,
         "price": 8000,
@@ -1371,7 +1371,7 @@
     {
         "id": "yellowSPEhat",
         "name": "Chapeau de Plage",
-        "description": "Un chapeau de paille à large bord. Il est populaire parmi les jeunes dresseurs à Kanto.",
+        "description": "Un chapeau de paille a large bord. Il est populaire parmi les jeunes dresseurs a Kanto.",
         "done": "yes",
         "len": 72,
         "price": 2500,
@@ -1381,7 +1381,7 @@
     {
         "id": "youngster",
         "name": "Casquette de Jeune",
-        "description": "Une casquette cool portée par la jeune génération. Elle doit être portée à l'envers pour être stylée.",
+        "description": "Une casquette cool portee par la jeune generation. Elle doit etre portee a l'envers pour etre stylee.",
         "done": "yes",
         "price": 1500,
         "tags": "hat,pewter,",
