@@ -159,14 +159,14 @@ class PokemonGameOption_Scene < PokemonOption_Scene
                               "Afficher les animations d'attaques dans les combats"
     )
 
-    options << EnumOption.new(_INTL("Style de combat"), [_INTL("Switch"), _INTL("Set")],
+    options << EnumOption.new(_INTL("Style de combat"), [_INTL("Choix"), _INTL("Défini")],
                               proc { $PokemonSystem.battlestyle },
                               proc { |value| $PokemonSystem.battlestyle = value },
                               ["Incite à changer de Pokémon avant que l'adversaire n'envoie le suivant",
                                "Aucune invite à changer de Pokémon avant que l'adversaire n'envoie le suivant"]
     )
 
-    options << NumberOption.new(_INTL("Frame de Dialogue"), 1, Settings::SPEECH_WINDOWSKINS.length,
+    options << NumberOption.new(_INTL("Texture du Cadre"), 1, Settings::SPEECH_WINDOWSKINS.length,
                                 proc { $PokemonSystem.textskin },
                                 proc { |value|
                                   $PokemonSystem.textskin = value
