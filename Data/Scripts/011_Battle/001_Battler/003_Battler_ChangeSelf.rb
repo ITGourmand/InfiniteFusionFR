@@ -52,7 +52,7 @@ class PokeBattle_Battler
       return
     end
     return if @fainted   # Has already fainted properly
-    @battle.pbDisplayBrief(_INTL("{1} s'est évanoui!",pbThis)) if showMessage
+    @battle.pbDisplayBrief(_INTL("{1} est K.O!",pbThis)) if showMessage
     updateSpirits()
     PBDebug.log("[Pokémon fainted] #{pbThis} (#{@index})") if !showMessage
     @battle.scene.pbFaintBattler(self)

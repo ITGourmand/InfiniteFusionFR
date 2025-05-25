@@ -312,7 +312,7 @@ Events.onMapUpdate += proc { |_sender,_e|
      !$game_temp.message_window_showing
     if pbBugContestState.expired?
       pbMessage(_INTL("ANNOUNCER:  BEEEEEP!"))
-      pbMessage(_INTL("Le temps est écoulé !"))
+      pbMessage(_INTL("Le temps est écoulé!"))
       pbBugContestState.pbStartJudging
     end
   end

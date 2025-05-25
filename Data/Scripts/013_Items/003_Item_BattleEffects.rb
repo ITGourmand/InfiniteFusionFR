@@ -317,7 +317,7 @@ ItemHandlers::UseInBattle.add(:POKEFLUTE,proc { |item,battler,battle|
     next if b.status != :SLEEP || b.hasActiveAbility?(:SOUNDPROOF)
     b.pbCureStatus(false)
   end
-  battle.pbDisplay(_INTL("Tous les Pokémon ont été réveillés par la mélodie !"))
+  battle.pbDisplay(_INTL("Tous les Pokémon ont été réveillés par la mélodie!"))
 })
 
 ItemHandlers::UseInBattle.addIf(proc { |item| GameData::Item.get(item).is_poke_ball? },   # Poké Balls
@@ -429,7 +429,7 @@ ItemHandlers::BattleUseOnPokemon.add(:FULLHEAL,proc { |item,pokemon,battler,choi
   battler.pbCureConfusion if battler
   name = (battler) ? battler.pbThis : pokemon.name
   scene.pbRefresh
-  scene.pbDisplay(_INTL("{1} est en bonne santé.",name))
+  scene.pbDisplay(_INTL("{1} est en pleine forme.",name))
 })
 
 ItemHandlers::BattleUseOnPokemon.copy(:FULLHEAL,
@@ -446,7 +446,7 @@ ItemHandlers::BattleUseOnPokemon.add(:FULLRESTORE,proc { |item,pokemon,battler,c
     pbBattleHPItem(pokemon,battler,pokemon.totalhp,scene)
   else
     scene.pbRefresh
-    scene.pbDisplay(_INTL("{1} est en bonne santé.",name))
+    scene.pbDisplay(_INTL("{1} est en pleine forme.",name))
   end
 })
 
@@ -455,14 +455,14 @@ ItemHandlers::BattleUseOnPokemon.add(:REVIVE,proc { |item,pokemon,battler,choice
   pokemon.hp = 1 if pokemon.hp<=0
   pokemon.heal_status
   scene.pbRefresh
-  scene.pbDisplay(_INTL("{1} s'est remis de son évanouissement!",pokemon.name))
+  scene.pbDisplay(_INTL("{1} n'est plus K.O!",pokemon.name))
 })
 
 ItemHandlers::BattleUseOnPokemon.add(:MAXREVIVE,proc { |item,pokemon,battler,choices,scene|
   pokemon.heal_HP
   pokemon.heal_status
   scene.pbRefresh
-  scene.pbDisplay(_INTL("{1} s'est remis de son évanouissement!",pokemon.name))
+  scene.pbDisplay(_INTL("{1} n'est plus K.O!",pokemon.name))
 })
 
 ItemHandlers::BattleUseOnPokemon.add(:ENERGYPOWDER,proc { |item,pokemon,battler,choices,scene|
@@ -484,7 +484,7 @@ ItemHandlers::BattleUseOnPokemon.add(:HEALPOWDER,proc { |item,pokemon,battler,ch
   pokemon.changeHappiness("powder")
   name = (battler) ? battler.pbThis : pokemon.name
   scene.pbRefresh
-  scene.pbDisplay(_INTL("{1} est en bonne santé.",name))
+  scene.pbDisplay(_INTL("{1} est en pleine forme.",name))
 })
 
 ItemHandlers::BattleUseOnPokemon.add(:REVIVALHERB,proc { |item,pokemon,battler,choices,scene|
@@ -492,7 +492,7 @@ ItemHandlers::BattleUseOnPokemon.add(:REVIVALHERB,proc { |item,pokemon,battler,c
   pokemon.heal_status
   pokemon.changeHappiness("revivalherb")
   scene.pbRefresh
-  scene.pbDisplay(_INTL("{1} s'est remis de son évanouissement!",pokemon.name))
+  scene.pbDisplay(_INTL("{1}  n'est plus K.O!",pokemon.name))
 })
 
 ItemHandlers::BattleUseOnPokemon.add(:ETHER,proc { |item,pokemon,battler,choices,scene|

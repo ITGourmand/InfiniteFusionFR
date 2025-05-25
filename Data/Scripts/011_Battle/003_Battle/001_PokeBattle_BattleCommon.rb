@@ -173,7 +173,7 @@ module PokeBattle_BattleCommon
         pkmn.species = :PALDIATINA
         pkmn.name = "Paldiatina"
       end
-      pbDisplayBrief(_INTL("Je t'ai eu ! {1} a été attrapé !", pkmn.name))
+      pbDisplayBrief(_INTL("Je t'ai eu ! {1} a été attrapé!", pkmn.name))
       @scene.pbThrowSuccess # Play capture success jingle
       pbRemoveFromParty(battler.index, battler.pokemonIndex)
       # Gain Exp

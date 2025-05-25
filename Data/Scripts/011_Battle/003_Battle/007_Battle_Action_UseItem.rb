@@ -66,7 +66,7 @@ class PokeBattle_Battle
       if $PokemonBag && $PokemonBag.pbCanStore?(item)
         $PokemonBag.pbStoreItem(item)
       else
-        raise _INTL("Impossible de retourner un objet inutilisé au sac pour une raison quelconque..")
+        raise _INTL("Impossible de vendre un objet inutilisé dans le sac pour une raison quelconque..")
       end
     else
       items = pbGetOwnerItems(idxBattler)

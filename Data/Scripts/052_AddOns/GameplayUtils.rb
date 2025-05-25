@@ -1733,7 +1733,7 @@ def purchaseDyeKitMenu(hats_kit_price=0,clothes_kit_price=0)
 
   if commands.length <= 1
     pbCallBub(2,@event_id)
-    pbMessage("\\C[1]Les Kits de Teinture\\C[0] permettent de teindre les vêtements de toutes sortes de couleurs !")
+    pbMessage("\\C[1]Les Kits de Teinture\\C[0] permettent de teindre les vêtements de toutes sortes de couleurs!")
 
 pbCallBub(2,@event_id)
 pbMessage("Tu peux les utiliser à tout moment lorsque tu changes de tenue.")
@@ -1743,7 +1743,7 @@ pbCallBub(2,@event_id)
 pbMessage("\\GBienvenue ! Es-tu intéressé par la teinture de tes tenues en différentes couleurs ?")
 
 pbCallBub(2,@event_id)
-pbMessage("Je fabrique de pratiques \\C[1]Kits de Teinture\\C[0] grâce à la peinture de mon Queulorior, et ils te permettent de teindre tes tenues dans la couleur de ton choix !")
+pbMessage("Je fabrique de pratiques \\C[1]Kits de Teinture\\C[0] grâce à la peinture de mon Queulorior, et ils te permettent de teindre tes tenues dans la couleur de ton choix!")
 
 pbCallBub(2,@event_id)
 pbMessage("\\GEn plus, ils sont réutilisables, alors tu peux en profiter à volonté ! Ça t'intéresse ?")
@@ -1761,7 +1761,7 @@ when command_hats
   pbSEPlay("SlotsCoin")
   Kernel.pbReceiveItem(:HATSDYEKIT)
   pbCallBub(2,@event_id)
-  pbMessage("\\GEt voilà ! Amuse-toi bien à teindre tes chapeaux !")
+  pbMessage("\\GEt voilà ! Amuse-toi bien à teindre tes chapeaux!")
 when command_clothes
   if $Trainer.money < clothes_kit_price
     pbCallBub(2,@event_id)
@@ -1773,7 +1773,7 @@ when command_clothes
   pbSEPlay("SlotsCoin")
   Kernel.pbReceiveItem(:CLOTHESDYEKIT)
   pbCallBub(2,@event_id)
-  pbMessage("\\GEt voilà ! Amuse-toi bien à teindre tes vêtements !")
+  pbMessage("\\GEt voilà ! Amuse-toi bien à teindre tes vêtements!")
 end
 pbCallBub(2,@event_id)
 pbMessage("Tu peux utiliser les \\C[1]Kits de Teinture\\C[0] à tout moment lorsque tu changes de tenue.")

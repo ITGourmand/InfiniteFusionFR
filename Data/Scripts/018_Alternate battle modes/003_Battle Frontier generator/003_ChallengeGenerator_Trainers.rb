@@ -37,7 +37,7 @@ def pbTrainerInfo(pokemonlist, trfile, rules)
       gender = GameData::TrainerType.get(trainerid).gender
       randomName = getRandomNameEx(gender, nil, 0, 12)
       # Add the trainer to bttrainers
-      tr = [trainerid, randomName, _INTL("Me voici!"), _INTL("Oui, j'ai gagné !"),
+      tr = [trainerid, randomName, _INTL("Me voici!"), _INTL("Oui, j'ai gagné!"),
          _INTL("Mec, j'ai perdu!"), []]
       bttrainers.push(tr)
     end

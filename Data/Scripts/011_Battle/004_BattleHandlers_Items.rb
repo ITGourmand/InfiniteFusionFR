@@ -267,7 +267,7 @@ BattleHandlers::StatusCureItem.add(:LUMBERRY,
       when :SLEEP
         battle.pbDisplay(_INTL("{1}'s {2} l'a réveillé!",battler.pbThis,itemName))
       when :POISON
-        battle.pbDisplay(_INTL("{1}'s {2} a guéri de son empoisonnement !!",battler.pbThis,itemName))
+        battle.pbDisplay(_INTL("{1}'s {2} a guéri de son empoisonnement!",battler.pbThis,itemName))
       when :BURN
         battle.pbDisplay(_INTL("{1}'s {2} a soigné sa brûlure!",battler.pbThis,itemName))
       when :PARALYSIS
@@ -1258,7 +1258,7 @@ BattleHandlers::UserItemAfterMoveUse.add(:LIFEORB,
     next if !hitBattler
     PBDebug.log("[Item triggered] #{user.pbThis}'s #{user.itemName} (recoil)")
     user.pbReduceHP(user.totalhp/10)
-    battle.pbDisplay(_INTL("{1} a perdu une partie de ses PV !",user.pbThis))
+    battle.pbDisplay(_INTL("{1} a perdu une partie de ses PV!",user.pbThis))
     user.pbItemHPHealCheck
     user.pbFaint if user.fainted?
   }

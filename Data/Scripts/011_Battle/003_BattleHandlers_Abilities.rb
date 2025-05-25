@@ -1466,7 +1466,7 @@ BattleHandlers::TargetAbilityOnHit.add(:INNARDSOUT,
       battle.scene.pbDamageAnimation(user)
       user.pbReduceHP(target.damageState.hpLost,false)
       if PokeBattle_SceneConstants::USE_ABILITY_SPLASH
-        battle.pbDisplay(_INTL("{1} est blessé !",user.pbThis))
+        battle.pbDisplay(_INTL("{1} est blessé!",user.pbThis))
       else
         battle.pbDisplay(_INTL("{1} est blessé par {2}'s {3}!",user.pbThis,
            target.pbThis(true),target.abilityName))
@@ -1485,7 +1485,7 @@ BattleHandlers::TargetAbilityOnHit.add(:IRONBARBS,
       battle.scene.pbDamageAnimation(user)
       user.pbReduceHP(user.totalhp/8,false)
       if PokeBattle_SceneConstants::USE_ABILITY_SPLASH
-        battle.pbDisplay(_INTL("{1} est blessé !",user.pbThis))
+        battle.pbDisplay(_INTL("{1} est blessé!",user.pbThis))
       else
         battle.pbDisplay(_INTL("{1} est blessé par {2}'s {3}!",user.pbThis,
            target.pbThis(true),target.abilityName))
@@ -1873,7 +1873,7 @@ BattleHandlers::EORHealingAbility.add(:HYDRATION,
       when :POISON
         battle.pbDisplay(_INTL("{1}'s {2} guéri de son poison!",battler.pbThis,battler.abilityName))
       when :BURN
-        battle.pbDisplay(_INTL("{1}'s {2} a guéri sa brûlure !",battler.pbThis,battler.abilityName))
+        battle.pbDisplay(_INTL("{1}'s {2} a guéri sa brûlure!",battler.pbThis,battler.abilityName))
       when :PARALYSIS
         battle.pbDisplay(_INTL("{1}'s {2} guéri sa paralysie!",battler.pbThis,battler.abilityName))
       when :FROZEN
@@ -1898,7 +1898,7 @@ BattleHandlers::EORHealingAbility.add(:SHEDSKIN,
       when :POISON
         battle.pbDisplay(_INTL("{1}'s {2} guéri de son poison!",battler.pbThis,battler.abilityName))
       when :BURN
-        battle.pbDisplay(_INTL("{1}'s {2} a guéri sa brûlure !",battler.pbThis,battler.abilityName))
+        battle.pbDisplay(_INTL("{1}'s {2} a guéri sa brûlure!",battler.pbThis,battler.abilityName))
       when :PARALYSIS
         battle.pbDisplay(_INTL("{1}'s {2} guéri sa paralysie!",battler.pbThis,battler.abilityName))
       when :FROZEN
@@ -2092,7 +2092,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:ANTICIPATION,
     end
     if found
       battle.pbShowAbilitySplash(battler)
-      battle.pbDisplay(_INTL("{1} frissonne d'impatience !",battler.pbThis))
+      battle.pbDisplay(_INTL("{1} frissonne d'impatience!",battler.pbThis))
       battle.pbHideAbilitySplash(battler)
     end
   }

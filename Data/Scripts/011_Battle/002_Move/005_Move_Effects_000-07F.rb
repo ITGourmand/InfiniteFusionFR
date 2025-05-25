@@ -954,7 +954,7 @@ class PokeBattle_Move_03A < PokeBattle_Move
     else
       user.stages[:ATTACK] = 6
       @battle.pbCommonAnimation("StatUp", user)
-      @battle.pbDisplay(_INTL("{1} a retiré ses propres PV et a maximisé son attaque !", user.pbThis))
+      @battle.pbDisplay(_INTL("{1} a retiré ses propres PV et a maximisé son attaque!", user.pbThis))
     end
     user.pbItemHPHealCheck
   end
@@ -1462,7 +1462,7 @@ class PokeBattle_Move_057 < PokeBattle_Move
   def pbEffectGeneral(user)
     user.attack, user.defense = user.defense, user.attack
     user.effects[PBEffects::PowerTrick] = !user.effects[PBEffects::PowerTrick]
-    @battle.pbDisplay(_INTL("{1} a changé son Attaque et sa Défense !", user.pbThis))
+    @battle.pbDisplay(_INTL("{1} a changé son Attaque et sa Défense!", user.pbThis))
   end
 end
 

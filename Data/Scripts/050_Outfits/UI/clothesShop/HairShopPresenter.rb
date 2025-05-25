@@ -54,7 +54,7 @@ class HairShopPresenter < PokemonMartScreen
 
       @adapter.setMoney(@adapter.getMoney - price)
       @stock.compact!
-      pbDisplayPaused(_INTL("Voilà, merci !")) { pbSEPlay("Mart buy item") }
+      pbDisplayPaused(_INTL("Voilà, merci!")) { pbSEPlay("Mart buy item") }
       @adapter.addItem(item)
       #break
     end

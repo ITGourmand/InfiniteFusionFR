@@ -77,7 +77,7 @@ class PokeBattle_BugContestBattle < PokeBattle_Battle
     else
       pbBugContestState.lastPokemon = pkmn
     end
-    pbDisplay(_INTL("{1} a été attrapé !",pkmn.name))
+    pbDisplay(_INTL("{1} a été attrapé!",pkmn.name))
   end
 
   def pbEndOfRoundPhase

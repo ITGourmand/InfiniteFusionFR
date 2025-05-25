@@ -1218,7 +1218,7 @@ def pbSellTriads
             $Trainer.money += price
             goldwindow.text = _INTL("Argent:\r\n{1}",pbGetGoldString)
             $PokemonGlobal.triads.pbDeleteItem(item,quantity)
-            pbMessage(_INTL("A retourné la carte {1} et reçu {2}$.\\se[Mart buy item]",itemname,price.to_s_formatted))
+            pbMessage(_INTL("A vendu la carte {1} et reçu {2}$.\\se[Mart buy item]",itemname,price.to_s_formatted))
             commands = []
             for i in 0...$PokemonGlobal.triads.length
               item = $PokemonGlobal.triads[i]

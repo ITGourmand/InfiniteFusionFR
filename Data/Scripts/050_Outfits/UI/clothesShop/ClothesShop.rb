@@ -12,7 +12,7 @@ def genericOutfitsShopMenu(stock = [], itemType = nil, versions = false, isShop=
       presenter.pbBuyScreen
       break
     else
-      pbMessage(_INTL("N'hésite pas à revenir !"))
+      pbMessage(_INTL("N'hésite pas à revenir!"))
       break
     end
   end

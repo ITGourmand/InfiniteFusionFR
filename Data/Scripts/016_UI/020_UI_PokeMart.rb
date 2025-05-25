@@ -726,7 +726,7 @@ class PokemonMartScreen
         qty.times do
           @adapter.removeItem(item)
         end
-        pbDisplayPaused(_INTL("A retourné {1} et reçu {2}$.", itemname, price.to_s_formatted)) { pbSEPlay("Mart buy item") }
+        pbDisplayPaused(_INTL("A vendu {1} et reçu {2}$.", itemname, price.to_s_formatted)) { pbSEPlay("Mart buy item") }
         @scene.pbRefresh
       end
       @scene.pbHideMoney
@@ -784,7 +784,7 @@ def pbPokemonMart(stock, speech = nil, cantsell = false)
       screen = PokemonMartScreen.new(scene, stock)
       screen.pbSellScreen
     else
-      pbMessage(_INTL("N'hésitez pas à revenir !"))
+      pbMessage(_INTL("N'hésitez pas à revenir!"))
       break
     end
     cmd = pbMessage(_INTL("Y a-t-il autre chose dont vous avez besoin ?"),

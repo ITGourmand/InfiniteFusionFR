@@ -93,7 +93,7 @@ end
 
 ItemHandlers::UseInBattle.add(:POKEDOLL, proc { |item, battler, battle|
   battle.decision = 3
-  battle.pbDisplayPaused(_INTL("A fui en toute sécurité !"))
+  battle.pbDisplayPaused(_INTL("A fui en toute sécurité!"))
 })
 
 ItemHandlers::UseFromBag.add(:LANTERN, proc { |item|
@@ -102,7 +102,7 @@ ItemHandlers::UseFromBag.add(:LANTERN, proc { |item|
     Kernel.pbMessage(_INTL("La grotte est déjà illuminée."))
     next false
   end
-  Kernel.pbMessage(_INTL("La Lanterne a illuminé la zone !"))
+  Kernel.pbMessage(_INTL("La Lanterne a illuminé la zone!"))
   $PokemonGlobal.flashUsed = true
   darkness.radius += 176
   while darkness.radius < 176
@@ -1309,7 +1309,7 @@ ItemHandlers::UseOnPokemon.add(:INCUBATOR_NORMAL, proc { |item, pokemon, scene|
     scene.pbDisplay(_INTL("En Incubation..."))
     scene.pbDisplay(_INTL("..."))
     scene.pbDisplay(_INTL("..."))
-    scene.pbDisplay(_INTL("L'Oeuf est sur le point d'éclore !"))
+    scene.pbDisplay(_INTL("L'Oeuf est sur le point d'éclore!"))
 
     # if pokemon.steps_to_hatch <= 1
     #   scene.pbDisplay(_INTL("Incubating..."))
@@ -1448,7 +1448,7 @@ def pbDNASplicing(pokemon, scene, item = :DNASPLICERS)
             return false
           end
           if pokemon.hp == 0 || poke2.hp == 0
-            scene.pbDisplay(_INTL("Un Pokémon évanoui ne peut pas être fusionné!"))
+            scene.pbDisplay(_INTL("Un Pokémon K.O ne peut pas être fusionné!"))
             return false
           end
 
@@ -1710,6 +1710,7 @@ def pbUnfuse(pokemon, scene, supersplicers, pcPosition = nil)
     end
   end
 end
+
 
 ItemHandlers::UseOnPokemon.add(:SUPERSPLICERS, proc { |item, pokemon, scene|
   next true if pbDNASplicing(pokemon, scene, item)

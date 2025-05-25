@@ -453,7 +453,7 @@ class PokeBattle_Battle
         end
         # Lose money from losing a battle
         pbLoseMoney
-        pbDisplayPaused(_INTL("Tu t'es évanoui!")) if !@canLose
+        pbDisplayPaused(_INTL("Tu t'évanoui!")) if !@canLose
       elsif @decision==2
         if @opponent
           @opponent.each_with_index do |_t,i|

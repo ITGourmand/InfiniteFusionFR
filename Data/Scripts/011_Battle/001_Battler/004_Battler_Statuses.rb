@@ -30,9 +30,9 @@ class PokeBattle_Battler
       if showMessages
         msg = ""
         case self.status
-        when :SLEEP     then msg = _INTL("{1} est déjà endormi !", pbThis)
-        when :POISON    then msg = _INTL("{1} est déjà empoisonné !", pbThis)
-        when :BURN      then msg = _INTL("{1} est déjà brûlé !!", pbThis)
+        when :SLEEP     then msg = _INTL("{1} est déjà endormi!", pbThis)
+        when :POISON    then msg = _INTL("{1} est déjà empoisonné!", pbThis)
+        when :BURN      then msg = _INTL("{1} est déjà brûlé!", pbThis)
         when :PARALYSIS then msg = _INTL("{1} est déjà paralysé!", pbThis)
         when :FROZEN    then msg = _INTL("{1} est déjà complètement gelé!", pbThis)
         end

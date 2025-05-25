@@ -105,7 +105,7 @@ Events.onStepTakenTransferPossible += proc { |_sender, e|
         elsif i.hp == 0
           i.changeHappiness("faint")
           i.status = :NONE
-          pbMessage(_INTL("{1} évanouie...", i.name))
+          pbMessage(_INTL("{1} a été mis K.O...", i.name))
         end
         if $Trainer.able_pokemon_count == 0
           handled[0] = true
@@ -119,7 +119,7 @@ Events.onStepTakenTransferPossible += proc { |_sender, e|
 def pbCheckAllFainted
   if $Trainer.able_pokemon_count == 0
     pbMessage(_INTL("Vous n’avez plus de Pokémon capable de se battre!\1"))
-    pbMessage(_INTL("Tu t'évanoui !"))
+    pbMessage(_INTL("Tu t'évanoui!"))
     pbBGMFade(1.0)
     pbBGSFade(1.0)
     pbFadeOutIn { pbStartOver }
